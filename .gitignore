@@ -40,3 +40,6 @@
 
 # Windows-specific files
 Thumbs.db
+
+# Draw.io diagram files
+*.drawio
