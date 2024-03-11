@@ -1,0 +1,42 @@
+# Compiled binary and hex files
+*.hex
+*.elf
+
+# EEPROM images
+*.eep
+
+# Arduino build folders
+/build/
+/tmp/
+
+# Miscellaneous
+*.o
+*.a
+*.d
+*.lst
+
+# Project-specific files that shouldn't be shared
+*.ino.private
+
+# Ignore all .pde files (older Arduino sketches)
+*.pde
+
+# Ignore platform-specific files for Visual Studio Code (if using PlatformIO)
+.vscode/
+.pio/
+.pioenvs/
+
+# Ignore potential configuration files that contain sensitive information
+*.ini
+*.json
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Mac OS X-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
