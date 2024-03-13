@@ -16,6 +16,24 @@ body:
       3 - high
       4 - critical
 
+- type: input
+  attribute:
+  label: Test Case used
+  description: Refer to the test case name and id if it correspond to a test case.
+
+  - type: dropdown
+  id: severity
+  attributes:
+    label: Severity
+    description: Please select the severity of this issue
+    options:
+      - low
+      - medium
+      - high
+      - critical
+  validations:
+    required: true
+
 - type: textarea
   attributes:
     label: Describe the issue
