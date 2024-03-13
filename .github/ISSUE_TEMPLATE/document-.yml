@@ -9,6 +9,19 @@ body:
     value: |
       Report any improvement or fix for the documentation
 
+- type: dropdown
+  id: severity
+  attributes:
+    label: Severity
+    description: Please select the severity of this issue
+    options:
+      - low
+      - medium
+      - high
+      - critical
+  validations:
+    required: true
+
 - type: textarea
   attributes:
     label: Location
