@@ -1,19 +1,9 @@
 name: Bug report
 about: Create a report to help us improve
-title: "[BUG]"
-labels: bug
-assignees: ''
-
----
-
-name: Arduino Device Issue
-about: Create a report to help us improve
-title: ''
-labels: 'documentation'
-assignees: ''
-
----
-
+title: "[BUG]:"
+labels: ["bug"]
+assignees: 
+- team 3
 body:
 - type: markdown
   attributes:
