@@ -16,6 +16,14 @@ body:
     description: Please provide the location in the documentation where the issue exists. This could be a URL or a page reference.
   validations:
     required: true
+    
+- type : textarea
+  attribute:
+    label: Issue
+    description: A clear and concise description of the issue you report
+  validation:
+    required: true
+  
 
 - type: textarea
   attributes:
