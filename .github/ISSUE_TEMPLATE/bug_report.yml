@@ -6,8 +6,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      **Test Case used**
-      Refer to the test case name and id if it correspond to a test case.  
+      Thanks for taking the time to fill out this bug report!  
 
 - type: dropdown
   id: severity
