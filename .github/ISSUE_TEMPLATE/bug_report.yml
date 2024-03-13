@@ -31,7 +31,7 @@ body:
   attributes:
     label: Describe the issue
     description: A clear and concise description of what the issue is.
-      validations:
+  validations:
     required: true
 
 - type: input
