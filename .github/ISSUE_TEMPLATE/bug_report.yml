@@ -26,7 +26,7 @@ body:
   attributes:
     label: Test Case
     description: Please enter the test case name and id
-    
+
 - type: textarea
   attributes:
     label: Describe the issue
@@ -39,7 +39,7 @@ body:
     label: Arduino Device Details
     description: Please provide the following details
   validations:
-  required: true
+    required: true
 
 - type: textarea
   attributes:
@@ -51,14 +51,14 @@ body:
     label: Expected behavior
     description: A clear and concise description of what you expected to happen.
   validations:
-  required: true
+    required: true
 
 - type: textarea
   attributes:
     label: Actual behavior
     description: A clear and concise description of what happened actually.
   validations:
-  required: true
+    required: true
 
 - type: textarea
   attributes:
