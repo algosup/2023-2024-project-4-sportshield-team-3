@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: "[BUG]"
-labels: ''
+labels: bug
 assignees: ''
 
 ---
@@ -11,13 +11,14 @@ assignees: ''
 name: Arduino Device Issue
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'documentation'
 assignees: ''
 
 ---
 
 **Test Case used**
 Refer to the test case name and id if it correspond to a test case.  
+
 **Severity**
 The different scalling of severity
 1 - low
