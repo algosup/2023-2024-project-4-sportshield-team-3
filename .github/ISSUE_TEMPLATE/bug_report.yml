@@ -1,8 +1,7 @@
 name: Bug report
-title: "[BUG]:"
+description: "Create a report to help fixing bugs"
+title: "BUG"
 labels: ["bug"]
-assignees: 
-- team 3
 body:
 - type: markdown
   attributes:
