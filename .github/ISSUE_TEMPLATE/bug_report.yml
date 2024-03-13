@@ -3,10 +3,12 @@ description: "Create a report to help fixing bugs"
 title: "BUG"
 labels: ["bug"]
 body:
-- type: textarea
-  attribute:
-  label: Test Case used
-  description: Refer to the test case name and id if it correspond to a test case.
+
+  - type: input
+  id: testcase
+  attributes:
+    label: Test Case
+    description:  enter the test case name and id if any
 
   - type: dropdown
   id: severity
