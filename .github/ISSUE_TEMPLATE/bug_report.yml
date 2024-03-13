@@ -25,7 +25,7 @@ body:
   id: testcase
   attributes:
     label: Test Case
-    description: Please enter the test case name and id
+    description: Please enter the test case name and id if any
 
 - type: textarea
   attributes:
@@ -45,6 +45,8 @@ body:
   attributes:
     label: To Reproduce
     description: Steps to reproduce the behavior.
+  validations:
+    required: true
 
 - type: textarea
   attributes:
