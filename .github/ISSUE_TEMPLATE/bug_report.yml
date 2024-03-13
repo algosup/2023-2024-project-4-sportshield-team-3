@@ -31,6 +31,8 @@ body:
   attributes:
     label: Describe the issue
     description: A clear and concise description of what the issue is.
+      validations:
+    required: true
 
 - type: input
   attributes:
@@ -48,11 +50,15 @@ body:
   attributes:
     label: Expected behavior
     description: A clear and concise description of what you expected to happen.
+      validations:
+    required: true
 
 - type: textarea
   attributes:
     label: Actual behavior
     description: A clear and concise description of what happened actually.
+      validations:
+    required: true
 
 - type: textarea
   attributes:
