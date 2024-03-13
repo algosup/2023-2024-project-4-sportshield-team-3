@@ -3,20 +3,7 @@ description: "Create a report to help fixing bugs"
 title: "BUG"
 labels: ["bug"]
 body:
-- type: markdown
-  attributes:
-    value: |
-      **Test Case used**
-      Refer to the test case name and id if it correspond to a test case.  
-
-      **Severity**
-      The different scaling of severity
-      1 - low
-      2 - medium
-      3 - high
-      4 - critical
-
-- type: input
+- type: textarea
   attribute:
   label: Test Case used
   description: Refer to the test case name and id if it correspond to a test case.
