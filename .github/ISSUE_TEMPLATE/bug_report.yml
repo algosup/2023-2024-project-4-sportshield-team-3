@@ -3,6 +3,12 @@ description: "Create a report to help fixing bugs"
 title: "BUG"
 labels: ["bug"]
 body:
+- type: markdown
+  attributes:
+    value: |
+      **Test Case used**
+      Refer to the test case name and id if it correspond to a test case.  
+
 
   - type: input
   id: testcase
