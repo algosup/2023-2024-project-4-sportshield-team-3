@@ -18,10 +18,10 @@ body:
     required: true
     
 - type: textarea
-  attribute:
+  attributes:
     label: Issue
-    description: A clear and concise description of the issue you report
-  validation:
+    description: A clear and concise description of the issue.
+  validations:
     required: true
   
 
