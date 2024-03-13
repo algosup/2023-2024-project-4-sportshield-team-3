@@ -3,19 +3,13 @@ description: "Create a report to help fixing bugs"
 title: "BUG"
 labels: ["bug"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-         Thanks for taking the time to fill out this bug report!
-
-
-  - type: input
-  id: testcase
+- type: markdown
   attributes:
-    label: Test Case
-    description:  enter the test case name and id if any
+    value: |
+      **Test Case used**
+      Refer to the test case name and id if it correspond to a test case.  
 
-  - type: dropdown
+- type: dropdown
   id: severity
   attributes:
     label: Severity
@@ -28,6 +22,12 @@ body:
   validations:
     required: true
 
+- type: input
+  id: testcase
+  attributes:
+    label: Test Case
+    description: Please enter the test case name and id
+    
 - type: textarea
   attributes:
     label: Describe the issue
