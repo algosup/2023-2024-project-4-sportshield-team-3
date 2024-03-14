@@ -11,7 +11,7 @@
 
 **Team:** Team 3
 
-**Reviewer(s):** Salaheddine NAMIR
+**Reviewer:** Salaheddine NAMIR
 
 **Created on:** March 11<sup>th</sup>, 2024
 
@@ -33,7 +33,7 @@
 </div>
 
 <br><details>
-<summary><h3 id="toc"> Table of Contents <i>(Click to expand)</i></h3></summary>
+<summary><h2 id="toc"> Table of Contents <i>(Click to expand)</i></h2></summary>
 
 - [Functional Specifications](#functional-specifications)
     - [Approvals](#approvals)
@@ -68,6 +68,25 @@
 </details>
 
 # 1. - Glossary
+
+| Term        | Definition                                        | More information                                                                    |
+| ----------- | ------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| SportShield | The name of the device developed in this project. |                                                                                     |
+| GNSS        | Global Navigation Satellite System.               | [here 🔗](https://en.wikipedia.org/wiki/Global_Navigation_Satellite_System)          |
+| GPS         | Global Positioning System.                        | [here 🔗](https://en.wikipedia.org/wiki/Global_Positioning_System)                   |
+| GSM         | Global System for Mobile Communications.          | [here 🔗](https://en.wikipedia.org/wiki/GSM)                                         |
+| GPRS        | General Packet Radio Service.                     | [here 🔗](https://en.wikipedia.org/wiki/General_Packet_Radio_Service)                |
+| BLE         | Bluetooth Low Energy.                             | [here 🔗](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy)                        |
+| NFC         | Near Field Communication.                         | [here 🔗](https://en.wikipedia.org/wiki/Near-field_communication)                    |
+| API         | Application Programming Interface.                | [here 🔗](https://en.wikipedia.org/wiki/Application_programming_interface)           |
+| HTTP        | Hypertext Transfer Protocol.                      | [here 🔗](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)                 |
+| DOF         | Degrees of Freedom.                               | [here 🔗](https://en.wikipedia.org/wiki/Degrees_of_freedom)                          |
+| IMU         | Inertial Measurement Unit.                        | [here 🔗](https://en.wikipedia.org/wiki/Inertial_measurement_unit)                   |
+| GPIO        | General Purpose Input/Output.                     | [here 🔗](https://en.wikipedia.org/wiki/General-purpose_input/output)                |
+| UART        | Universal Asynchronous Receiver-Transmitter.      | [here 🔗](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) |
+| I2C         | Inter-Integrated Circuit.                         | [here 🔗](https://en.wikipedia.org/wiki/I%C2%B2C)                                    |
+| SPI         | Serial Peripheral Interface.                      | [here 🔗](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface)                 |
+
 
 # 2. - Introduction
 
@@ -157,9 +176,122 @@ External project reviewers have been appointed by the project owner to review ou
 
 ### 2.4.1 - Retro-planning
 
+The project will be developped in 6 weeks, from the 11<sup>th</sup> March 2024 to the 19<sup>th</sup> April 2024.
+
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    title Team 3 - Retro-Planning
+    dateFormat  YYYY-MM-DD
+
+    section Weeks
+    Week 1  :2024-03-11, 5d
+    WE      :crit, 2024-03-16, 2d
+    Week 3  :2024-03-18, 5d
+    WE      :crit, 2024-03-23, 2d
+    Week 3  :2024-03-25, 5d
+    WE      :crit, 2024-03-30, 3d
+    Week 4  :2024-04-02,4d
+    WE      :crit, 2024-04-06, 2d
+    Week 5  :2024-04-08, 5d
+    WE      :crit, 2024-04-13, 2d
+    Week 6  :2024-04-15, 5d
+    End     :crit, 2024-04-20, 2d
+```
+
+```mermaid
+gantt
+    title .
+    dateFormat  YYYY-MM-DD
+
+    section Documents
+        Functional Specifications           :2024-03-11, 8d
+        Functional Specifications Deadline  :crit, milestone, 2024-03-18, 1d
+        Technical Specifications            :2024-03-11, 16d
+        Technical Specifications Deadline   :crit, milestone, 2024-03-26, 1d
+        Test Plan                           :2024-03-15, 15d
+        Test Plan Deadline                  :crit, milestone, 2024-04-10, 1d
+        User Manual                         :2024-04-04, 7d
+        User Manual Deadline                :crit, milestone, 2024-04-10, 1d
+        Project Post-Mortem                 :milestone, 2024-04-19, 1d
+
+    section Developement
+        Operating Components                :2024-03-12, 4d
+        Shock Detection                     :2024-03-18, 4d
+        Get Battery Level                   :2024-03-19, 2d
+        Alarm Setup                         :2024-03-20, 3d
+        NFC Working                         :2024-03-22, 4d
+        Working Location                    :2024-03-22, 4d
+        Electromagnet                       :2024-03-25, 3d
+        POC                                 :milestone, 2024-03-27, 1d
+        Bluetooth Connection                :2024-03-27, 3d
+        GSM HTTP Post                       :2024-03-29, 5d
+        Battery Optimization                :2024-04-02, 9d
+        MVP                                 :milestone, 2024-04-04, 1d
+        Final Code Deadline                 :crit, milestone, 2024-04-10, 1d
+
+    section Testing
+        Test the tests cases                :2024-03-30, 11d
+
+    section Final Presentation
+        Slideshow                           :2024-04-10, 5d
+        Rehearsals                          :2024-04-15, 4d
+        Oral Exam                           :crit, milestone, 2024-04-19, 1d
+
+    section Meetings
+        Report Week 1                       :milestone, 2024-03-15, 1d
+        Report Week 2                       :milestone, 2024-03-22, 1d
+        Report Week 3                       :milestone, 2024-03-29, 1d
+        Report Week 4                       :milestone, 2024-04-05, 1d
+        Report Week 5                       :milestone, 2024-04-12, 1d
+        Report Week 6                       :milestone, 2024-04-18, 1d
+```
+
 ### 2.4.2 - Milestones
 
+| n°  | Milestone                      | Date       |     | n°  | Milestone           | Date       |
+| --- | ------------------------------ | ---------- | --- | --- | ------------------- | ---------- |
+| 1   | First Week Report              | 03/15/2024 |     | 8   | Fourth Week Report  | 04/05/2024 |
+| 2   | Functional Specifications (v1) | 03/18/2024 |     | 9   | Test Plan           | 04/10/2024 |
+| 3   | Second Week Report             | 03/22/2024 |     | 10  | User Manual         | 04/10/2024 |
+| 4   | Technical Specifications (v1)  | 03/26/2024 |     | 11  | Final Code          | 04/10/2024 |
+| 5   | POC (Proof of Concept)         | 03/27/2024 |     | 12  | Fifth Week Report   | 04/12/2024 |
+| 6   | Third Week Report              | 03/29/2024 |     | 13  | Final Presentation  | 04/19/2024 |
+| 7   | MVP (Minimum Viable Product)   | 04/04/2024 |     | 14  | Project Post-Mortem | 04/19/2024 |    
+
+
 ### 2.4.3 - Resources
+
+- The team (6 people).
+- We estimate 504 hours of work for the whole team *(6 weeks * 6 people * 2 days * 7 hours/day = 504 hours)*.
+- The books from the ALGOSUP's library.
+- Teachers and professionals from ALGOSUP.
+- The Original Source Code of the device.
+- The Hardware of the device.
+  - The microcontroller,
+  - GNSS module,
+  - GSM module,
+  - Electromagnet,
+  - Buzzer,
+  - Battery,
+  - NFC antenna,
+  - USB-C connector.
+- The following documentation:
+  - SIM800L Hardware Design v2.02 (GSM module),
+  - LP603449 Battery Datasheet (Battery),
+  - CD-PA1010D Satasheet v02 (GNSS module),
+  - Xiao nRF52840 Product Specification v1.5 (Microcontroller),
+  - Xiao nRF52840 Blueprints v1.1 (Microcontroller),
+  - SportShield Electronic Schematic v2 (Device).
+- The following Libraries:
+  - NRF52_MBED_TimerInterrupt V1.4.1
+  - ArduinoBLE V1.3.6
+  - Adafruit GPS Library V1.7.4
+  - Sim800L http connector V1.14.0
+  - Seeed Arduino LSM6DS3 V2.0.3
+  - OneWire V2.3.7
 
 ### 2.4.4 - Assumptions and Constraints
 
