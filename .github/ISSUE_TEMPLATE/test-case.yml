@@ -113,5 +113,5 @@ body:
 - type: textarea
   id: last_test
   attributes:
-    label: Last Test
-    description: Please provide details of the last test.
+    label: Last Test date
+    description: Please provide the date of the last test.
