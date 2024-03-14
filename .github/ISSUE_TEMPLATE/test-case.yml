@@ -19,9 +19,10 @@ body:
     label: Priority
     description: Please select the priority of this test.
     options:
-      - Low
-      - Medium
-      - High
+      - low
+      - medium
+      - high
+      - critical
   validations:
     required: true
 
@@ -53,15 +54,6 @@ body:
   validations:
     required: true
 
-- type: textarea
-  id: last_test
-  attributes:
-    label: Last Test
-    description: Please provide details of the last test.
-title: "[TEST]"
-labels: ['test case']
-
-body:
 - type: textarea
   id: test_description
   attributes:
@@ -115,3 +107,8 @@ body:
   attributes:
     label: Last Test date
     description: Please provide the date of the last test.
+- type: textarea
+  id: last_test
+  attributes:
+    label: Last Test
+    description: Please provide details of the last test.
