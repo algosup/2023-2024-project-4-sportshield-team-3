@@ -2,8 +2,7 @@
 name: Test Case
 about: Setup the test case here.
 title: "[TEST]"
-labels: ''
-assignees: ''
+labels: ['test case']
 
 body:
 - type: textarea
