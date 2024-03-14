@@ -54,7 +54,7 @@ body:
     required: true
     
 - type: textarea
-  id: last_test date
+  id: last_test_date
   attributes:
     label: Last Test date
     description: Please provide the date of the last test if it done.
