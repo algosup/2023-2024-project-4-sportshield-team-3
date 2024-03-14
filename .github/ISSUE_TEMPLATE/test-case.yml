@@ -1,12 +1,11 @@
----
+
 name: Test Case
 about: Setup the test case here.
 title: "[TEST]"
 labels: ''
 assignees: ''
 
----
-
+body:
 - type: textarea
   id: test_description
   attributes:
