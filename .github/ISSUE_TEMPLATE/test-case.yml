@@ -47,7 +47,7 @@ body:
     label: Status
     description: Please select the current status of the test.
     options:
-      - None
+      - Not Tested
       - Fail
       - Success
   validations:
