@@ -1,6 +1,3 @@
-#include "struct.h"
-myConfig Config;
-
 /*
     Get the remaining battery voltage
 

@@ -14,11 +14,17 @@
 //SIM
 #include "SIM800L.h"
 
+#include "struct.h"
+
 //---------------- GLOBAL VARIABLES -----------------------------
+myConfig Config;
 #define VBAT_ENABLE 14
 
 const int buzzerPin = D2;
 const int electroMagnet = D3;
+
+void deviceOn();
+void deviceOff();
 
 void setup() {
   Serial.begin(115200);  // Initialize serial communication
@@ -36,6 +42,9 @@ void setup() {
 
   pinMode(buzzerPin, OUTPUT);
 
+  deviceOn();
+  deviceOff();
+
 }
 // Only print the battery percentage every 15 mintutes
 void loop() {
@@ -45,3 +54,4 @@ void loop() {
     Serial.println("%");
     visualBatteryLevelIndicator();
 }
+
