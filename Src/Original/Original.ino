@@ -374,18 +374,19 @@ void sim_setup(void) {
 
   uint8_t signal = sim800l->getSignal();
   while (signal <= 0) {
+    Serial.println(signal);
     delay(1000);
     signal = sim800l->getSignal();
   }
   Serial.println(String(signal));
   NetworkRegistration network = sim800l->getRegistrationStatus();
-  while (network != REGISTERED_HOME && network != REGISTERED_ROAMING) {
-    delay(1000);
-    network = sim800l->getRegistrationStatus();
-    Serial.print(network + " ");
-    Serial.println(F("Problem to register, retry in 1 sec"));
-    digitalWrite(LEDG, !digitalRead(LEDG));
-  }
+  // while (network != REGISTERED_HOME && network != REGISTERED_ROAMING) {
+  //   delay(1000);
+  //   network = sim800l->getRegistrationStatus();
+  //   Serial.print(network + " ");
+  //   Serial.println(F("Problem to register, retry in 1 sec"));
+  //   digitalWrite(LEDG, !digitalRead(LEDG));
+  // }
   delay(50);
   sim800l->setPowerMode(MINIMUM);      // set minimum functionnality mode
   digitalWrite(SIM800_DTR_PIN, HIGH);  // put in sleep mode
