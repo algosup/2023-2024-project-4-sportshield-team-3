@@ -1,5 +1,63 @@
 
 name: Test Case
+description: Create a new test case
+title: "[TEST]"
+labels: ['test case']
+
+body:
+- type: textarea
+  id: test_description
+  attributes:
+    label: Test Description
+    description: Please provide a description of the test.
+  validations:
+    required: true
+
+- type: dropdown
+  id: priority
+  attributes:
+    label: Priority
+    description: Please select the priority of this test.
+    options:
+      - Low
+      - Medium
+      - High
+  validations:
+    required: true
+
+- type: textarea
+  id: test_steps
+  attributes:
+    label: Test Steps
+    description: Please provide the steps to perform the test.
+  validations:
+    required: true
+
+- type: textarea
+  id: expected_result
+  attributes:
+    label: Expected Result
+    description: Please provide the expected result of the test.
+  validations:
+    required: true
+
+- type: dropdown
+  id: status
+  attributes:
+    label: Status
+    description: Please select the current status of the test.
+    options:
+      - Not Tested
+      - Fail
+      - Success
+  validations:
+    required: true
+
+- type: textarea
+  id: last_test
+  attributes:
+    label: Last Test
+    description: Please provide details of the last test.
 title: "[TEST]"
 labels: ['test case']
 
