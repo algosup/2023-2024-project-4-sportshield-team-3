@@ -25,7 +25,7 @@ body:
   id: testcase
   attributes:
     label: Test Case
-    description: Please enter the test case name and id if any
+    description: Please enter the test case name  if any
 
 - type: textarea
   attributes:
