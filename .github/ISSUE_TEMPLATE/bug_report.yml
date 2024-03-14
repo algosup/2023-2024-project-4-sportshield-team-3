@@ -36,8 +36,8 @@ body:
 
 - type: input
   attributes:
-    label: Arduino Device Details
-    description: Please provide the following details
+    label: Hardware
+    description: Please provide which hardware is concerned
   validations:
     required: true
 
