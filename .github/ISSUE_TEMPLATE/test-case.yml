@@ -18,9 +18,10 @@ body:
     label: Priority
     description: Please select the priority of this test.
     options:
-      - Low
-      - Medium
-      - High
+      - low
+      - medium
+      - high
+      - critical
   validations:
     required: true
 
@@ -46,14 +47,21 @@ body:
     label: Status
     description: Please select the current status of the test.
     options:
-      - Not Tested
-      - Fail
-      - Success
+      - not Tested
+      - fail
+      - success
   validations:
     required: true
+    
+- type: textarea
+  id: last_test date
+  attributes:
+    label: Last Test date
+    description: Please provide the date of the last test if it done.
 
 - type: textarea
   id: last_test
   attributes:
     label: Last Test
-    description: Please provide details of the last test.
+    description: Please provide details of the last test if it done.
+    
