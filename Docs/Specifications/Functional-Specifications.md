@@ -261,7 +261,6 @@ gantt
 | 6   | Third Week Report              | 03/29/2024 |     | 13  | Final Presentation  | 04/19/2024 |
 | 7   | MVP (Minimum Viable Product)   | 04/04/2024 |     | 14  | Project Post-Mortem | 04/19/2024 |    
 
-
 ### 2.4.3 - Resources
 
 - The team (6 people).
@@ -295,9 +294,32 @@ gantt
 
 ### 2.4.4 - Assumptions and Constraints
 
+**Assumptions:**
+- The device will be used by people who are familiar with technology.
+- The device will be used in a place where the GSM and GPS signals are available.
+- The device will be powered by a 3.7V battery with a capacity of 1100mAh.
+- We assume that the device will be used in an environment where the temperature is between -15°C and +45°C.
+
+**Constraints:**
+- The device must be able to work for at least 7 days without being recharged.
+- The device must distinguish between a legitimate movement and a theft attempt.
+- The device must be able to communicate with a smartphone using Bluetooth Low Energy (BLE).
+- The device must be able to communicate with a server using the GSM module.
+- The device must be able to send the GPS coordinates and battery level to the server using the GSM module.
+- The device must be able to lock and unlock the equipment using an electromagnet.
+- All the components of the device must be powered by the battery.
+
 # 3. - Personas
 
 ## 3.1 - Individual Sports Enthusiasts
+
+| The Weekend Warrior | The Extreme Sports Adventurer | The Fitness Fanatic |
+| ------------------- | ----------------------------- | ------------------- |
+| ![The Weekend Warrior](https://placehold.co/400) | ![The Extreme Sports Adventurer](https://placehold.co/400) | ![The Fitness Fanatic](https://placehold.co/400) |
+| - **Name:** John Doe | - **Name:** Jane Doe | - **Name:** Jimmy Doe |
+| - **Age:** 35 | - **Age:** 28 | - **Age:** 30 |
+| - **Occupation:** Accountant | - **Occupation:** Photographer | - **Occupation:** Personal Trainer |
+| - **Tech Savvy:**  | - **Tech Savvy:** 4/5 | - **Tech Savvy:** 5/5 |
 
 ### 3.1.1 - The Weekend Warrior
 

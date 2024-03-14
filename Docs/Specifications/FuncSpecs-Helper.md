@@ -63,6 +63,7 @@ Xiao BLE Sense nrf52840
 - 2 x 2 x 0,5 cm 
 - BLE 5.0 & 6 DoF IMU
 - 11 GPIO (UART, SPI, I2C)
+- Work Temperature: -40°C ~ +65°C
 
 ---
 The GNSS PA1010D is a small and powerful GPS module with an integrated antenna. It can be used to get the GPS coordinates of the device.
@@ -71,6 +72,7 @@ GNSS PA1010D
 - 2,5 x 2,5 x 1 cm
 - Integrated antenna
 - UART & I2C
+- Work Temperature: -40°C ~ +85°C
 
 ---
 The SIM800L is a small and powerful GSM/2G module with a SIM card holder. It can be used to send HTTP requests to the API to send the GPS coordinates and the battery level, and to send a notification when a shock is detected.
@@ -80,6 +82,7 @@ GSM/2G SIM800L Module
 - GPRS & HTTP, UART
 - SIM Card holder
 - With 1NCE SIM card
+- Work Temperature: -40°C ~ +85°C
 
 Although this sensor still uses the 2G network, which will no longer be in use by the end of 2025, we are still using it for the development phase, while this one can be easily replaced by a sensor that uses the 4G network.
 
@@ -89,6 +92,7 @@ The electromagnet is used to lock and unlock the security cable. It is powered b
 Electromagnet
 - 12V, 500mA
 - 2,7 x 1,6 x 1,3 cm
+- Work Temperature: until 115°C
 
 ---
 The Buzzer is used to emit audible signals upon detecting movement with the 6-DoF IMU. It emits moderate-level beeps for slight movements, and a loud alarm for significant ones.
@@ -96,6 +100,8 @@ The Buzzer is used to emit audible signals upon detecting movement with the 6-Do
 Piezoelectric buzzer
 - 12V with control circuit oscillator
 - ~ 90-100 dB
+- Work Temperature: -20°C ~ +70°C
+- 
 
 ---
 The battery is used to power the device. It is recharged via a USB-C port. For the moment the battery can last less than 3 days in normal use, but we are working on the energy management to increase the battery life.
@@ -103,6 +109,7 @@ The battery is used to power the device. It is recharged via a USB-C port. For t
 Lithium-Polymer battery
 - 5,1 x 3,5 x 0,6 cm
 - 3.7V, 1100mAh, 4.1Wh
+- Work Temperature: -20°C ~ +60°C
 
 ---
 The NFC antenna is used to replace the BLE if the user wants to unlock the device without using the mobile app or don't have mich more battery. The user can unlock the device by approaching the NFC antenna with a NFC security card.
@@ -110,6 +117,7 @@ The NFC antenna is used to replace the BLE if the user wants to unlock the devic
 NFC antenna
 - 5,5 x 4,5 x 0,017 cm
 - 13,56MHz frequency
+- Work Temperature: -30°C to +85°C
 
 # Software
 Here is the software environment used for the development of the SportShield device:
