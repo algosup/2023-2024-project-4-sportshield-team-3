@@ -216,6 +216,7 @@ gantt
     End     :crit, 2024-04-20, 2d
 ```
 
+
 ```mermaid
 gantt
     title .
@@ -234,21 +235,21 @@ gantt
 
     section Developement
         Operating Components                :2024-03-12, 4d
-        Shock Detection                     :2024-03-18, 4d
-        Get Battery Level                   :2024-03-19, 2d
-        Alarm Setup                         :2024-03-20, 3d
-        NFC Working                         :2024-03-22, 4d
-        Working Location                    :2024-03-22, 4d
-        Electromagnet                       :2024-03-25, 3d
-        POC                                 :milestone, 2024-03-27, 1d
-        Bluetooth Connection                :2024-03-27, 3d
-        GSM HTTP Post                       :2024-03-29, 5d
-        Battery Optimization                :2024-04-02, 9d
+        GSM HTTP Post                       :2024-03-17, 4d
+        Bluetooth Connection                :2024-03-20, 3d
+        Get Battery Level                   :2024-03-24, 4d
+        Get Device Location                 :2024-03-24, 4d
+        Shock Detection                     :2024-03-27, 5d
+        Alarm Setup                         :2024-03-29, 4d
+        NFC Working                         :2024-03-31, 4d
+        Electromagnet                       :2024-04-02, 4d
+        POC                                 :milestone, 2024-03-29, 1d
+        Battery Optimization                :2024-03-18, 23d
         MVP                                 :milestone, 2024-04-04, 1d
         Final Code Deadline                 :crit, milestone, 2024-04-10, 1d
 
     section Testing
-        Test the tests cases                :2024-03-30, 11d
+        Test the tests cases                :2024-03-26, 15d
 
     section Final Presentation
         Slideshow                           :2024-04-10, 5d
@@ -272,7 +273,7 @@ gantt
 | 2   | Functional Specifications (v1) | 03/18/2024 |     | 9   | Test Plan           | 04/10/2024 |
 | 3   | Second Week Report             | 03/22/2024 |     | 10  | User Manual         | 04/10/2024 |
 | 4   | Technical Specifications (v1)  | 03/26/2024 |     | 11  | Final Code          | 04/10/2024 |
-| 5   | POC (Proof of Concept)         | 03/27/2024 |     | 12  | Fifth Week Report   | 04/12/2024 |
+| 5   | POC (Proof of Concept)         | 03/29/2024 |     | 12  | Fifth Week Report   | 04/12/2024 |
 | 6   | Third Week Report              | 03/29/2024 |     | 13  | Final Presentation  | 04/19/2024 |
 | 7   | MVP (Minimum Viable Product)   | 04/04/2024 |     | 14  | Project Post-Mortem | 04/19/2024 |
 
@@ -547,8 +548,8 @@ gantt
 | Soft Alarm               | Emit a 3 times low sound                           |
 | Loud Alarm               | Emit a 5 times high sound                          |
 | Confirmation Sound       | Emit a sound to confirm the action.                |
-| GPS Coordinates          | retrieve the GPS coordinates of the device.        |
-| Battery Level            | retrieve the battery level of the device.          |
+| GPS Coordinates          | Retrieve the GPS coordinates of the device.        |
+| Battery Level            | Retrieve the battery level of the device.          |
 | GSM HTTP Post            | Send a request to the API.                         |
 | Notifications            | Receive notifications from the API.                |
 | Low Battery Detection    | Detect when the battery is charged at 15% or less. |

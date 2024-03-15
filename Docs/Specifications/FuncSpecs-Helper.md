@@ -205,16 +205,9 @@ Battery operating time between two charges
 - No update of the firmware made by bluetooth/usb is planned for the moment
 
 
-In scope
-3.1 Overview of In-Scope Activities
-3.2 Prototype Development for Bluetooth and GSM Testing
+---
 
-Out of Scope
-4.1 Application and API Final Development
-4.2 Technical Specifications
-
-
-Table of Contents
+# Table of Contents
 
 1. Glossary
 
@@ -235,7 +228,7 @@ Table of Contents
 2.4.3 Resources
 2.4.4 Assumptions and Constraints
 
-3. Personas
+1. Personas
 3.1 Individual Sports Enthusiasts
 3.1.1 The Weekend Warrior
 3.1.2 The Extreme Sports Adventurer
@@ -247,7 +240,7 @@ Table of Contents
 3.3.1 The Global Backpacker: Uses SportShield to protect their backpack and camping gear across different countries and terrains.
 3.3.2 The Tech-Savvy Traveler: Looks for smart solutions to safeguard their electronic devices and luggage during their travels.
 
-4. The Uses Cases
+1. The Uses Cases
 4.1 Use Case 1: Pair the Device with the Mobile App.
 4.2 Use Case 2: Add a Security Card to the Device.
 4.3 Use Case 3: Activate the Anti-Theft Protection using the Mobile App.
@@ -262,3 +255,4 @@ Table of Contents
 4.12 Use Case 12: Send a Notification when the Battery is Full.
 4.13 Use Case 13: Cut the Alarm with the Mobile App.
 4.14 Use Case 14: Cut the Alarm with the Security Card
+
