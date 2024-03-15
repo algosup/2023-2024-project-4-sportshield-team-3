@@ -45,11 +45,14 @@ float getBatteryPercentage() {
 */
 bool batteryAlertSwitchMode(myConfig* Config) {
   if (Config->isActivate == true) {
+    Serial.println("The anti-thief mode desactivated, ");
+    Serial.print(getBatteryPercentage());
+    Serial.println(" remaining");
     Config->isActivate = false;
     return Config->isActivate;
   } 
   else {
-    Serial.println("The anti-thief mode desactivated, ");
+    Serial.println("The anti-thief mode activated, ");
     Serial.print(getBatteryPercentage());
     Serial.println(" remaining");
     Config->isActivate = true;
