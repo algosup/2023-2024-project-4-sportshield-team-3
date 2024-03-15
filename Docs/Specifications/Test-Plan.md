@@ -1,6 +1,7 @@
-# Test Plan Team 3
+# Test Plan 2023-2024-project-4-sportshield-team-3
+
 ![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Arduino Logo](https://img.shields.io/badge/-Arduino-00979D?logo=arduino&logoColor=white) ![C logo](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)  ![C++ Logo](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-March%2014%2C%202024-orange)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-March%2015%2C%202024-orange)
 
 | Contributers        | Role              |
 | ----------------- | ----------------- | 
@@ -12,7 +13,7 @@
 | Guillaume DESPAUX | Software Engineer |          
 
 <details>
-<summary>Table of Contents</summary>
+<summary>📖Table of Contents</summary>
 
 1. [Introduction](#1-introduction)
     1. [Scope](#11-scope)
