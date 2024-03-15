@@ -237,12 +237,28 @@ Table of Contents
 
 3. Personas
 3.1 Individual Sports Enthusiasts
-3.1.1 The Weekend Warrior: A recreational skier who values security for their high-end equipment during infrequent but passionate weekend trips.
-3.1.2 The Extreme Sports Adventurer: Engages in various high-adrenaline sports, needs versatile protection for their equipment across environments.
-3.1.3 The Fitness Fanatic: A gym-goer and marathon runner who uses the device for locker room security and to protect personal belongings during events.
+3.1.1 The Weekend Warrior
+3.1.2 The Extreme Sports Adventurer
+3.1.3 The Fitness Fanatic
 3.2 Professional Athletes and Performers
-3.2.1 The Touring Musician: Relies on SportShield to secure musical instruments while on tour, in various venues and hotels.
-3.2.2 The Competitive Skier: A professional athlete who needs to ensure their snowboarding and skiing equipment is secure during national and international competitions.
+3.2.1 The Touring Musician
+3.2.2 The Competitive Skier
 3.3 Outdoor and Travel Enthusiasts
 3.3.1 The Global Backpacker: Uses SportShield to protect their backpack and camping gear across different countries and terrains.
 3.3.2 The Tech-Savvy Traveler: Looks for smart solutions to safeguard their electronic devices and luggage during their travels.
+
+4. The Uses Cases
+4.1 Use Case 1: Pair the Device with the Mobile App.
+4.2 Use Case 2: Add a Security Card to the Device.
+4.3 Use Case 3: Activate the Anti-Theft Protection using the Mobile App.
+4.4 Use Case 4: Activate the Anti-Theft Protection using the Security Card.
+4.5 Use Case 5: Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App.
+4.6 Use Case 6: Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card.
+4.7 Use Case 7: Emit an Audible Alarm when a Light Shock is Detected.
+4.8 Use Case 8: Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected.
+4.9 Use Case 9: Send GPS Coordinates and Battery Level to the API.
+4.10 Use Case 10: Receive Notifications from the API.
+4.11 Use Case 11: Send a Notification when the Battery is Low.
+4.12 Use Case 12: Send a Notification when the Battery is Full.
+4.13 Use Case 13: Cut the Alarm with the Mobile App.
+4.14 Use Case 14: Cut the Alarm with the Security Card

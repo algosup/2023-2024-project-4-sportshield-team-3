@@ -15,7 +15,7 @@
 
 **Created on:** March 11<sup>th</sup>, 2024
 
-**Last updated:** March 13<sup>th</sup>, 2024
+**Last updated:** March 15<sup>th</sup>, 2024
 
 ---
 
@@ -56,15 +56,30 @@
     - [2.4.4 - Assumptions and Constraints](#244---assumptions-and-constraints)
 - [3. - Personas](#3---personas)
   - [3.1 - Individual Sports Enthusiasts](#31---individual-sports-enthusiasts)
-    - [3.1.1 - The Weekend Warrior](#311---the-weekend-warrior)
-    - [3.1.2 - The Extreme Sports Adventurer](#312---the-extreme-sports-adventurer)
-    - [3.1.3 - The Fitness Fanatic](#313---the-fitness-fanatic)
   - [3.2 - Professional Athletes and Performers](#32---professional-athletes-and-performers)
-    - [3.2.1 - The Touring Musician](#321---the-touring-musician)
-    - [3.2.2 - The Competitive Skier](#322---the-competitive-skier)
   - [3.3 - Outdoor and Travel Enthusiasts](#33---outdoor-and-travel-enthusiasts)
-    - [3.3.1 - The Global Backpacker](#331---the-global-backpacker)
-    - [3.3.2 - The Tech-Savvy Traveler](#332---the-tech-savvy-traveler)
+- [4. - The Uses Cases](#4---the-uses-cases)
+  - [4.1 - Use Case List](#41---use-case-list)
+  - [4.2 - Use Case Description](#42---use-case-description)
+    - [4.2.1 - Pair the Device with the Mobile App.](#421---pair-the-device-with-the-mobile-app)
+    - [4.2.2 - Add a Security Card to the Device.](#422---add-a-security-card-to-the-device)
+    - [4.2.3 - Activate the Anti-Theft Protection using the Mobile App.](#423---activate-the-anti-theft-protection-using-the-mobile-app)
+    - [4.2.4 - Activate the Anti-Theft Protection using the Security Card.](#424---activate-the-anti-theft-protection-using-the-security-card)
+    - [4.2.5 - Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App.](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app)
+    - [4.2.6 - Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card.](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card)
+    - [4.2.7 - Emit an Audible Alarm when a Light Shock is Detected.](#427---emit-an-audible-alarm-when-a-light-shock-is-detected)
+    - [4.2.8 - Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected.](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected)
+    - [4.2.9 - Send GPS Coordinates and Battery Level to the API.](#429---send-gps-coordinates-and-battery-level-to-the-api)
+    - [4.2.10 - Receive Notifications from the API.](#4210---receive-notifications-from-the-api)
+    - [4.2.11 - Send a Notification when the Battery is Low.](#4211---send-a-notification-when-the-battery-is-low)
+    - [4.2.12 - Send a Notification when the Battery is Full.](#4212---send-a-notification-when-the-battery-is-full)
+    - [4.2.13 - Cut the Alarm with the Mobile App.](#4213---cut-the-alarm-with-the-mobile-app)
+    - [4.2.14 - Cut the Alarm with the Security Card.](#4214---cut-the-alarm-with-the-security-card)
+- [5. - Features](#5---features)
+  - [5.1 - Features List](#51---features-list)
+  - [5.2 - Features Description](#52---features-description)
+    - [5.2.1 - Light Shock Detection](#521---light-shock-detection)
+- [6. - Hardware Used](#6---hardware-used)
 </details>
 
 # 1. - Glossary
@@ -98,7 +113,7 @@
 
 The Goals and Objectives of this project is to work on the development of the SportShield device. The SportShield device is a lockspan powered by a microcontroller and equipped with a set of sensors and a communication module. The device is designed to be attached to a sports equipment, such as a pair of skis, a snowboard, a bike, a surf, etc. The device is intended to provide the user with a set of features to protect the equipment from theft and to monitor the equipment's status.
 
-This Project is piloted by the company [Coris Innovation](https://www.corisinnovation.com/), A company founded in 2015 by Stéphane MAIGE and specialized in the development of innovative products in many fields like Aerospace, Automotive, Energy, Railway, Pharmaceutical, Watchmaking, etc...
+This Project is piloted by the company [Coris Innovation](https://www.corisinnovation.com/), A company founded in 2015 by [Stéphane MAIGE](https://www.linkedin.com/in/st%C3%A9phane-maige-37710613/) and specialized in the development of innovative products in many fields like Aerospace, Automotive, Energy, Railway, Pharmaceutical, Watchmaking, etc...
 Coris Innovation is made of a team of 90 employees spreaded over 5 sites in France and Switzerland.
 
 ### 2.2.2 - Scope
@@ -131,11 +146,11 @@ The deliverables of this project are:
 
 ### 2.3.1 - Project Representatives
 
-| Owners                 | Representative                                |
-| ---------------------- | --------------------------------------------- |
-| ***Coris Innovation*** | Represented by ***Florent ANON***             |
-| ***ALGOSUP***          | Represented by ***Franck JEANNIN***           |
-| Mouatassime SEIV       | Represented by Pierre GORIN (Program Manager) |
+| Owners                                                                     | Representative                                                                                         |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| ***[Coris Innovation](https://www.corisinnovation.com)***                  | Represented by ***[Florent ANON](https://www.linkedin.com/in/florentanon/)***                          |
+| ***[ALGOSUP](https://www.algosup.com)***                                   | Represented by ***[Franck JEANNIN](https://www.linkedin.com/in/franck-jeannin/)***                     |
+| [Mouatassime SEIV](https://www.linkedin.com/in/moutassime-seiv-9542171a9/) | Represented by [Pierre GORIN](https://www.linkedin.com/in/pierre-gorin-61a784221/  ) (Program Manager) |
 
 The project sponsors (highlighted in ***bold italic***) are expected to be in charge of:
 
@@ -159,14 +174,14 @@ The project sponsors (highlighted in ***bold italic***) are expected to be in ch
 
 ### 2.3.3 - Project Team
 
-| Role              | Description                                                                                                                                                                                                                    | Name              |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| Project Manager   | • He is in charge of organization, planning, and budgeting.<br>• Ensure communication within the team and keep them motivated.                                                                                                 | Mouatassime SEIV  |
-| Program Manager   | • Makes sure the project meets the client's expectations.<br>• He is the intermediary between the client and the development team.<br>• He is responsible for writing the Functional Specifications.                           | Pierre GORIN      |
-| Technical Lead    | • He is in charge of making the technical decisions in the project.<br>• He translates the Functional Specifications into Technical Specifications.                                                                            | Abderrazaq MAKRAN |
-| Technical Writer  | • He is in charge of writing the documentation of the project.<br>• Based on the specifications, he writes a Manual for the end-users.                                                                                         | Michel RIFF       |
-| Software Engineer | • Responsible for Writing the code and the unit tests, commenting, and documenting his code.<br>• He participates in the technical choices.                                                                                    | Guillaume DESPAUX |
-| Quality Assurance | • Tests all the functionalities of the product to find bugs and issues. Defines the test strategy and writes the test plan.<br>• He documents all the encountered bugs and issues, then checks that the errors are well fixed. | Salaheddine NAMIR |
+| Role              | Description                                                                                                                                                                                                                    | Name                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| Project Manager   | • He is in charge of organization, planning, and budgeting.<br>• Ensure communication within the team and keep them motivated.                                                                                                 | [Mouatassime SEIV](https://github.com/seiv007)           |
+| Program Manager   | • Makes sure the project meets the client's expectations.<br>• He is the intermediary between the client and the development team.<br>• He is responsible for writing the Functional Specifications.                           | [Pierre GORIN](https://github.com/Pierre2103)            |
+| Technical Lead    | • He is in charge of making the technical decisions in the project.<br>• He translates the Functional Specifications into Technical Specifications.                                                                            | [Abderrazaq MAKRAN](https://github.com/Amakran2003)      |
+| Technical Writer  | • He is in charge of writing the documentation of the project.<br>• Based on the specifications, he writes a Manual for the end-users.                                                                                         | [Michel RIFF](https://github.com/MichelRiff)             |
+| Software Engineer | • Responsible for Writing the code and the unit tests, commenting, and documenting his code.<br>• He participates in the technical choices.                                                                                    | [Guillaume DESPAUX](https://github.com/GuillaumeDespaux) |
+| Quality Assurance | • Tests all the functionalities of the product to find bugs and issues. Defines the test strategy and writes the test plan.<br>• He documents all the encountered bugs and issues, then checks that the errors are well fixed. | [Salaheddine NAMIR](https://github.com/T3rryc)           |
 
 ### 2.3.4 - Project Reviewers
 
@@ -189,7 +204,7 @@ gantt
     section Weeks
     Week 1  :2024-03-11, 5d
     WE      :crit, 2024-03-16, 2d
-    Week 3  :2024-03-18, 5d
+    Week 2  :2024-03-18, 5d
     WE      :crit, 2024-03-23, 2d
     Week 3  :2024-03-25, 5d
     WE      :crit, 2024-03-30, 3d
@@ -259,12 +274,12 @@ gantt
 | 4   | Technical Specifications (v1)  | 03/26/2024 |     | 11  | Final Code          | 04/10/2024 |
 | 5   | POC (Proof of Concept)         | 03/27/2024 |     | 12  | Fifth Week Report   | 04/12/2024 |
 | 6   | Third Week Report              | 03/29/2024 |     | 13  | Final Presentation  | 04/19/2024 |
-| 7   | MVP (Minimum Viable Product)   | 04/04/2024 |     | 14  | Project Post-Mortem | 04/19/2024 |    
+| 7   | MVP (Minimum Viable Product)   | 04/04/2024 |     | 14  | Project Post-Mortem | 04/19/2024 |
 
 ### 2.4.3 - Resources
 
 - The team (6 people).
-- We estimate 504 hours of work for the whole team *(6 weeks * 6 people * 2 days * 7 hours/day = 504 hours)*.
+- We estimate **504 hours of work** for the whole team *(6 weeks * 6 people * 2 days * 7 hours/day = 504 hours)*.
 - The books from the ALGOSUP's library.
 - Teachers and professionals from ALGOSUP.
 - The Original Source Code of the device.
@@ -278,12 +293,12 @@ gantt
   - NFC antenna,
   - USB-C connector.
 - The following documentation:
-  - SIM800L Hardware Design v2.02 (GSM module),
-  - LP603449 Battery Datasheet (Battery),
-  - CD-PA1010D Satasheet v02 (GNSS module),
-  - Xiao nRF52840 Product Specification v1.5 (Microcontroller),
-  - Xiao nRF52840 Blueprints v1.1 (Microcontroller),
-  - SportShield Electronic Schematic v2 (Device).
+  - [SIM800L Hardware Design v2.02 (GSM module)](../Hardware/SIM800L-SIMCom.pdf),
+  - [LP603449 Battery Datasheet (Battery)](../Hardware/Batterie_LP603449.pdf),
+  - [CD-PA1010D Satasheet v02 (GNSS module)](../Hardware/CD-PA1010D-Datasheet-v.02.pdf),
+  - [Xiao nRF52840 Product Specification v1.5 (Microcontroller)](../Hardware/nRF52840_PS_v1.5.pdf),
+  - [Xiao nRF52840 Blueprints v1.1 (Microcontroller)](../Hardware/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf),
+  - [SportShield Electronic Schematic v2 (Device)](../Hardware/SportShield%20-%20Electronics%20diagram.png).
 - The following Libraries:
   - NRF52_MBED_TimerInterrupt V1.4.1
   - ArduinoBLE V1.3.6
@@ -291,6 +306,12 @@ gantt
   - Sim800L http connector V1.14.0
   - Seeed Arduino LSM6DS3 V2.0.3
   - OneWire V2.3.7
+- The Following Tools:
+  - Arduino IDE,
+  - Visual Studio Code,
+  - GitHub,
+  - NFC Tools,
+  - LightBlue.
 
 ### 2.4.4 - Assumptions and Constraints
 
@@ -299,6 +320,8 @@ gantt
 - The device will be used in a place where the GSM and GPS signals are available.
 - The device will be powered by a 3.7V battery with a capacity of 1100mAh.
 - We assume that the device will be used in an environment where the temperature is between -15°C and +45°C.
+- We assume that the user will use the original USB-C.
+- We assume that the user can buy a security card to use with the device.
 
 **Constraints:**
 - The device must be able to work for at least 7 days without being recharged.
@@ -313,28 +336,236 @@ gantt
 
 ## 3.1 - Individual Sports Enthusiasts
 
-| The Weekend Warrior | The Extreme Sports Adventurer | The Fitness Fanatic |
-| ------------------- | ----------------------------- | ------------------- |
-| ![The Weekend Warrior](https://placehold.co/400) | ![The Extreme Sports Adventurer](https://placehold.co/400) | ![The Fitness Fanatic](https://placehold.co/400) |
-| - **Name:** John Doe | - **Name:** Jane Doe | - **Name:** Jimmy Doe |
-| - **Age:** 35 | - **Age:** 28 | - **Age:** 30 |
-| - **Occupation:** Accountant | - **Occupation:** Photographer | - **Occupation:** Personal Trainer |
-| - **Tech Savvy:**  | - **Tech Savvy:** 4/5 | - **Tech Savvy:** 5/5 |
+| The Weekend Warrior                                                                                                                                                                                                       | The Extreme Sports Adventurer                                                                                                                                          | The Fitness Fanatic                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![The Weekend Warrior](Img/Functional-Specifications/Persona_Liam.png)                                                                                                                                                    | ![The Extreme Sports Adventurer](Img/Functional-Specifications/Persona_Sophia.png)                                                                                     | ![The Fitness Fanatic](Img/Functional-Specifications/Persona_Elena.png)                                                                                                           |
+| **Name:** Liam Davis                                                                                                                                                                                                      | **Name:** Sophia Johnson                                                                                                                                               | **Name:** Elena Smith                                                                                                                                                             |
+| **Age:** 43                                                                                                                                                                                                               | **Age:** 27                                                                                                                                                            | **Age:** 31                                                                                                                                                                       |
+| **Occupation:** Accountant 👨‍💼                                                                                                                                                                                              | **Occupation:** Photographer 📸                                                                                                                                         | **Occupation:** Personal Trainer 🏋️‍♂️                                                                                                                                                |
+| **Tech Savviness:** ⭐️⭐️                                                                                                                                                                                                    | **Tech Savviness** ⭐️⭐️⭐️                                                                                                                                                 | **Tech Savviness** ⭐️⭐️⭐️⭐️                                                                                                                                                           |
+| **Liam** loves to spend his weekends outside, doing things like skiing, biking, or surfing. He's not very into tech, but **SportShield** is easy for him to use. It keeps his sports stuff safe when he's taking a break. | **Sophia** travels a lot to do exciting sports. She likes **SportShield** because it's strong and keeps her equipment safe everywhere she goes, no matter the weather. | **Elena** is always moving, from the gym to outdoor workouts. She likes **SportShield** because it's easy to use with her phone and it keeps her things safe while she exercises. |
 
-### 3.1.1 - The Weekend Warrior
-
-### 3.1.2 - The Extreme Sports Adventurer
-
-### 3.1.3 - The Fitness Fanatic
+*All images were created using the Dall-E 3 AI generative model.*
 
 ## 3.2 - Professional Athletes and Performers
 
-### 3.2.1 - The Touring Musician
+| The Touring Musician                                                                                                                                                                                 | The Competitive Skier                                                                                                                                       | The Professional Cyclist                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![The Touring Musician](Img/Functional-Specifications/Persona_Noah.png)                                                                                                                              | ![The Competitive Skier](Img/Functional-Specifications/Persona_Isabella.png)                                                                                | ![The Professional Cyclist](Img/Functional-Specifications/Persona_Oliver.png)                                                                                      |
+| **Name:** Noah Miller                                                                                                                                                                                | **Name:** Isabella Williams                                                                                                                                 | **Name:** Oliver Wilson                                                                                                                                            |
+| **Age:** 39                                                                                                                                                                                          | **Age:** 26                                                                                                                                                 | **Age:** 36                                                                                                                                                        |
+| **Occupation:** Musician 🎸                                                                                                                                                                           | **Occupation:** Ski Instructor 🎿                                                                                                                            | **Occupation:** Cyclist 🚴🏻‍♂️                                                                                                                                          |
+| **Tech Savviness** ⭐️⭐️                                                                                                                                                                                | **Tech Savviness** ⭐️⭐️⭐️⭐️                                                                                                                                     | **Tech Savviness** ⭐️⭐️⭐️⭐️⭐️                                                                                                                                           |
+| **Noah** goes to different places to play music. He likes **SportShield** because it keeps his instruments safe, especially when he's busy. It's easy for him to check on his things with his phone. | **Isabella** races and teaches skiing. She uses **SportShield** to keep her ski gear safe. It has an alarm and can tell if someone tries to move her stuff. | **Oliver** rides bikes in races. He likes **SportShield** because it can track his bike and tell him if someone tries to take it. It helps him keep his bike safe. |
 
-### 3.2.2 - The Competitive Skier
+*All images were created using the Dall-E 3 AI generative model.*
 
 ## 3.3 - Outdoor and Travel Enthusiasts
 
-### 3.3.1 - The Global Backpacker
+| The Global Backpacker                                                                                                                                             | The Tech-Savvy Traveler                                                                                                                                                  | The Van Life Nomad                                                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![The Global Backpacker](Img/Functional-Specifications/Persona_Ava.png)                                                                                           | ![The Tech-Savvy Traveler](Img/Functional-Specifications/Persona_Mia.png)                                                                                                | ![The Van Life Nomad](Img/Functional-Specifications/Persona_Ethan.png)                                                                                        |
+| **Name:** Ava Brown                                                                                                                                               | **Name:** Mia Jones                                                                                                                                                      | **Name:** Ethan Moore                                                                                                                                         |
+| **Age:** 21                                                                                                                                                       | **Age:** 27                                                                                                                                                              | **Age:** 32                                                                                                                                                   |
+| **Occupation:** Student 🎓                                                                                                                                         | **Occupation:** Software Engineer 👨‍💻                                                                                                                                      | **Occupation:** Freelancer 🧑‍💻                                                                                                                                  |
+| **Tech Savviness** ⭐️⭐️⭐️⭐️⭐️                                                                                                                                          | **Tech Savviness** ⭐️⭐️⭐️⭐️⭐️                                                                                                                                                 | **Tech Savviness** ⭐️⭐️⭐️⭐️⭐️                                                                                                                                      |
+| **Ava** loves to travel and see new places. She uses **SportShield** to keep her things safe. It's small and works with her phone, so it's perfect for her trips. | **Mia** loves tech and travel. She likes **SportShield** because it has smart features. She can check where her stuff is with her phone, which is great for her travels. | **Ethan** lives and works in his van. He likes **SportShield** because it's strong and smart. It keeps his work stuff and other things safe wherever he goes. |
 
-### 3.3.2 - The Tech-Savvy Traveler
+*All images were created using the Dall-E 3 AI generative model.*
+
+# 4. - The Uses Cases
+
+## 4.1 - Use Case List
+
+| ID                                                                                             | Use Case Name                                                                       |
+| ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [1](#421---pair-the-device-with-the-mobile-app)                                                | Pair the Device with the Mobile App.                                                |
+| [2](#422---add-a-security-card-to-the-device)                                                  | Add a Security Card to the Device.                                                  |
+| [3](#423---activate-the-anti-theft-protection-using-the-mobile-app)                            | Activate the Anti-Theft Protection using the Mobile App.                            |
+| [4](#424---activate-the-anti-theft-protection-using-the-security-card)                         | Activate the Anti-Theft Protection using the Security Card.                         |
+| [5](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app)    | Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App.    |
+| [6](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card) | Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card. |
+| [7](#427---emit-an-audible-alarm-when-a-light-shock-is-detected)                               | Emit an Audible Alarm when a Light Shock is Detected.                               |
+| [8](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected)      | Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected.      |
+| [9](#429---send-gps-coordinates-and-battery-level-to-the-api)                                  | Send GPS Coordinates and Battery Level to the API.                                  |
+| [10](#4210---receive-notifications-from-the-api)                                               | Receive Notifications from the API.                                                 |
+| [11](#4211---send-a-notification-when-the-battery-is-low)                                      | Send a Notification when the Battery is Low.                                        |
+| [12](#4212---send-a-notification-when-the-battery-is-full)                                     | Send a Notification when the Battery is Full.                                       |
+| [13](#4213---cut-the-alarm-with-the-mobile-app)                                                | Cut the Alarm with the Mobile App.                                                  |
+| [14](#4214---cut-the-alarm-with-the-security-card)                                             | Cut the Alarm with the Security Card.                                               |
+
+## 4.2 - Use Case Description
+
+### 4.2.1 - Pair the Device with the Mobile App.
+
+| Use Case Name       | Pair the Device with the Mobile App.                                                                                                                                                                                                                                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App                                                                                                                                                                                                                                   |
+| **Description**     | The user wants to pair the device with the mobile app.                                                                                                                                                                                                                 |
+| **Pre-conditions**  | The device is powered on and the mobile app is installed on the user's smartphone.                                                                                                                                                                                     |
+| **Post-conditions** | The device is paired with the mobile app.                                                                                                                                                                                                                              |
+| **Normal Flow**     | 1. The user opens the mobile app.<br>2. The user clicks on the "Pair Device" button.<br>3. The mobile app scans for the device.<br>4. The mobile app finds the device and pairs with it.<br>5. The mobile app displays a message to confirm that the device is paired. |
+
+### 4.2.2 - Add a Security Card to the Device.
+
+| Use Case Name       | Add a Security Card to the Device.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Actors**          | User, SportShield Device, Mobile App, Security Card                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Description**     | The user wants to add a security card to the device.                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Pre-conditions**  | The device is paired with the mobile app.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Post-conditions** | The security card is added to the device.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Normal Flow**     | 1. The user opens the mobile app.<br>2. The user clicks on the "Add Security Card" button.<br>3. The mobile app displays a message to ask the user to present the security card to the device.<br>4. The user presents the security card to the device.<br>5. The device reads the security card and adds it to its list of authorized security cards.<br>6. The mobile app displays a message to confirm that the security card is added. |
+
+### 4.2.3 - Activate the Anti-Theft Protection using the Mobile App.
+
+| Use Case Name       | Activate the Anti-Theft Protection using the Mobile App.                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App                                                                                                                                                                                                                                                                                                                                                               |
+| **Description**     | The user wants to activate the anti-theft protection using the mobile app.                                                                                                                                                                                                                                                                                                                         |
+| **Pre-conditions**  | The device is paired with the mobile app.                                                                                                                                                                                                                                                                                                                                                          |
+| **Post-conditions** | The anti-theft protection is activated.                                                                                                                                                                                                                                                                                                                                                            |
+| **Normal Flow**     | 1. The user opens the mobile app.<br>2. The user clicks on the "Activate Anti-Theft Protection" button.<br>3. The mobile app sends a command to the device to activate the anti-theft protection.<br>4. The device activates the anti-theft protection and sends a confirmation to the mobile app.<br>5. The mobile app displays a message to confirm that the anti-theft protection is activated. |
+
+### 4.2.4 - Activate the Anti-Theft Protection using the Security Card.
+
+| Use Case Name       | Activate the Anti-Theft Protection using the Security Card.                                                                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Security Card                                                                                                                                                       |
+| **Description**     | The user wants to activate the anti-theft protection using the security card.                                                                                                                 |
+| **Pre-conditions**  | The security card is added to the device.                                                                                                                                                     |
+| **Post-conditions** | The anti-theft protection is activated.                                                                                                                                                       |
+| **Normal Flow**     | 1. The user presents the security card to the device.<br>2. The device reads the security card and activates the anti-theft protection.<br>3. The device play a sound to confirm to the user. |
+
+### 4.2.5 - Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App.
+
+| Use Case Name       | Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Description**     | The user wants to deactivate the anti-theft protection and unlock the device using the mobile app.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Pre-conditions**  | The device is paired with the mobile app and the anti-theft protection is activated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Post-conditions** | The anti-theft protection is deactivated and the device is unlocked.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Normal Flow**     | 1. The user opens the mobile app.<br>2. The user clicks on the "Deactivate Anti-Theft Protection" button.<br>3. The mobile app sends a command to the device to deactivate the anti-theft protection.<br>4. The device deactivates the anti-theft protection and sends a confirmation to the mobile app.<br>5. The mobile app displays a message to confirm that the anti-theft protection is deactivated.<br>6. The user clicks on the "Unlock Device" button.<br>7. The mobile app sends a command to the device to unlock it.<br>8. The device unlocks and sends a confirmation to the mobile app.<br>9. The mobile app displays a message to confirm that the device is unlocked. |
+
+### 4.2.6 - Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card.
+
+| Use Case Name       | Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card.                                                                                                                                                                                                                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Security Card                                                                                                                                                                                                                                                                                                                                         |
+| **Description**     | The user wants to deactivate the anti-theft protection and unlock the device using the security card.                                                                                                                                                                                                                                                                           |
+| **Pre-conditions**  | The security card is added to the device and the anti-theft protection is activated.                                                                                                                                                                                                                                                                                            |
+| **Post-conditions** | The anti-theft protection is deactivated and the device is unlocked.                                                                                                                                                                                                                                                                                                            |
+| **Normal Flow**     | 1. The user presents the security card to the device.<br>2. The device reads the security card and deactivates the anti-theft protection.<br>3. The device play a sound to confirm to the user.<br>4. The user presents the security card to the device.<br>5. The device reads the security card and unlocks the device.<br>6. The device play a sound to confirm to the user. |
+
+### 4.2.7 - Emit an Audible Alarm when a Light Shock is Detected.
+
+| Use Case Name       | Emit an Audible Alarm when a Light Shock is Detected.                     |
+| ------------------- | ------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device                                                  |
+| **Description**     | The device emits an audible alarm when a light shock is detected.         |
+| **Pre-conditions**  | The anti-theft protection is activated.                                   |
+| **Post-conditions** | An audible alarm is emitted.                                              |
+| **Normal Flow**     | 1. The device detects a light shock.<br>2. The device emits a soft alarm. |
+
+### 4.2.8 - Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected.
+
+| Use Case Name       | Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected.                                                                                                                                                                                               |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App, API                                                                                                                                                                                                                                    |
+| **Description**     | The device emits an audible alarm and sends a notification when a strong shock is detected.                                                                                                                                                                                  |
+| **Pre-conditions**  | The anti-theft protection is activated.                                                                                                                                                                                                                                      |
+| **Post-conditions** | An audible alarm is emitted and a notification is sent.                                                                                                                                                                                                                      |
+| **Normal Flow**     | 1. The device detects a strong shock.<br>2. The device emits a loud alarm.<br>3. The device sends a notification to the API.<br>4. The API sends a notification to the mobile app.<br>5. The mobile app displays a message with the location of the device to warn the user. |
+
+### 4.2.9 - Send GPS Coordinates and Battery Level to the API.
+
+| Use Case Name       | Send GPS Coordinates and Battery Level to the API.                    |
+| ------------------- | --------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App, API                             |
+| **Description**     | The device sends the GPS coordinates and battery level to the API.    |
+| **Pre-conditions**  | The device have battery                                               |
+| **Post-conditions** | The GPS coordinates and battery level are sent to the API.            |
+| **Normal Flow**     | 1. The device sends the GPS coordinates and battery level to the API. |
+
+### 4.2.10 - Receive Notifications from the API.
+
+| Use Case Name       | Receive Notifications from the API.                                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App, API                                                                                                            |
+| **Description**     | The user receives notifications from the API.                                                                                                        |
+| **Pre-conditions**  | The device is paired with the mobile app and the mobile app is connected to the API.                                                                 |
+| **Post-conditions** | The user receives notifications from the API.                                                                                                        |
+| **Normal Flow**     | 1. The API sends a notification to the mobile app.<br>2. The mobile app displays a message with the location and/or the battery level of the device. |
+
+### 4.2.11 - Send a Notification when the Battery is Low.
+
+| Use Case Name       | Send a Notification when the Battery is Low.                                                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Actors**          | User, SportShield Device, Mobile App, API                                                                                                                                                              |
+| **Description**     | The device sends a notification when the battery is low.                                                                                                                                               |
+| **Pre-conditions**  | The device have low battery                                                                                                                                                                            |
+| **Post-conditions** | The user receives a notification from the API.                                                                                                                                                         |
+| **Normal Flow**     | 1. The device detects a low battery.<br>2. The device sends a notification to the API.<br>3. The API sends a notification to the mobile app.<br>4. The mobile app displays a message to warn the user. |
+
+### 4.2.12 - Send a Notification when the Battery is Full.
+
+| Use Case Name       | Send a Notification when the Battery is Full.                                                                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App, API                                                                                                                                                                 |
+| **Description**     | The device sends a notification when the battery is full.                                                                                                                                                 |
+| **Pre-conditions**  | The device have full battery                                                                                                                                                                              |
+| **Post-conditions** | The user receives a notification from the API.                                                                                                                                                            |
+| **Normal Flow**     | 1. The device detects a full battery.<br>2. The device sends a notification to the API.<br>3. The API sends a notification to the mobile app.<br>4. The mobile app displays a message to inform the user. |
+
+### 4.2.13 - Cut the Alarm with the Mobile App.
+
+| Use Case Name       | Cut the Alarm with the Mobile App.                                                                                                                                                                                                                                                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Actors**          | User, SportShield Device, Mobile App                                                                                                                                                                                                                                                                          |
+| **Description**     | The user wants to cut the alarm with the mobile app.                                                                                                                                                                                                                                                          |
+| **Pre-conditions**  | The device is paired with the mobile app and the alarm is ringing.                                                                                                                                                                                                                                            |
+| **Post-conditions** | The alarm is cut.                                                                                                                                                                                                                                                                                             |
+| **Normal Flow**     | 1. The user opens the mobile app.<br>2. The user clicks on the "Cut Alarm" button.<br>3. The mobile app sends a command to the device to cut the alarm.<br>4. The device cuts the alarm and sends a confirmation to the mobile app.<br>5. The mobile app displays a message to confirm that the alarm is cut. |
+
+### 4.2.14 - Cut the Alarm with the Security Card.
+
+| Use Case Name       | Cut the Alarm with the Security Card.                                                                                                                                    |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Actors**          | User, SportShield Device, Security Card                                                                                                                                  |
+| **Description**     | The user wants to cut the alarm with the security card.                                                                                                                  |
+| **Pre-conditions**  | The security card is added to the device and the alarm is ringing.                                                                                                       |
+| **Post-conditions** | The alarm is cut.                                                                                                                                                        |
+| **Normal Flow**     | 1. The user presents the security card to the device.<br>2. The device reads the security card and cuts the alarm.<br>3. The device play a sound to confirm to the user. |
+
+# 5. - Features
+
+## 5.1 - Features List
+
+| Feature Name             | Description                                        |
+| ------------------------ | -------------------------------------------------- |
+| Light Shock Detection    | Detect an involuntary movement.                    |
+| Strong Shock Detection   | Detect a theft attempt.                            |
+| Soft Alarm               | Emit a 3 times low sound                           |
+| Loud Alarm               | Emit a 5 times high sound                          |
+| Confirmation Sound       | Emit a sound to confirm the action.                |
+| GPS Coordinates          | retrieve the GPS coordinates of the device.        |
+| Battery Level            | retrieve the battery level of the device.          |
+| GSM HTTP Post            | Send a request to the API.                         |
+| Notifications            | Receive notifications from the API.                |
+| Low Battery Detection    | Detect when the battery is charged at 15% or less. |
+| Full Battery Detection   | Detect when the battery is charged at 100%.        |
+| Alarm Cut                | Cut the alarm even if there is ringing.            |
+| Electromagnet            | Lock and unlock the device.                        |
+| Detect the Security Card | Detect the security card.                          |
+| Bluetooth Pairing        | Pair the device with the mobile app.               |
+| Send a command using BLE | Send a command to the device using Bluetooth.      |
+| Security Card Pairing    | Add a security card to the device.                 |
+| Anti-Theft Protection    | Turn on the anti-theft protection.                 |
+| Sleep Mode               | Enter in a low power consumption mode.             |
+
+## 5.2 - Features Description
+
+### 5.2.1 - Light Shock Detection
+
+
+
+# 6. - Hardware Used
