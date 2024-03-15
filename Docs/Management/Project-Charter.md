@@ -76,7 +76,6 @@ The team is composed of the following members:
 ### Responsibilities
 For this project responsibilities are as follows:
 <img src="" />
-Find more details in the [RACI matrix](https://docs.google.com/spreadsheets/d/1NdSN8kjTw9uXcUbG_F4BMpNhVCxAUsPhv6oYFRZ3_c8/edit?usp=sharing)
 
 ## Stakeholders
 The key stakeholders involved in this project include:
