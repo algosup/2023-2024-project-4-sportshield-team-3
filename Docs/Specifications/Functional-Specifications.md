@@ -1,6 +1,4 @@
 <!-- See: Docs/Specifications/FuncSpecs-Helper.md -->
-<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
-
 <div align="center">
 
 # Functional Specifications
@@ -79,14 +77,28 @@
 - [5. - Features](#5---features)
   - [5.1 - Features List](#51---features-list)
   - [5.2 - Features Description](#52---features-description)
-    - [5.2.1 - Light Shock Detection](#521---light-shock-detection)
-    - [5.2.2 - Strong Shock Detection](#522---strong-shock-detection)
-    - [5.2.3 - Soft Alarm](#523---soft-alarm)
-    - [5.2.4 - Loud Alarm](#524---loud-alarm)
-    - [5.2.5 - Confirmation Sound](#525---confirmation-sound)
-    - [5.2.6 - Bluetooth Connection Sound](#526---bluetooth-connection-sound)
-    - [5.2.7 - Enter in Sleep Mode Sound](#527---enter-in-sleep-mode-sound)
-    - [5.2.8 - Enter in Anti-Theft Mode Sound](#528---enter-in-anti-theft-mode-sound)
+    - [5.2.1 - Bluetooth Pairing](#521---bluetooth-pairing)
+    - [5.2.2 - Bluetooth Connection Sound](#522---bluetooth-connection-sound)
+    - [5.2.3 - Send a command using BLE](#523---send-a-command-using-ble)
+    - [5.2.4 - Confirmation Sound](#524---confirmation-sound)
+    - [5.2.5 - Enter in Anti-Theft Mode Sound](#525---enter-in-anti-theft-mode-sound)
+    - [5.2.6 - Anti-Theft Protection](#526---anti-theft-protection)
+    - [5.2.7 - Light Shock Detection](#527---light-shock-detection)
+    - [5.2.8 - Soft Alarm](#528---soft-alarm)
+    - [5.2.9 - Strong Shock Detection](#529---strong-shock-detection)
+    - [5.2.10 - Loud Alarm](#5210---loud-alarm)
+    - [5.2.11 - Electromagnet](#5211---electromagnet)
+    - [5.2.12 - Alarm Cut](#5212---alarm-cut)
+    - [5.2.13 - Battery Level](#5213---battery-level)
+    - [5.2.14 - Low Battery Detection](#5214---low-battery-detection)
+    - [5.2.15 - Full Battery Detection](#5215---full-battery-detection)
+    - [5.2.16 - GPS Coordinates](#5216---gps-coordinates)
+    - [5.2.17 - GSM HTTP Post](#5217---gsm-http-post)
+    - [5.2.18 - Notifications](#5218---notifications)
+    - [5.2.19 - Enter in Sleep Mode Sound](#5219---enter-in-sleep-mode-sound)
+    - [5.2.20 - Sleep Mode](#5220---sleep-mode)
+    - [5.2.21 - Security Card Pairing](#5221---security-card-pairing)
+    - [5.2.22 - Detect the Security Card](#5222---detect-the-security-card)
 - [6. - Hardware and Libraries Used](#6---hardware-and-libraries-used)
   - [6.1 - Hardware](#61---hardware)
     - [6.1.1 - Microcontroller](#611---microcontroller)
@@ -564,84 +576,47 @@ gantt
 
 ## 5.1 - Features List
 
-| Feature Name                   | Description                                            |
-| ------------------------------ | ------------------------------------------------------ |
-| Light Shock Detection          | Detect an involuntary movement.                        |
-| Strong Shock Detection         | Detect a theft attempt.                                |
-| Soft Alarm                     | Emit a 3 times low sound                               |
-| Loud Alarm                     | Emit a 5 times high sound                              |
-| Confirmation Sound             | Emit a sound to confirm the action.                    |
-| Bluetooth Connected Sound      | Emit a sound when the device is connected.             |
-| Enter in Sleep Mode Sound      | Emit a sound when the device enter in sleep mode.      |
-| Enter in Anti-Theft Mode Sound | Emit a sound when the device enter in anti-theft mode. |
-| GPS Coordinates                | Retrieve the GPS coordinates of the device.            |
-| Battery Level                  | Retrieve the battery level of the device.              |
-| GSM HTTP Post                  | Send a request to the API.                             |
-| Notifications                  | Receive notifications from the API.                    |
-| Low Battery Detection          | Detect when the battery is charged at 15% or less.     |
-| Full Battery Detection         | Detect when the battery is charged at 100%.            |
-| Alarm Cut                      | Cut the alarm even if there is ringing.                |
-| Electromagnet                  | Lock and unlock the device.                            |
-| Detect the Security Card       | Detect the security card.                              |
-| Bluetooth Pairing              | Pair the device with the mobile app.                   |
-| Send a command using BLE       | Send a command to the device using Bluetooth.          |
-| Security Card Pairing          | Add a security card to the device.                     |
-| Anti-Theft Protection          | Turn on the anti-theft protection.                     |
-| Sleep Mode                     | Enter in a low power consumption mode.                 |
+| ID                                         | Feature Name                   |
+| ------------------------------------------ | ------------------------------ |
+| [1](#521---bluetooth-pairing)              | Bluetooth Pairing              |
+| [2](#522---bluetooth-connected-sound)      | Bluetooth Connected Sound      |
+| [3](#523---send-a-command-using-ble)       | Send a command using BLE       |
+| [4](#524---confirmation-sound)             | Confirmation Sound             |
+| [5](#525---enter-in-anti-theft-mode-sound) | Enter in Anti-Theft Mode Sound |
+| [6](#526---anti-theft-protection)          | Anti-Theft Protection          |
+| [7](#527---light-shock-detection)          | Light Shock Detection          |
+| [8](#528---soft-alarm)                     | Soft Alarm                     |
+| [9](#529---strong-shock-detection)         | Strong Shock Detection         |
+| [10](#5210---loud-alarm)                   | Loud Alarm                     |
+| [11](#5211---electromagnet)                | Electromagnet                  |
+| [12](#5212---alarm-cut)                    | Alarm Cut                      |
+| [13](#5213---battery-level)                | Battery Level                  |
+| [14](#5214---low-battery-detection)        | Low Battery Detection          |
+| [15](#5215---full-battery-detection)       | Full Battery Detection         |
+| [16](#5216---gps-coordinates)              | GPS Coordinates                |
+| [17](#5217---gsm-http-post)                | GSM HTTP Post                  |
+| [18](#5218---notifications)                | Notifications                  |
+| [19](#5219---enter-in-sleep-mode-sound)    | Enter in Sleep Mode Sound      |
+| [20](#5220---sleep-mode)                   | Sleep Mode                     |
+| [21](#5221---security-card-pairing)        | Security Card Pairing          |
+| [22](#5222---detect-the-security-card)     | Detect the Security Card       |
+
 
 ## 5.2 - Features Description
 
-### 5.2.1 - Light Shock Detection
+### 5.2.1 - Bluetooth Pairing
 
-When a light shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a soft alarm to warn the user that a movement has been detected.
+The user will be able to pair the device with the mobile app using Bluetooth Low Energy (BLE). The device will be able to communicate with the mobile app using BLE.
 
-### 5.2.2 - Strong Shock Detection
-
-When a strong shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a loud alarm to warn the user that a theft attempt has been detected. The device will also send a notification to the API to warn the user.
-
-### 5.2.3 - Soft Alarm
-
-The device will emit a soft alarm when a light shock is detected. It will emit a 3 tones sound.
-
-The sound duration is 0.6 seconds and the frequency is about 8350 Hz.
+***This feature is used in the following use cases:***
+- [Pair the Device with the Mobile App](#421---pair-the-device-with-the-mobile-app).
+- [Add a Security Card to the Device](#422---add-a-security-card-to-the-device).
+- [Activate the Anti-Theft Protection using the Mobile App](#423---activate-the-anti-theft-protection-using-the-mobile-app).
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app).
+- [Cut the Alarm with the Mobile App](#4213---cut-the-alarm-with-the-mobile-app).
 
 
-Following are the sound, the audio spectrum and the waveform of the soft alarm:
-
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Soft_Alarm.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
-| <audio src="Img/Functional-Specifications/Sound_Soft_Alarm.wav" controls preload></audio> | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
-
-### 5.2.4 - Loud Alarm
-
-The device will emit a loud alarm when a strong shock is detected. It will emit a 5 tones sound.
-
-The sound duration is 7 seconds and the frequency is about 8350 Hz.
-
-Following are the sound, the audio spectrum and the waveform of the loud alarm:
-
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [![Loud Alarm Sound](https://img.youtube.com/vi/EvWO7pTntO0/0.jpg)](https://www.youtube.com/watch?v=EvWO7pTntO0)) | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
-
-The Alarm will ring for 30 seconds, and then it will stop, if a command is not sent to the device to cut the alarm or if no security card is presented to the device, the alarm will ring again for 30 seconds unless no movement is detected.
-
-### 5.2.5 - Confirmation Sound
-
-The device will emit a sound to confirm the action. It will emit a short 2 tones sound.
-
-The sound duration is 0.3 seconds and the frequency is about 4200 Hz and 8400 Hz.
-
-Following are the sound, the audio spectrum and the waveform of the confirmation sound:
-
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Confirmation.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Confirmation](Img/Functional-Specifications/Spectrum_Analysis_Confirmation.png) | ![Confirmation](Img/Functional-Specifications/Waveform_Confirmation.png) |
-
-This sound will be emitted when the device have received a command from the mobile app or when the device have read a security card.
-
-### 5.2.6 - Bluetooth Connection Sound
+### 5.2.2 - Bluetooth Connection Sound
 
 The device will emit a sound when the device is connected to the mobile app. It will emit a 5 tones sound.
 
@@ -649,23 +624,46 @@ The sound duration is 1.2 seconds and the frequency is about 4250 Hz and 8400 Hz
 
 Following are the sound, the audio spectrum and the waveform of the Bluetooth Connection sound:
 
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Bluetooth_Connection.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Bluetooth Connected](Img/Functional-Specifications/Spectrum_Analysis_Bluetooth_Connection.png) | ![Bluetooth Connected](Img/Functional-Specifications/Waveform_Bluetooth_Connection.png) |
+| Sound                                                                                                                                                               | Audio Spectrum                                                                                   | Waveform                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/GUX--or8x5U) | ![Bluetooth Connected](Img/Functional-Specifications/Spectrum_Analysis_Bluetooth_Connection.png) | ![Bluetooth Connected](Img/Functional-Specifications/Waveform_Bluetooth_Connection.png) |
 
-### 5.2.7 - Enter in Sleep Mode Sound
+***This feature is used in the following use case:***
+- [Pair the Device with the Mobile App](#421---pair-the-device-with-the-mobile-app).
 
-The device will emit a sound when the device enter in sleep mode. It will emit a 5 tones sound.
 
-The sound duration is 1.2 seconds and the frequency is about 4300 Hz and 8400 Hz.
+### 5.2.3 - Send a command using BLE
 
-Following are the sound, the audio spectrum and the waveform of the Enter in Sleep Mode sound:
+The device will receive a command from the mobile app using Bluetooth. The device will also send a confirmation to the mobile app when the command is receive and the device will play a sound to confirm the action.
 
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Sleep_Mode.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Sleep Mode](Img/Functional-Specifications/Spectrum_Analysis_Sleep_Mode.png) | ![Sleep Mode](Img/Functional-Specifications/Waveform_Sleep_Mode.png) |
+***This feature is used in the following use cases:***
+- [Cut the Alarm with the Mobile App](#4213---cut-the-alarm-with-the-mobile-app),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app),
+- [Pair the Device with the Mobile App](#421---pair-the-device-with-the-mobile-app),
+- [Activate the Anti-Theft Protection using the Mobile App](#423---activate-the-anti-theft-protection-using-the-mobile-app),
+- [Add a Security Card to the Device](#422---add-a-security-card-to-the-device).
 
-### 5.2.8 - Enter in Anti-Theft Mode Sound
+
+### 5.2.4 - Confirmation Sound
+
+The device will emit a sound to confirm the action. It will emit a short 2 tones sound.
+
+The sound duration is 0.3 seconds and the frequency is about 4200 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the confirmation sound:
+
+| Sound                                                                                                                                                               | Audio Spectrum                                                                    | Waveform                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/ufChpOkpv6w) | ![Confirmation](Img/Functional-Specifications/Spectrum_Analysis_Confirmation.png) | ![Confirmation](Img/Functional-Specifications/Waveform_Confirmation.png) |
+
+This sound will be emitted when the device have received a command from the mobile app or when the device have read a security card.
+
+***This feature is used in the following use cases:***
+- [Cut the Alarm with the Mobile App](#4213---cut-the-alarm-with-the-mobile-app),
+- [Cut the Alarm with the Security Card](#4214---cut-the-alarm-with-the-security-card),
+
+
+### 5.2.5 - Enter in Anti-Theft Mode Sound
 
 The device will emit a sound when the device enter in anti-theft mode. It will emit a 5 tones sound.
 
@@ -673,9 +671,206 @@ The sound duration is 1.2 seconds and the frequency is about 4300 Hz and 8400 Hz
 
 Following are the sound, the audio spectrum and the waveform of the Enter in Anti-Theft Mode sound:
 
-| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Anti_Theft.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Anti-Theft Mode](Img/Functional-Specifications/Spectrum_Analysis_Anti_Theft.png) | ![Anti-Theft Mode](Img/Functional-Specifications/Waveform_Anti_Theft.png) |
+| Sound                                                                                                                                                               | Audio Spectrum                                                                     | Waveform                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/GXnIWkKJtww) | ![Anti-Theft Mode](Img/Functional-Specifications/Spectrum_Analysis_Anti_Theft.png) | ![Anti-Theft Mode](Img/Functional-Specifications/Waveform_Anti_Theft.png) |
+
+***This feature is used in the following use cases:***
+- [Activate the Anti-Theft Protection using the Mobile App](#423---activate-the-anti-theft-protection-using-the-mobile-app).
+- [Activate the Anti-Theft Protection using the Security Card](#424---activate-the-anti-theft-protection-using-the-security-card).
+
+
+### 5.2.6 - Anti-Theft Protection
+
+The user can activate the anti-theft protection using the mobile app or the security card. When the anti-theft protection is activated, the device will emit a sound to confirm the action and the device will enter in anti-theft mode.
+
+The anti-theft protection will be deactivated when the user cut the alarm or when the user unlock the device using the mobile app or the security card.
+
+If a movement is detected when the anti-theft protection is activated, the device will emit an audible alarm and send a notification to the API, depending on the movement detected.
+
+***This feature is used in the following use cases:***
+- [Activate the Anti-Theft Protection using the Mobile App](#423---activate-the-anti-theft-protection-using-the-mobile-app),
+- [Activate the Anti-Theft Protection using the Security Card](#424---activate-the-anti-theft-protection-using-the-security-card),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card),
+- [Emit an Audible Alarm when a Light Shock is Detected](#427---emit-an-audible-alarm-when-a-light-shock-is-detected),
+- [Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected),
+- [Send GPS Coordinates and Battery Level to the API](#4210---send-gps-coordinates-and-battery-level-to-the-api).
+
+
+### 5.2.7 - Light Shock Detection
+
+When a light shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a soft alarm to warn the user that a movement has been detected.
+
+***This feature is used in the following use case:***
+- [Emit an Audible Alarm when a Light Shock is Detected](#427---emit-an-audible-alarm-when-a-light-shock-is-detected).
+
+
+### 5.2.8 - Soft Alarm
+
+The device will emit a soft alarm when a light shock is detected. It will emit a 3 tones sound.
+
+The sound duration is 0.6 seconds and the frequency is about 8350 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the soft alarm:
+
+| Sound                                                                                                                                                               | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/onNAGbDg-SQ) | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
+
+***This feature is used in the following use case:***
+- [Emit an Audible Alarm when a Light Shock is Detected](#427---emit-an-audible-alarm-when-a-light-shock-is-detected).
+
+
+### 5.2.9 - Strong Shock Detection
+
+When a strong shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a loud alarm to warn the user that a theft attempt has been detected. The device will also send a notification to the API to warn the user.
+
+***This feature is used in the following use case:***
+- [Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected).
+
+
+### 5.2.10 - Loud Alarm
+
+The device will emit a loud alarm when a strong shock is detected. It will emit a 5 tones sound.
+
+The sound duration is 7 seconds and the frequency is about 8350 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the loud alarm:
+
+| Sound                                                                                                                                                               | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/EvWO7pTntO0) | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
+
+The Alarm will ring for 30 seconds, and then it will stop, if a command is not sent to the device to cut the alarm or if no security card is presented to the device, the alarm will ring again for 30 seconds unless no movement is detected.
+
+***This feature is used in the following use case:***
+- [Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected).
+
+
+### 5.2.11 - Electromagnet
+
+The device will lock and unlock the security cable using an electromagnet. The electromagnet will be powered by the device when the user wants to unlock the security cable.
+
+***This feature is used in the following use cases:***
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card).
+
+
+### 5.2.12 - Alarm Cut
+
+The user can cut the alarm even if there is ringing. The user can cut the alarm using the mobile app or the security card.
+
+***This feature is used in the following use cases:***
+- [Cut the Alarm with the Mobile App](#4213---cut-the-alarm-with-the-mobile-app),
+- [Cut the Alarm with the Security Card](#4214---cut-the-alarm-with-the-security-card).
+
+
+### 5.2.13 - Battery Level
+
+The device will retrieve the battery level of the device. The battery level will be sent to the API to be stored and to be used to send notifications to the user.
+
+The battery level will be sent every 15 minutes when the device is in anti-theft mode.
+
+***This feature is used in the following use cases:***
+- [Send GPS Coordinates and Battery Level to the API](#4210---send-gps-coordinates-and-battery-level-to-the-api),
+- [Send a Notification when the Battery is Low](#4211---send-a-notification-when-the-battery-is-low),
+- [Send a Notification when the Battery is Full](#4212---send-a-notification-when-the-battery-is-full).
+
+
+### 5.2.14 - Low Battery Detection
+
+The device will detect when the battery is charged at 15% or less. The device will send a notification to the API to warn the user.
+
+***This feature is used in the following use case:***
+- [Send a Notification when the Battery is Low](#4211---send-a-notification-when-the-battery-is-low).
+
+
+### 5.2.15 - Full Battery Detection
+
+The device will detect when the battery is charged at 100%. The device will send a notification to the API to inform the user.
+
+***This feature is used in the following use case:***
+- [Send a Notification when the Battery is Full](#4212---send-a-notification-when-the-battery-is-full).
+
+
+### 5.2.16 - GPS Coordinates
+
+The device will retrieve the GPS coordinates of the device using the GNSS module. The GPS coordinates will be sent to the API to be stored and to be used to send notifications to the user.
+
+The GPS coordinates will be sent to the API when a strong shock is detected, and every 15 minutes when the device is in anti-theft mode.
+
+***This feature is used in the following use case:***
+- [Send GPS Coordinates and Battery Level to the API](#4210---send-gps-coordinates-and-battery-level-to-the-api).
+
+
+### 5.2.17 - GSM HTTP Post
+
+The device will send a request to the API to send the GPS coordinates and the battery level. The device will also send a request to the API to send a notification to the user when a strong shock is detected.
+
+***This feature is used in the following use cases:***
+- [Send GPS Coordinates and Battery Level to the API](#4210---send-gps-coordinates-and-battery-level-to-the-api),
+- [Receive Notifications from the API](#4210---receive-notifications-from-the-api).
+- [Send a Notification when the Battery is Low](#4211---send-a-notification-when-the-battery-is-low),
+- [Send a Notification when the Battery is Full](#4212---send-a-notification-when-the-battery-is-full).
+- [Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected).
+
+
+### 5.2.18 - Notifications
+
+The user will receive notifications from the API. The notifications will be sent when a strong shock is detected, when the battery is low and when the battery is full.
+
+***This feature is used in the following use cases:***
+- [Receive Notifications from the API](#4210---receive-notifications-from-the-api).
+- [Send a Notification when the Battery is Low](#4211---send-a-notification-when-the-battery-is-low),
+- [Send a Notification when the Battery is Full](#4212---send-a-notification-when-the-battery-is-full),
+- [Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected](#428---emit-an-audible-alarm-and-send-a-notification-when-a-strong-shock-is-detected),
+- [Send GPS Coordinates and Battery Level to the API](#4210---send-gps-coordinates-and-battery-level-to-the-api).
+
+
+### 5.2.19 - Enter in Sleep Mode Sound
+
+The device will emit a sound when the device enter in sleep mode. It will emit a 5 tones sound.
+
+The sound duration is 1.2 seconds and the frequency is about 4300 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the Enter in Sleep Mode sound:
+
+| Sound                                                                                                                                                               | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [![Static Badge](https://img.shields.io/badge/Click--Me-!?style=for-the-badge&logo=youtube&logoColor=red&labelColor=white&color=red)](https://youtu.be/xf8VLjW79-4) | ![Sleep Mode](Img/Functional-Specifications/Spectrum_Analysis_Sleep_Mode.png) | ![Sleep Mode](Img/Functional-Specifications/Waveform_Sleep_Mode.png) |
+
+***This feature is used in the following use cases:***
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Mobile App](#425---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-mobile-app),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card).
+
+
+### 5.2.20 - Sleep Mode
+
+The device will enter in sleep mode to reduce the power consumption. The device will enter in sleep mode when the device is not connected to the mobile app and when the device is not in anti-theft mode.
+
+The device will exit from sleep mode when the device is connected to the mobile app or when the device is in anti-theft mode.
+
+
+### 5.2.21 - Security Card Pairing
+
+The user can add a security card to the device.
+
+***This feature is used in the following use case:***
+- [Add a Security Card to the Device](#422---add-a-security-card-to-the-device).
+
+
+### 5.2.22 - Detect the Security Card
+
+The device detect when a security card is near the NFC antenna.
+
+***This feature is used in the following use cases:***
+- [Add a Security Card to the Device](#422---add-a-security-card-to-the-device),
+- [Activate the Anti-Theft Protection using the Security Card](#424---activate-the-anti-theft-protection-using-the-security-card),
+- [Cut the Alarm with the Security Card](#4214---cut-the-alarm-with-the-security-card),
+- [Deactivate the Anti-Theft Protection and Unlock the Device using the Security Card](#426---deactivate-the-anti-theft-protection-and-unlock-the-device-using-the-security-card).
+
+
 
 # 6. - Hardware and Libraries Used
 
