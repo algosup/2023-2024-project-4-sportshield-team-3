@@ -79,7 +79,24 @@
   - [5.1 - Features List](#51---features-list)
   - [5.2 - Features Description](#52---features-description)
     - [5.2.1 - Light Shock Detection](#521---light-shock-detection)
-- [6. - Hardware Used](#6---hardware-used)
+    - [5.2.2 - Strong Shock Detection](#522---strong-shock-detection)
+    - [5.2.3 - Soft Alarm](#523---soft-alarm)
+- [6. - Hardware and Libraries Used](#6---hardware-and-libraries-used)
+  - [6.1 - Hardware](#61---hardware)
+    - [6.1.1 - Microcontroller](#611---microcontroller)
+    - [6.1.2 - GNSS Module](#612---gnss-module)
+    - [6.1.3 - GSM Module](#613---gsm-module)
+    - [6.1.4 - Electromagnet](#614---electromagnet)
+    - [6.1.5 - Buzzer](#615---buzzer)
+    - [6.1.6 - Battery](#616---battery)
+    - [6.1.7 - NFC Antenna](#617---nfc-antenna)
+  - [6.2 - Libraries](#62---libraries)
+    - [6.2.1 - NRF52\_MBED\_TimerInterrupt V1.4.1](#621---nrf52_mbed_timerinterrupt-v141)
+    - [6.2.2 - ArduinoBLE V1.3.6](#622---arduinoble-v136)
+    - [6.2.3 - Adafruit GPS Library V1.7.4](#623---adafruit-gps-library-v174)
+    - [6.2.4 - Sim800L http connector V1.14.0](#624---sim800l-http-connector-v1140)
+    - [6.2.5 - Seeed Arduino LSM6DS3 V2.0.3](#625---seeed-arduino-lsm6ds3-v203)
+    - [6.2.6 - OneWire V2.3.7](#626---onewire-v237)
 </details>
 
 # 1. - Glossary
@@ -541,32 +558,153 @@ gantt
 
 ## 5.1 - Features List
 
-| Feature Name             | Description                                        |
-| ------------------------ | -------------------------------------------------- |
-| Light Shock Detection    | Detect an involuntary movement.                    |
-| Strong Shock Detection   | Detect a theft attempt.                            |
-| Soft Alarm               | Emit a 3 times low sound                           |
-| Loud Alarm               | Emit a 5 times high sound                          |
-| Confirmation Sound       | Emit a sound to confirm the action.                |
-| GPS Coordinates          | Retrieve the GPS coordinates of the device.        |
-| Battery Level            | Retrieve the battery level of the device.          |
-| GSM HTTP Post            | Send a request to the API.                         |
-| Notifications            | Receive notifications from the API.                |
-| Low Battery Detection    | Detect when the battery is charged at 15% or less. |
-| Full Battery Detection   | Detect when the battery is charged at 100%.        |
-| Alarm Cut                | Cut the alarm even if there is ringing.            |
-| Electromagnet            | Lock and unlock the device.                        |
-| Detect the Security Card | Detect the security card.                          |
-| Bluetooth Pairing        | Pair the device with the mobile app.               |
-| Send a command using BLE | Send a command to the device using Bluetooth.      |
-| Security Card Pairing    | Add a security card to the device.                 |
-| Anti-Theft Protection    | Turn on the anti-theft protection.                 |
-| Sleep Mode               | Enter in a low power consumption mode.             |
+| Feature Name                   | Description                                            |
+| ------------------------------ | ------------------------------------------------------ |
+| Light Shock Detection          | Detect an involuntary movement.                        |
+| Strong Shock Detection         | Detect a theft attempt.                                |
+| Soft Alarm                     | Emit a 3 times low sound                               |
+| Loud Alarm                     | Emit a 5 times high sound                              |
+| Confirmation Sound             | Emit a sound to confirm the action.                    |
+| Bluetooth Connected Sound      | Emit a sound when the device is connected.             |
+| Enter in Sleep Mode Sound      | Emit a sound when the device enter in sleep mode.      |
+| Enter in Anti-Theft Mode Sound | Emit a sound when the device enter in anti-theft mode. |
+| GPS Coordinates                | Retrieve the GPS coordinates of the device.            |
+| Battery Level                  | Retrieve the battery level of the device.              |
+| GSM HTTP Post                  | Send a request to the API.                             |
+| Notifications                  | Receive notifications from the API.                    |
+| Low Battery Detection          | Detect when the battery is charged at 15% or less.     |
+| Full Battery Detection         | Detect when the battery is charged at 100%.            |
+| Alarm Cut                      | Cut the alarm even if there is ringing.                |
+| Electromagnet                  | Lock and unlock the device.                            |
+| Detect the Security Card       | Detect the security card.                              |
+| Bluetooth Pairing              | Pair the device with the mobile app.                   |
+| Send a command using BLE       | Send a command to the device using Bluetooth.          |
+| Security Card Pairing          | Add a security card to the device.                     |
+| Anti-Theft Protection          | Turn on the anti-theft protection.                     |
+| Sleep Mode                     | Enter in a low power consumption mode.                 |
 
 ## 5.2 - Features Description
 
 ### 5.2.1 - Light Shock Detection
 
+When a light shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a soft alarm to warn the user that a movement has been detected.
 
+### 5.2.2 - Strong Shock Detection
 
-# 6. - Hardware Used
+When a strong shock is detected, the BLE will detect it using the Gyroscope and the Accelerometer. The device will emit a loud alarm to warn the user that a theft attempt has been detected. The device will also send a notification to the API to warn the user.
+
+### 5.2.3 - Soft Alarm
+
+The device will emit a soft alarm when a light shock is detected. It will emit a 3 times low sound.
+
+Following is the sound that will be emitted:
+
+<audio controls="controls">
+  <source type="audio/mp3" src="Img/Functional-Specifications/Sound_Soft_Alarm.mp3"></source>
+  <p>Your browser does not support the audio element.</p>
+</audio>
+
+# 6. - Hardware and Libraries Used
+
+## 6.1 - Hardware
+
+### 6.1.1 - Microcontroller
+
+The microcontroller is a Xiao BLE Sense nrf52840 from Seeed Studio. It is a small and powerful microcontroller with a built-in Bluetooth Low Energy 5.0 and a 6 Degrees of Freedom Inertial Measurement Unit (6-DoF IMU). It has 11 GPIOs that can be used as UART, SPI, I2C, etc.
+
+Here are the main characteristics of the Xiao BLE Sense nrf52840:
+- Dimensions : 2 x 2 x 0,5 cm
+- Bluetooth Low Energy 5.0
+- 6 Degrees of Freedom Inertial Measurement Unit (6-DoF IMU)
+- 11 GPIOs (UART, SPI, I2C)
+- Work Temperature: -40°C ~ +65°C
+- [Product Specification](../Hardware/nRF52840_PS_v1.5.pdf)
+- [Blueprints](../Hardware/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+
+### 6.1.2 - GNSS Module
+
+The GNSS PA1010D is a small and powerful GPS module with an integrated antenna. It can be used to get the GPS coordinates of the device.
+
+Here are the main characteristics of the GNSS PA1010D:
+- Dimensions : 2,5 x 2,5 x 1 cm
+- Integrated antenna
+- UART & I2C
+- Work Temperature: -40°C ~ +85°C
+- [Datasheet](../Hardware/CD-PA1010D-Datasheet-v.02.pdf)
+
+### 6.1.3 - GSM Module
+
+The SIM800L is a small and powerful GSM/2G module with a SIM card holder. It can be used to send HTTP requests to the API to send the GPS coordinates and the battery level, and to send a notification when a shock is detected.
+
+Here are the main characteristics of the GSM/2G SIM800L Module:
+- Dimensions : 2,2 x 1,8 x 0,5 cm
+- GPRS & HTTP, UART
+- SIM Card holder
+- With 1NCE SIM card
+- Work Temperature : -40°C ~ +85°C
+- [Hardware Design](../Hardware/SIM800L-SIMCom.pdf)
+
+Although this sensor still uses the 2G network, which will no longer be in use by the end of 2025, we are still using it for the development phase, while this one can be easily replaced by a sensor that uses the 4G network.
+
+### 6.1.4 - Electromagnet
+
+The electromagnet is used to lock and unlock the security cable. It is powered by the device when the user wants to unlock the security cable.
+
+Here are the main characteristics of the Electromagnet:
+- Voltage : 12V, 500mA
+- Dimensions : 2,7 x 1,6 x 1,3 cm
+- Work Temperature : until 115°C
+
+### 6.1.5 - Buzzer
+
+The buzzer is used to emit audible signals upon detecting movement with the 6-DoF IMU. It emits moderate-level beeps for slight movements, and a loud alarm for significant ones.
+
+Here are the main characteristics of the Piezoelectric buzzer:
+- Voltage : 12V with control circuit oscillator
+- Sound level : ~ 90-100 dB
+- Work Temperature : -20°C ~ +70°C
+
+### 6.1.6 - Battery
+
+The battery is used to power the device. It is recharged via a USB-C port. For the moment the battery can last less than 3 days in normal use, but we are working on the energy management to increase the battery life.
+
+Here are the main characteristics of the Lithium-Polymer battery:
+- Dimensions : 5,1 x 3,5 x 0,6 cm
+- Voltage : 3.7V, 1100mAh, 4.1Wh
+- Work Temperature : -20°C ~ +60°C
+- [Datasheet](../Hardware/Batterie_LP603449.pdf)
+
+### 6.1.7 - NFC Antenna
+
+The NFC antenna is used to replace the BLE if the user wants to unlock the device without using the mobile app or don't have much more battery. The user can unlock the device by approaching the NFC antenna with a NFC security card.
+
+Here are the main characteristics of the NFC antenna:
+- Dimensions : 5,5 x 4,5 x 0,017 cm
+- Frequency : 13,56MHz
+- Work Temperature : -30°C to +85°C
+
+## 6.2 - Libraries
+
+### 6.2.1 - NRF52_MBED_TimerInterrupt V1.4.1
+
+This library is used to manage the timer interrupts of the microcontroller. It is used to manage the sleep mode and the alarm.
+
+### 6.2.2 - ArduinoBLE V1.3.6
+
+This library is used to manage the Bluetooth Low Energy communication between the device and the mobile app.
+
+### 6.2.3 - Adafruit GPS Library V1.7.4
+
+This library is used to manage the GPS module and to get the GPS coordinates of the device.
+
+### 6.2.4 - Sim800L http connector V1.14.0
+
+This library is used to manage the GSM module and to send HTTP requests to the API.
+
+### 6.2.5 - Seeed Arduino LSM6DS3 V2.0.3
+
+This library is used to manage the 6-DoF IMU of the microcontroller.
+
+### 6.2.6 - OneWire V2.3.7
+
+This library is used to manage the battery level of the device.
