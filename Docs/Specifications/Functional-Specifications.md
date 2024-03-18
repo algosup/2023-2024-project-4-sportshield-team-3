@@ -621,7 +621,7 @@ Following are the sound, the audio spectrum and the waveform of the loud alarm:
 
 | Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Loud_Alarm.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
+| <video controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Loud_Alarm.mp4"></source><p>Your browser does not support the audio element.</p></video> | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
 
 The Alarm will ring for 30 seconds, and then it will stop, if a command is not sent to the device to cut the alarm or if no security card is presented to the device, the alarm will ring again for 30 seconds unless no movement is detected.
 
