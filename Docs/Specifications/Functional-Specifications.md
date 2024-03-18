@@ -81,6 +81,11 @@
     - [5.2.1 - Light Shock Detection](#521---light-shock-detection)
     - [5.2.2 - Strong Shock Detection](#522---strong-shock-detection)
     - [5.2.3 - Soft Alarm](#523---soft-alarm)
+    - [5.2.4 - Loud Alarm](#524---loud-alarm)
+    - [5.2.5 - Confirmation Sound](#525---confirmation-sound)
+    - [5.2.6 - Bluetooth Connection Sound](#526---bluetooth-connection-sound)
+    - [5.2.7 - Enter in Sleep Mode Sound](#527---enter-in-sleep-mode-sound)
+    - [5.2.8 - Enter in Anti-Theft Mode Sound](#528---enter-in-anti-theft-mode-sound)
 - [6. - Hardware and Libraries Used](#6---hardware-and-libraries-used)
   - [6.1 - Hardware](#61---hardware)
     - [6.1.1 - Microcontroller](#611---microcontroller)
@@ -595,14 +600,80 @@ When a strong shock is detected, the BLE will detect it using the Gyroscope and 
 
 ### 5.2.3 - Soft Alarm
 
-The device will emit a soft alarm when a light shock is detected. It will emit a 3 times low sound.
+The device will emit a soft alarm when a light shock is detected. It will emit a 3 tones sound.
 
-Following is the sound that will be emitted:
+The sound duration is 0.6 seconds and the frequency is about 8350 Hz.
 
-<audio controls="controls">
-  <source type="audio/mp3" src="Img/Functional-Specifications/Sound_Soft_Alarm.mp3"></source>
-  <p>Your browser does not support the audio element.</p>
-</audio>
+
+Following are the sound, the audio spectrum and the waveform of the soft alarm:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Soft_Alarm.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
+
+### 5.2.4 - Loud Alarm
+
+The device will emit a loud alarm when a strong shock is detected. It will emit a 5 tones sound.
+
+The sound duration is 7 seconds and the frequency is about 8350 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the loud alarm:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Loud_Alarm.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
+
+The Alarm will ring for 30 seconds, and then it will stop, if a command is not sent to the device to cut the alarm or if no security card is presented to the device, the alarm will ring again for 30 seconds unless no movement is detected.
+
+### 5.2.5 - Confirmation Sound
+
+The device will emit a sound to confirm the action. It will emit a short 2 tones sound.
+
+The sound duration is 0.3 seconds and the frequency is about 4200 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the confirmation sound:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Confirmation.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Confirmation](Img/Functional-Specifications/Spectrum_Analysis_Confirmation.png) | ![Confirmation](Img/Functional-Specifications/Waveform_Confirmation.png) |
+
+This sound will be emitted when the device have received a command from the mobile app or when the device have read a security card.
+
+### 5.2.6 - Bluetooth Connection Sound
+
+The device will emit a sound when the device is connected to the mobile app. It will emit a 5 tones sound.
+
+The sound duration is 1.2 seconds and the frequency is about 4250 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the Bluetooth Connection sound:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Bluetooth_Connection.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Bluetooth Connected](Img/Functional-Specifications/Spectrum_Analysis_Bluetooth_Connection.png) | ![Bluetooth Connected](Img/Functional-Specifications/Waveform_Bluetooth_Connection.png) |
+
+### 5.2.7 - Enter in Sleep Mode Sound
+
+The device will emit a sound when the device enter in sleep mode. It will emit a 5 tones sound.
+
+The sound duration is 1.2 seconds and the frequency is about 4300 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the Enter in Sleep Mode sound:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Sleep_Mode.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Sleep Mode](Img/Functional-Specifications/Spectrum_Analysis_Sleep_Mode.png) | ![Sleep Mode](Img/Functional-Specifications/Waveform_Sleep_Mode.png) |
+
+### 5.2.8 - Enter in Anti-Theft Mode Sound
+
+The device will emit a sound when the device enter in anti-theft mode. It will emit a 5 tones sound.
+
+The sound duration is 1.2 seconds and the frequency is about 4300 Hz and 8400 Hz.
+
+Following are the sound, the audio spectrum and the waveform of the Enter in Anti-Theft Mode sound:
+
+| Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Anti_Theft.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Anti-Theft Mode](Img/Functional-Specifications/Spectrum_Analysis_Anti_Theft.png) | ![Anti-Theft Mode](Img/Functional-Specifications/Waveform_Anti_Theft.png) |
 
 # 6. - Hardware and Libraries Used
 
