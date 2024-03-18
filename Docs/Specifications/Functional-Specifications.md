@@ -1,4 +1,5 @@
 <!-- See: Docs/Specifications/FuncSpecs-Helper.md -->
+<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
 
 <div align="center">
 
@@ -610,6 +611,7 @@ Following are the sound, the audio spectrum and the waveform of the soft alarm:
 | Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | <audio controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Soft_Alarm.wav"></source><p>Your browser does not support the audio element.</p></audio> | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
+| <audio src="Img/Functional-Specifications/Sound_Soft_Alarm.wav" controls preload></audio> | ![Soft Alarm](Img/Functional-Specifications/Spectrum_Analysis_Soft_Alarm.png) | ![Soft Alarm](Img/Functional-Specifications/Waveform_Soft_Alarm.png) |
 
 ### 5.2.4 - Loud Alarm
 
@@ -621,7 +623,7 @@ Following are the sound, the audio spectrum and the waveform of the loud alarm:
 
 | Sound                                                                                                                                                                                 | Audio Spectrum                                                                | Waveform                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <video controls="controls"><source type="audio/wav" src="Img/Functional-Specifications/Sound_Loud_Alarm.mp4"></source><p>Your browser does not support the audio element.</p></video> | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
+| [![Loud Alarm Sound](https://img.youtube.com/vi/EvWO7pTntO0/0.jpg)](https://www.youtube.com/watch?v=EvWO7pTntO0)) | ![Loud Alarm](Img/Functional-Specifications/Spectrum_Analysis_Loud_Alarm.png) | ![Loud Alarm](Img/Functional-Specifications/Waveform_Loud_Alarm.png) |
 
 The Alarm will ring for 30 seconds, and then it will stop, if a command is not sent to the device to cut the alarm or if no security card is presented to the device, the alarm will ring again for 30 seconds unless no movement is detected.
 
