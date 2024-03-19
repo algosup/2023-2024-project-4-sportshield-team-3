@@ -201,7 +201,7 @@ The project will be organized in the following folder structure:
 
 [*(Back to top)*](#toc)
 
-### 3.1.1 - Hardware
+### 3.1 - Hardware
 
 | Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
 | ---------------- | -------------------- | ------------------------- |
@@ -220,6 +220,46 @@ The project will be organized in the following folder structure:
 | Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm | 3.7V, 1100mAh, 4.1Wh | |
 | NFC antenna | 5,5 x 4,5 x 0,017 cm | 13,56MHz frequency | |
 
+#### 3.1.1 Xiao BLE Sense nrf52840
+
+**Introduction:**
+The Seeed Studio XIAO nRF52840 is the first wireless product in the XIAO family, featuring the powerful Nordic nRF52840 MCU with integrated Bluetooth 5.0 connectivity. Its small and exquisite form-factor makes it suitable for wearable devices and Internet of Things (IoT) projects. The single-sided surface-mountable design, along with the onboard Bluetooth antenna, facilitates rapid deployment of IoT projects.
+
+**Key Features:**
+- **Powerful Wireless Capabilities:** Bluetooth 5.0 with onboard antenna.
+- **Powerful CPU:** Nordic nRF52840, ARM® Cortex®-M4 32-bit processor with FPU, running at 64 MHz.
+- **Ultra-Low Power:** Standby power consumption of less than 5μA.
+- **Battery Charging Chip:** Supports lithium battery charge and discharge management.
+- **Onboard 2 MB Flash:** Ample storage capacity for program storage and data logging.
+- **Rich Interfaces:** 
+  - 1x UART
+  - 1x I2C
+  - 1x SPI
+  - 1x NFC
+  - 1x SWD
+  - 11x GPIO (PWM)
+  - 6x ADC
+  
+#### 3.1.2 GNSS PA1010D
+
+This miniature GPS breakout is only 1" x 1" (~ 25mm x 25mm) but houses a complete GPS/GNSS solution with both I2C and UART interfaces. There's even an antenna on top so it's plug and play!
+
+- Support for GPS, GLONASS, GALILEO, QZSS
+- -165 dBm sensitivity, up to 10 Hz updates
+- Up to 210 PRN channels with 99 search channels and 33 simultaneous tracking channels
+- 5V friendly design and only 30mA current draw
+- Breadboard-able, with 4 mounting holes
+- UART and I2C interfaces, pick whichever you like most!
+- RTC battery-compatible
+- PPS output on fix ±20ns jitter
+- Internal patch antenna
+- Low-power and standby mode with WAKE pin
+
+#### 3.1.3 GSM/2G SIM800L Module
+#### 3.1.4 Electromagnet
+#### 3.1.5 Piezoelectric buzzer
+#### 3.1.6 Lithium-Polymer battery
+#### 3.1.7 NFC antenna
 
 ### 3.2 - Software 
 - Programming Language: Arduino (C/C++) 
@@ -234,6 +274,25 @@ The project will be organized in the following folder structure:
   - `sim.ino`: Handles SIM card communication for GPRS connectivity.
   - `sounds.ino`: Implements sound generation for alarm and notifications.
   - `struct.h`: Contains data structures used across the software components.
+
+#### 3.2.1 - `original.ino`
+
+#### 3.2.2 - `batteryState.ino`
+
+#### 3.2.3 - `bluetooth.ino`
+
+#### 3.2.4 - `gps.ino`
+
+#### 3.2.5 - `imu.ino`
+
+#### 3.2.6 - `nfc.ino`
+
+#### 3.2.7 - `sim.ino`
+
+#### 3.2.8 - `sounds.ino`
+
+#### 3.2.9 - `struct.h`
+
 # 4 - End Matter
 
 ## 4.1 - Contributors
