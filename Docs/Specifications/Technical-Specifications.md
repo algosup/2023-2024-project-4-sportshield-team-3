@@ -107,7 +107,7 @@ Provide a reliable security solution for individual users of medium to high-end 
 - [Arduino IDE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjm4NzL6_OEAxVTUaQEHfAYB8MQmhN6BAhVEAI&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FArduino&usg=AOvVaw36wKonvDZOyb7wbdqDRmEy&opi=89978449) - Arduino is an Italian open-source hardware and software company, project, and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices. 
 - [VS Code](https://code.visualstudio.com/download) - Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS.
 - [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) - C/C++ for Visual Studio Code is an extension for VS Code that provides IntelliSense, debugging, and code browsing support for C and C++ code.
--
+
 
 The software is developed using the 23<sup>rd</sup> version of the C++ language.
 
@@ -122,13 +122,19 @@ The software is developed using the 23<sup>rd</sup> version of the C++ language.
 
 The project will include the following features:
 
-- 
-- 
-- 
+- Securing sports gear such as skis, snowboards, and related equipment from theft or unauthorized access.
+- Sending instant notifications to users via the mobile app in case of unauthorized access or tampering with the protected equipment.
+- Integrating GPS technology to enable users to track the location of their equipment in real-time, enhancing security and facilitating recovery efforts.
+- Optimizing power consumption to ensure long-lasting battery life and uninterrupted protection of sports equipment.
 
 ### 1.4.2 - Out of Scope
 
 The project will not include the following features:
+
+- Protecting physical spaces or premises beyond the scope of securing sports equipment, such as home security or building access control.
+- Implementing complex artificial intelligence or automation features beyond the basic functionalities required for equipment security and tracking.
+- Offering security solutions for items unrelated to sports or outdoor activities, such as electronics, jewelry, or personal belongings.
+
 ---
 
 # 2 - Overall Description
@@ -139,11 +145,11 @@ The project will not include the following features:
 
 ### 2.1.1 - Hardware
 
-<!-- | Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
+| Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
 | ---------------- | -------------------- | ------------------------- |
 | Processor        | Intel Core i7-1065G7 | Apple Silicon M1          |
 | RAM[^15]         | 16 GB                |  8 GB                     |
-| Operating System | Windows 11 Pro       | macOS Sonoma              | -->
+| Operating System | Windows 11 Pro       | macOS Sonoma              |
 
 
 |Name|Size|Specification|Image|
