@@ -139,45 +139,7 @@ The project will not include the following features:
 
 # 2 - Overall Description
 
-## 2.1 System Architecture
-
-[*(Back to top)*](#toc)
-
-### 2.1.1 - Hardware
-
-| Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
-| ---------------- | -------------------- | ------------------------- |
-| Processor        | Intel Core i7-1065G7 | Apple Silicon M1          |
-| RAM[^15]         | 16 GB                |  8 GB                     |
-| Operating System | Windows 11 Pro       | macOS Sonoma              |
-
-
-|Name|Size|Specification|Image|
-|--------------|-------|---------|--------|
-|Xiao BLE Sense nrf52840|2 x 2 x 0,5 cm|- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)|![Xiao](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.29.png)|
-|GNSS PA1010D|2,5 x 2,5 x 1 cm|- Integrated antenna - UART & I2C|![GNSS](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.41.png)|
-| GSM/2G SIM800L Module | 2,2 x 1,8 x 0,5 cm | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card | ![GSM](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.53.png) |
-| Electromagnet | 2,7 x 1,6 x 1,3 cm | 12V, 500mA | |
-| Piezoelectric buzzer | unknown | - 12V, avec oscillator control circuit - ~ 90-100 dB | |
-| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm | 3.7V, 1100mAh, 4.1Wh | |
-| NFC antenna | 5,5 x 4,5 x 0,017 cm | 13,56MHz frequency | |
-
-
-#### 2.2 - Software Components
-- Programming Language: Arduino (C/C++) 
-- IDE: Arduino IDE
-- Main Software Files:
-  - `original.ino`: Contains original code or primary logic for SportShield.
-  - `batteryState.ino`: Manages battery state and consumption.
-  - `bluetooth.ino`: Handles Bluetooth connectivity for the mobile app.
-  - `gps.ino`: Implements GPS functionality for device localization.
-  - `imu.ino`: Manages the Inertial Measurement Unit (IMU) for movement detection.
-  - `nfc.ino`: Controls NFC functionality for device management.
-  - `sim.ino`: Handles SIM card communication for GPRS connectivity.
-  - `sounds.ino`: Implements sound generation for alarm and notifications.
-  - `struct.h`: Contains data structures used across the software components.
-
-## 2.2 - Project Folder Structure
+## 2.1 - Project Folder Structure
 
 [*(Back to top)*](#toc)
 
@@ -235,7 +197,43 @@ The project will be organized in the following folder structure:
 | ----------- | ------- | --------- | ------- | ------------ | ------------- | ------ |
 | Root folder | Folders | Documents | PDF Files | Header Files | Arduino File | Images |
 
+# 3 System Architecture
 
+[*(Back to top)*](#toc)
+
+### 3.1.1 - Hardware
+
+| Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
+| ---------------- | -------------------- | ------------------------- |
+| Processor        | Intel Core i7-1065G7 | Apple Silicon M1          |
+| RAM[^15]         | 16 GB                |  8 GB                     |
+| Operating System | Windows 11 Pro       | macOS Sonoma              |
+
+
+|Name|Size|Specification|Image|
+|--------------|-------|---------|--------|
+|Xiao BLE Sense nrf52840|2 x 2 x 0,5 cm|- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)|![Xiao](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.29.png)|
+|GNSS PA1010D|2,5 x 2,5 x 1 cm|- Integrated antenna - UART & I2C|![GNSS](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.41.png)|
+| GSM/2G SIM800L Module | 2,2 x 1,8 x 0,5 cm | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card | ![GSM](Docs/Specifications/img/Capture d’écran 2024-03-18 à 17.15.53.png) |
+| Electromagnet | 2,7 x 1,6 x 1,3 cm | 12V, 500mA | |
+| Piezoelectric buzzer | unknown | - 12V, avec oscillator control circuit - ~ 90-100 dB | |
+| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm | 3.7V, 1100mAh, 4.1Wh | |
+| NFC antenna | 5,5 x 4,5 x 0,017 cm | 13,56MHz frequency | |
+
+
+### 3.2 - Software 
+- Programming Language: Arduino (C/C++) 
+- IDE: Arduino IDE
+- Main Software Files:
+  - `original.ino`: Contains original code or primary logic for SportShield.
+  - `batteryState.ino`: Manages battery state and consumption.
+  - `bluetooth.ino`: Handles Bluetooth connectivity for the mobile app.
+  - `gps.ino`: Implements GPS functionality for device localization.
+  - `imu.ino`: Manages the Inertial Measurement Unit (IMU) for movement detection.
+  - `nfc.ino`: Controls NFC functionality for device management.
+  - `sim.ino`: Handles SIM card communication for GPRS connectivity.
+  - `sounds.ino`: Implements sound generation for alarm and notifications.
+  - `struct.h`: Contains data structures used across the software components.
 # 4 - End Matter
 
 ## 4.1 - Contributors
