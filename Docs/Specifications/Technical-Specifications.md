@@ -13,7 +13,7 @@
 
 **Created on:** March 13<sup>th</sup>, 2024
 
-**Last updated:**  March 18<sup>th</sup>, 2024
+**Last updated:**  March 19<sup>th</sup>, 2024
 
 ---
 
@@ -47,11 +47,7 @@
 [*(Back to top)*](#toc)
 
 ### 1.1.1 - Goals
-
-Develop an innovative anti-theft device for sports equipment and expand its application to other sectors such as camping gear, musical instruments, and locker rooms.
-
-Provide a reliable security solution for individual users of medium to high-end skis and snowboards.
-
+This project aims to enhance battery efficiency, prolong lifespan, and ensure secure device management. By optimizing energy usage, integrating NFC technology for convenient control, and improving alarm and security measures, the system will offer users a reliable and seamless experience with increased functionality and peace of mind.
 
 ### 1.1.2 - Objectives
 
@@ -72,7 +68,7 @@ The project objectives are as follow:
 The project will be considered successful if the following criterias are met:
 
 - Successful implementation and testing of the alarm system. 
-- Secure physical locking mechanism preventing unauthorized access.
+- 
 - Functioning mobile app with Bluetooth connectivity and GPS localization.
 ## 1.2 - Stakeholders
 
@@ -99,8 +95,13 @@ This project is for educational purposes and is intended for commercial use. The
 | Natacha BOEZ     | ALGOSUP's Co-Founder | [LinkedIn](https://www.linkedin.com/in/natacha-boez-913a33167/) |
 
 ## 1.3 - Usage
-
 [*(Back to top)*](#toc)
+
+Develop an innovative anti-theft device for sports equipment and expand its application to other sectors such as camping gear, musical instruments, and locker rooms.
+
+Provide a reliable security solution for individual users of medium to high-end skis and snowboards.
+
+
 
 ### 1.3.1 - Requirements
 - [Arduino IDE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjm4NzL6_OEAxVTUaQEHfAYB8MQmhN6BAhVEAI&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FArduino&usg=AOvVaw36wKonvDZOyb7wbdqDRmEy&opi=89978449) - Arduino is an Italian open-source hardware and software company, project, and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices. 
