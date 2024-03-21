@@ -1,8 +1,8 @@
 # Test Case Archive 2023-2024-project-4-sportshield-team-3
 
 ![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Arduino Logo](https://img.shields.io/badge/-Arduino-00979D?logo=arduino&logoColor=white) ![C logo](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)  ![C++ Logo](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-March%2015%2C%202024-orange)
-
+![Last Updated](https://img.shields.io/github/last-commit/algosup/2023-2024-project-4-sportshield-team-3/test-plan)
+![GitHub issues](https://img.shields.io/github/issues/algosup/2023-2024-project-4-sportshield-team-3)
 ## Syntax for adding a test case (example)
 
 |Test Case |Description |Priority| Date |State & Change |Statue | Github issue |

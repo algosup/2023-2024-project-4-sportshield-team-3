@@ -1,8 +1,8 @@
 # Test Plan 2023-2024-project-4-sportshield-team-3
 
 ![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Arduino Logo](https://img.shields.io/badge/-Arduino-00979D?logo=arduino&logoColor=white) ![C logo](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)  ![C++ Logo](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-March%2015%2C%202024-orange)
-
+![Last Updated](https://img.shields.io/github/last-commit/algosup/2023-2024-project-4-sportshield-team-3/test-plan)
+![GitHub issues](https://img.shields.io/github/issues/algosup/2023-2024-project-4-sportshield-team-3)
 | Contributers        | Role              |
 | ----------------- | ----------------- | 
 | Salaheddine NAMIR | Quality Assurance |         
@@ -36,16 +36,49 @@
 </details>
 
 ## 1 Introduction	
-
+SportShield is a smart anti-thieft device designed to protect sport equipement. Developed by Coris Innovation, a company specialised on systems and process engineering. The device feature include choke sensors, thieft alarme, GPS tracking, remote lock/unlock functinality. 
 
 ### 1.1  Scope
-#### 1.1.1 In Scope
 
+#### 1.1.1 In Scope
+1. Battery Consumption Management:
+
+- Improve energy efficiency of the system by implementing strategies such as turning on components only when needed and managing sleep modes effectively.
+- Implement measures to handle low battery situations, ensuring skis are secured even when the electromagnet cannot be powered to release the cable.
+- Increase battery lifespan by enforcing charging limits (e.g., no charge above 80% of Vmax) and discharge thresholds (e.g., no discharge under 20%).
+
+2.Device Management with NFC:
+
+- Enable NFC functionality for users to activate/deactivate the anti-theft system and unlock the cable via their smartphone and SportShield app.
+
+- Implement NFC functionality redundantly with Bluetooth to provide users with increased control options.
+3. Alarm Management and Simultaneous Actions:
+
+- Add the capability to stop the alarm when it rings, regardless of whether the ringing cycle is completed.
+- Enable the alarm to ring while simultaneously sending HTTP notifications to the server.
+- Enhance interruption management for better user experience.
 
 	
 
 #### 1.1.2 Out of Scope
+1. Hardware Modifications:
+- Changes or modifications to hardware components such as circuitry or electromagnets are not within the scope of this test plan.
 
+2. Advanced Connectivity Features:
+- Introducing new connectivity features beyond NFC and Bluetooth, such as Wi-Fi or cellular connectivity, is out of scope for this phase of testing.
+
+3. User Interface Overhaul:
+
+- Significant redesign or overhaul of the user interface beyond the necessary changes to accommodate new features is not within the scope of this test plan.
+4. Server-Side Changes:
+
+- Modifications or enhancements to the server-side infrastructure beyond implementing HTTP notifications are not included in this test plan.
+5. Third-Party Integration:
+
+- Integrating with third-party services or platforms beyond basic HTTP notifications is out of scope for this test plan.
+6. Physical Design Changes:
+
+- Alterations to the physical design of the device, such as size, shape, or material changes, are not part of this test plan.
 
 ### 1.2 Quality Objective
 
