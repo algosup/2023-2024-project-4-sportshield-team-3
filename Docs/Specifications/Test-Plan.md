@@ -36,7 +36,7 @@
 </details>
 
 ## 1 Introduction	
-SportShield is a smart anti-thieft device designed to protect sport equipement. Developed by Coris Innovation, a company specialised on systems and process engineering. The device feature include choke sensors, thieft alarme, GPS tracking, remote lock/unlock functinality. 
+SportShield is a smart anti-thieft device designed to protect sport equipement. Developed by Coris Innovation, a company specialised on systems and process engineering. The device feature include choke sensors, thieft alarme, GPS tracking, remote lock/unlock functinality. The goal of the project is to improve the battery consumption management, device management with NFC and alarm management and simultaneous actions. 
 
 ### 1.1  Scope
 
@@ -44,10 +44,10 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 1. Battery Consumption Management:
 
 - Improve energy efficiency of the system by implementing strategies such as turning on components only when needed and managing sleep modes effectively.
-- Implement measures to handle low battery situations, ensuring skis are secured even when the electromagnet cannot be powered to release the cable.
+- Implement measures to handle low battery situations, ensuring skis are secured even when the battery is low.
 - Increase battery lifespan by enforcing charging limits (e.g., no charge above 80% of Vmax) and discharge thresholds (e.g., no discharge under 20%).
 
-2.Device Management with NFC:
+2. Device Management with NFC:
 
 - Enable NFC functionality for users to activate/deactivate the anti-theft system and unlock the cable via their smartphone and SportShield app.
 
@@ -82,8 +82,38 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 
 ### 1.2 Quality Objective
 
+The primary objective of this test plan is to validate that the SportShield device functions as expected and meets all defined requirements. This includes ensuring that the device's battery management, NFC functionality, and alarm management features work correctly and provide a satisfactory user experience.
+
+Specific quality objectives include:
+
+- **Functionality**: The device should perform all its functions correctly, including battery management, NFC functionality, and alarm management.
+- **Reliability**: The device should operate reliably under normal conditions, with minimal downtime or errors.
+- **Usability**: The device should be easy to use, with clear instructions and intuitive controls.
+- **Performance**: The device should respond quickly to user inputs and should manage its battery efficiently.
+- **Security**: The device should securely handle user data and should not be susceptible to unauthorized access or control.
+
+The testing process will aim to identify and resolve any issues that could affect these quality objectives. The ultimate goal is to ensure that the SportShield device provides a reliable, efficient, and user-friendly solution for protecting sports equipment.
+
+
+
 
 ### 1.3 Roles and Responsibilities 
+
+The following roles and responsibilities are defined for the testing process:
+
+- **Quality Assurance (QA)**: Responsible for overseeing the testing process, defining test strategies, and ensuring that the device meets quality standards.
+
+- **Project Manager**: Responsible for coordinating the testing activities, managing resources, and ensuring that the project stays on schedule.
+
+- **Program Manager**: Responsible for defining the overall project goals and objectives, including quality standards and testing requirements.
+
+- **Technical Lead**: Responsible for providing technical guidance and support to the testing team, including reviewing test plans and results.
+
+- **Technical Writer**: Responsible for documenting the testing process, including test plans, test cases, and test results.
+
+- **Software Engineer**: Responsible for developing and implementing test cases, executing tests, and reporting defects.
+
+Each team member will contribute to the testing process according to their role and responsibilities. Collaboration and communication among team members will be essential to ensure the success of the testing effort.
 
 
 
