@@ -1,5 +1,6 @@
 // This file stand for the bluetooth communication with other device
 
+// Prepare the setup for Bluetooth Low Energie
 void ble_setup(void) {
   if (!BLE.begin()) {
     Serial.println("starting Bluetooth® Low Energy module failed!");
@@ -44,19 +45,24 @@ void ble_setup(void) {
   BLE.advertise();
 }
 
+// Detectec when the bluetooth is connected
 void onConnect(BLEDevice central) {
   Serial.print("Connected to ");
   Serial.println(central.address());
   Serial.println(BLE.address());
   digitalWrite(LEDB, LOW);
+  bluetoothConnected();
 }
 
+// Detectec when the bluetooth is disconnected
 void onDisconnect(BLEDevice central) {
   Serial.print(F("Disconnected from central: "));
   Serial.println(central.address());
   isAuthenticate = false;
   digitalWrite(LEDB, HIGH);
+  bluetoothDisconnected();
 }
+
 
 void onWritePassword(BLEDevice central, BLECharacteristic characteristic) {
   const int motDePasseAttendu = 13330;

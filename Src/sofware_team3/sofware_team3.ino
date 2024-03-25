@@ -16,6 +16,10 @@
 
 //---------------- GLOBAL VARIABLES -----------------------------
 
+// Battery Voltage
+const float MIN_VOLTAGE = 3.0;
+const float MAX_VOLTAGE = 4.2;
+
 myConfig Config;
 bool isAuthenticate = false;
 // Timer
@@ -93,6 +97,7 @@ unsigned long StartCoolDown = 0;  //check point for millis aided cooldown
 
 //-------------------------------- SETUP ----------------------------------------
 void setup() {
+
   pinMode(buzzerPin, OUTPUT);  // setup for buzzer
   digitalWrite(buzzerPin, HIGH);
   delay(1000);
@@ -157,13 +162,14 @@ void setup() {
   digitalWrite(LEDG, LOW);
   Temps();
 
-  Serial.print(getBatteryVoltage());
-  Serial.print("%");
 }
 
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
 
+  Serial.print(getBatteryPercentage());
+  Serial.println("%");
+  delay(100);
   MotionData = getMotionData();
   RotationData = getRotationData();
 
