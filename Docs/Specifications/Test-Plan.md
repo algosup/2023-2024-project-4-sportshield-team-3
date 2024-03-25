@@ -41,18 +41,18 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 ### 1.1  Scope
 
 #### 1.1.1 In Scope
-1. Battery Consumption Management:
+##### 1. Battery Consumption Management:
 
 - Improve energy efficiency of the system by implementing strategies such as turning on components only when needed and managing sleep modes effectively.
 - Implement measures to handle low battery situations, ensuring skis are secured even when the battery is low.
 - Increase battery lifespan by enforcing charging limits (e.g., no charge above 80% of Vmax) and discharge thresholds (e.g., no discharge under 20%).
 
-2. Device Management with NFC:
+##### 2. Device Management with NFC:
 
 - Enable NFC functionality for users to activate/deactivate the anti-theft system and unlock the cable via their smartphone and SportShield app.
 
 - Implement NFC functionality redundantly with Bluetooth to provide users with increased control options.
-3. Alarm Management and Simultaneous Actions:
+##### 3. Alarm Management and Simultaneous Actions:
 
 - Add the capability to stop the alarm when it rings, regardless of whether the ringing cycle is completed.
 - Enable the alarm to ring while simultaneously sending HTTP notifications to the server.
@@ -61,22 +61,22 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 	
 
 #### 1.1.2 Out of Scope
-1. Hardware Modifications:
+##### 1. Hardware Modifications:
 - Changes or modifications to hardware components such as circuitry or electromagnets are not within the scope of this test plan.
 
-2. Advanced Connectivity Features:
+##### 2. Advanced Connectivity Features:
 - Introducing new connectivity features beyond NFC and Bluetooth, such as Wi-Fi or cellular connectivity, is out of scope for this phase of testing.
 
-3. User Interface Overhaul:
+##### 3. User Interface Overhaul:
 
 - Significant redesign or overhaul of the user interface beyond the necessary changes to accommodate new features is not within the scope of this test plan.
-4. Server-Side Changes:
+##### 4. Server-Side Changes:
 
 - Modifications or enhancements to the server-side infrastructure beyond implementing HTTP notifications are not included in this test plan.
-5. Third-Party Integration:
+##### 5. Third-Party Integration:
 
 - Integrating with third-party services or platforms beyond basic HTTP notifications is out of scope for this test plan.
-6. Physical Design Changes:
+##### 6. Physical Design Changes:
 
 - Alterations to the physical design of the device, such as size, shape, or material changes, are not part of this test plan.
 
@@ -120,8 +120,11 @@ Each team member will contribute to the testing process according to their role 
 
 
 ## 2 Test Methodology
+On this section we will describe the test methodology that will be used to validate the SportShield device. This includes an overview of the testing process, the different test levels that will be applied, bug triage procedures, and criteria for suspending and resuming testing activities.
 ### 2.1 Overview
+The testing process will follow a structured approach to validate the SportShield device's functionality, reliability, usability, performance, and security. The testing activities will be organized into different levels, each focusing on specific aspects of the device's behavior. The test plan will include detailed test cases, test procedures, and expected results to ensure comprehensive coverage of all requirements.
 
+Extreme Programming (XP) is a software development methodology that focuses on delivering high-quality software quickly and efficiently. It emphasizes collaboration, feedback, and continuous improvement to ensure that the final product meets customer requirements and expectations. XP is based on a set of core values and principles that guide the development process and help teams deliver value to customers. This method is type of agile methodology that is well-suited for projects with changing requirements and tight deadlines.     
 
 
 
@@ -131,18 +134,32 @@ Each team member will contribute to the testing process according to their role 
 
 ### 2.2 Test Levels
 
+The testing process will be conducted at several levels to ensure comprehensive coverage of all aspects of the SportShield device. The test levels include:
 
+1. **Unit Testing**: This level of testing will focus on individual components of the software. The goal is to ensure that each function or method works correctly in isolation. This will be the responsibility of the Software Engineers, who will write and execute these tests.
 
+2. **Integration Testing**: After unit testing, the individual components will be combined and tested together. The aim is to identify any issues that arise when different parts of the software interact with each other. This will be overseen by the Technical Lead and executed by the Software Engineers.
 
+3. **System Testing**: At this level, the entire system will be tested as a whole. This includes testing the software and hardware integration, as well as the complete functionality of the SportShield device. The Quality Assurance team will be responsible for this level of testing.
 
+4. **Acceptance Testing**: The final level of testing is to ensure that the SportShield device meets all the defined requirements and is ready for release. This will involve testing the device in conditions that mimic real-world use to ensure it meets the needs and expectations of the end users. The Project Manager and Quality Assurance team will collaborate on this level of testing.
 
 
 
 	
 ### 2.3 Bug Triage
 
+Each level of testing will be documented, including the test cases, test results, and any identified and resolved issues. This will ensure transparency and traceability throughout the testing process.
+
+During this phase, the team will prioritize the identified bugs based on their severity and impact on the system. The following criteria will be used to determine the priority of each bug
 
 
+- **Identification**: The test plan will include a list of all identified bugs, including a description of the issue, steps to reproduce, and severity level. This will help the team track and prioritize bugs for resolution.
+- **Categorization**: Bugs will be categorized based on their severity and impact on the system. This will help the team prioritize bug fixes and allocate resources effectively.
+- **Prioritization**: The team will prioritize bugs based on their severity, impact on the system, and customer requirements. Critical bugs that affect core functionality will be addressed first, followed by less critical issues.
+- **Assignment**: Each bug will be assigned to a team member responsible for resolving it. The team will collaborate to ensure that bugs are fixed in a timely manner and that the system meets quality standards. 
+- **Verification**: Once a bug is fixed, the team will verify the resolution and retest the affected functionality to ensure that the issue has been resolved. This will help prevent regression and ensure that the system remains stable.
+- **Closure**: Once a bug is verified and resolved, it will be marked as closed. The team will document the resolution and update the bug tracking system to reflect the status of the bug. This will help track the progress of bug fixes and ensure that all issues are addressed before release.
 
 ### 2.4 Suspension Criteria and Resumption Requirements
 
@@ -168,6 +185,8 @@ Each team member will contribute to the testing process according to their role 
 
 
 ## 5 Terms/Acronyms 
+
+
 
 
 
