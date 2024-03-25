@@ -121,16 +121,11 @@ Each team member will contribute to the testing process according to their role 
 
 ## 2 Test Methodology
 On this section we will describe the test methodology that will be used to validate the SportShield device. This includes an overview of the testing process, the different test levels that will be applied, bug triage procedures, and criteria for suspending and resuming testing activities.
+
 ### 2.1 Overview
 The testing process will follow a structured approach to validate the SportShield device's functionality, reliability, usability, performance, and security. The testing activities will be organized into different levels, each focusing on specific aspects of the device's behavior. The test plan will include detailed test cases, test procedures, and expected results to ensure comprehensive coverage of all requirements.
 
 Extreme Programming (XP) is a software development methodology that focuses on delivering high-quality software quickly and efficiently. It emphasizes collaboration, feedback, and continuous improvement to ensure that the final product meets customer requirements and expectations. XP is based on a set of core values and principles that guide the development process and help teams deliver value to customers. This method is type of agile methodology that is well-suited for projects with changing requirements and tight deadlines.     
-
-
-
-
-
-
 
 ### 2.2 Test Levels
 
@@ -144,15 +139,11 @@ The testing process will be conducted at several levels to ensure comprehensive 
 
 4. **Acceptance Testing**: The final level of testing is to ensure that the SportShield device meets all the defined requirements and is ready for release. This will involve testing the device in conditions that mimic real-world use to ensure it meets the needs and expectations of the end users. The Project Manager and Quality Assurance team will collaborate on this level of testing.
 
-
-
-	
 ### 2.3 Bug Triage
 
 Each level of testing will be documented, including the test cases, test results, and any identified and resolved issues. This will ensure transparency and traceability throughout the testing process.
 
 During this phase, the team will prioritize the identified bugs based on their severity and impact on the system. The following criteria will be used to determine the priority of each bug
-
 
 - **Identification**: The test plan will include a list of all identified bugs, including a description of the issue, steps to reproduce, and severity level. This will help the team track and prioritize bugs for resolution.
 - **Categorization**: Bugs will be categorized based on their severity and impact on the system. This will help the team prioritize bug fixes and allocate resources effectively.
@@ -161,28 +152,26 @@ During this phase, the team will prioritize the identified bugs based on their s
 - **Verification**: Once a bug is fixed, the team will verify the resolution and retest the affected functionality to ensure that the issue has been resolved. This will help prevent regression and ensure that the system remains stable.
 - **Closure**: Once a bug is verified and resolved, it will be marked as closed. The team will document the resolution and update the bug tracking system to reflect the status of the bug. This will help track the progress of bug fixes and ensure that all issues are addressed before release.
 
+All of these steps is reported on [GitHub issues](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues) to ensure that the team is aware of the status of each bug and can collaborate effectively to resolve them.
+Labeling system will be used to categorize and prioritize bugs based on their severity and impact on the system. This will help the team track and manage bugs effectively and ensure that critical issues are addressed promptly.
+
 ### 2.4 Suspension Criteria and Resumption Requirements
 
 
 
 ### 2.5 Test Completeness
 
+All test cases will be executed and documented to ensure that the testing process is complete. The test plan will include a list of all test cases, along with their expected results and actual outcomes. This will help the team track the progress of testing and ensure that all requirements are met.
 ## 3 Test Deliverables
 
-
-
+The following test deliverables will be produced as part of the testing process:
+[Test Case](Test-Case.md)
 
 ## 4 Resource & Environment Needs
 
 ### 4.1 Testing Tools
 
-
-
-
-
 ### 4.2 Test Environment
-
-
 
 ## 5 Terms/Acronyms 
 
