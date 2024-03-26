@@ -304,6 +304,15 @@ Formatting conventions are important to keep a clear, concise and readable code,
   - `sounds.ino`: Implements sound generation for alarm and notifications.
   - `struct.h`: Contains data structures used across the software components.
 
+- Main libraries used: 
+  - `NRF52_MBED_TimerInterrupt V1.4.1`
+  - `ArduinoBLE v1.3.6`
+  - `Adafruit GPS Libary V1.7.4`
+  - `Sim800L http connector V1.14.0`
+  - `Seeed Arduino LSM6DS3 V2.0.3`
+  - `OneWire V2.3.7`
+
+
 #### 3.2.1 - `original.ino`
 
 The `original.ino` file serves as the main sketch provided by Coris Innovation for the SportShield project. It encompasses the central logic and functionality of the SportShield device, orchestrating the behavior of the hardware components, sensors, and communication modules to achieve the project's objectives.
@@ -318,27 +327,30 @@ The `batteryState.ino` file is responsible for managing the battery state and co
 
 This Arduino sketch implements the following functionalities related to battery management:
 
-Monitoring Battery Voltage: The file contains functions to read the voltage level of the battery periodically using analog-to-digital conversion techniques. It interprets the raw voltage readings to determine the current state of charge and estimates the remaining battery capacity.
+**Monitoring Battery Voltage**: The file contains functions to read the voltage level of the battery periodically using analog-to-digital conversion techniques. It interprets the raw voltage readings to determine the current state of charge and estimates the remaining battery capacity.
 
-Low Battery Detection: It includes algorithms to detect low battery conditions based on predefined voltage thresholds. When the battery voltage drops below a certain threshold, appropriate actions are triggered to notify the user, conserve power, or switch to alternative power sources.
+**Low Battery Detection**: It includes algorithms to detect low battery conditions based on predefined voltage thresholds. When the battery voltage drops below a certain threshold, appropriate actions are triggered to notify the user, conserve power, or switch to alternative power sources.
 
-Power Optimization: The sketch implements strategies to optimize power consumption and extend battery life. This may involve adjusting the operating modes of various components, reducing the frequency of sensor readings or wireless transmissions, and implementing sleep modes to minimize idle power consumption.
+**Power Optimization**: The sketch implements strategies to optimize power consumption and extend battery life. This may involve adjusting the operating modes of various components, reducing the frequency of sensor readings or wireless transmissions, and implementing sleep modes to minimize idle power consumption.
 
 >Inputs:
 
-Analog Voltage Readings: Raw voltage readings obtained from the battery voltage monitoring circuitry.
+**Analog Voltage Readings**: Raw voltage readings obtained from the battery voltage monitoring circuitry.
 
 >Outputs:
 
-Battery Status Updates: Notifications or status messages indicating the current battery state, such as voltage level, remaining capacity, or estimated runtime.
+*Battery Status Updates**: Notifications or status messages indicating the current battery state, such as voltage level, remaining capacity, or estimated runtime.
 
 >Dependencies:
 
-The batteryState.ino file may depend on external libraries or utility functions for performing analog-to-digital conversions, voltage threshold comparisons, and power management routines.
+- The file may depend on the built-in analog input functions of the microcontroller for reading battery voltage.
+- It might utilize standard Arduino functions for managing power modes or triggering actions based on battery voltage levels.
+- Although not directly related to battery management, the Seeed Arduino LSM6DS3 V2.0.3 library might indirectly influence power-saving strategies if used for motion sensing or accelerometer functionalities.
 
 >Usage:
-- Include the batteryState.ino file as part of the SportShield project in the Arduino IDE.
-- Integrate function calls from this file into the main control logic (original.ino) to ensure continuous monitoring of the battery state.
+
+- Include the `batteryState.ino` file as part of the SportShield project in the Arduino IDE.
+- Integrate function calls from this file into the main control logic `software_team3` to ensure continuous monitoring of the battery state.
 - Configure voltage threshold values and battery management parameters according to the specifications provided by Coris Innovation.
 - Test the battery management functionality under various load conditions, battery states, and environmental factors to verify its reliability and effectiveness.
 
@@ -364,12 +376,12 @@ This file implements Bluetooth functionality using the Bluetooth module integrat
 
 >Dependencies:
 
-- This file depends on the underlying Bluetooth library provided by the microcontroller platform (e.g., Arduino Bluetooth library).
-It may interact with other system components such as sensors, actuators, or the main control logic.
+- This file depends on the underlying Bluetooth library provided by the microcontroller platform `ArduinoBLE v1.3.6`.
+- It may interact with other system components such as sensors, actuators, or the main control logic.
 
 >Usage:
 
-- Include the bluetooth.ino file in the `software_team3.ino` project file.
+- Include the `bluetooth.ino` file in the `software_team3.ino` project file.
 - Initialize the Bluetooth module and configure its parameters (e.g., device name, pairing mode) using appropriate function calls.
 - Set up event handlers or callback functions to handle Bluetooth events such as connection/disconnection, data reception, or errors.
 - Implement the main logic for Bluetooth communication, including sending/receiving data to/from the mobile app and responding to user commands.
@@ -379,7 +391,7 @@ It may interact with other system components such as sensors, actuators, or the 
 
 >Purpose:
 
-The purpose of the gps.ino file is to implement GPS functionality for the SportShield device, enabling accurate positioning and location tracking.
+The purpose of the `gps.ino` file is to implement GPS functionality for the SportShield device, enabling accurate positioning and location tracking.
 
 >Functionality:
 
@@ -393,9 +405,9 @@ This file interfaces with a GPS module integrated into the SportShield device to
 >Outputs:
 
 - Processed GPS data, including current location coordinates (latitude, longitude), altitude, and satellite information.
--Location updates or events triggered based on GPS data changes or thresholds.
+- Location updates or events triggered based on GPS data changes or thresholds.
 
->Dependencies:
+>Dependencies: 
 
 This file depends on the underlying GPS library or module integrated into the SportShield hardware. It may interact with other system components such as the main control logic, Bluetooth module for transmitting location data, or storage module for logging location history.
 
@@ -419,6 +431,7 @@ The purpose of the `imu.ino` file is to manage the Inertial Measurement Unit (IM
 This file interacts with the IMU sensor to collect data related to the device's orientation, acceleration, and angular velocity. It processes this data to detect motion events, such as tilting, shaking, or sudden movements, and triggers corresponding actions or alarms.
 
 >Inputs:
+
 - Raw sensor data from the IMU sensor, including accelerometer, gyroscope, and magnetometer readings.
 - Configuration parameters for IMU initialization and operation (e.g., sensor range, sampling rate).
 
@@ -429,7 +442,7 @@ This file interacts with the IMU sensor to collect data related to the device's 
 
 >Dependencies:
 
-This file depends on the underlying IMU library or sensor driver integrated into the SportShield hardware. It may interact with other system components such as the main control logic, Bluetooth module for transmitting motion data, or alarm module for triggering alerts based on motion events.
+This file depends on the `Seeed Arduino LSM6DS3 V2.0.3` library or sensor driver integrated into the SportShield hardware. It may interact with other system components such as the main control logic, Bluetooth module for transmitting motion data, or alarm module for triggering alerts based on motion events.
 
 >Usage:
 
@@ -462,7 +475,7 @@ This file interacts with the NFC module integrated into the SportShield hardware
 
 >Dependencies:
 
-This file depends on the underlying NFC library or driver provided by the microcontroller platform (e.g., Arduino NFC library).
+This file is supposed to depends on the underlying NFC library or driver provided by the microcontroller platform.
 It may interact with other system components such as the main control logic, Bluetooth module for transmitting NFC data to a mobile app, or storage module for saving NFC tag data.
 
 >Usage:
@@ -478,11 +491,11 @@ It may interact with other system components such as the main control logic, Blu
 
 >Purpose:
 
-The purpose of the sim.ino file is to manage communication with the Subscriber Identity Module (SIM) card used for Global System for Mobile Communications (GSM) connectivity in the SportShield device. It handles tasks such as sending and receiving data over the cellular network.
+The purpose of the `sim.ino` file is to manage communication with the Subscriber Identity Module (SIM) card used for Global System for Mobile Communications (GSM) connectivity in the SportShield device. It handles tasks such as sending and receiving data over the cellular network.
 
 >Functionality:
 
-This file interacts with the SIM800L GSM module integrated into the SportShield hardware to establish and maintain a connection with the cellular network. It facilitates tasks such as sending SMS messages, making voice calls, and establishing data connections (GPRS) for internet access.
+This file interacts with the SIM800L GSM module integrated into the SportShield hardware to establish and maintain a connection with the cellular network. It facilitates tasks such as sending SMS messages and establishing data connections (GPRS) for internet access.
 
 >Inputs:
 
@@ -496,7 +509,7 @@ This file interacts with the SIM800L GSM module integrated into the SportShield 
 
 >Dependencies:
 
-This file depends on the underlying library or driver provided by the microcontroller platform for interfacing with the SIM800L GSM module.
+This file depends on the `Sim800L http connector V1.14.0` library provided by the microcontroller platform for interfacing with the SIM800L GSM module.
 It may interact with other system components such as the main control logic, sensors, actuators, or communication protocols (e.g., MQTT) for transmitting data over the cellular network.
 
 >Usage:
