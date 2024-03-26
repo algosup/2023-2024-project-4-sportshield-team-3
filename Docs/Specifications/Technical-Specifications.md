@@ -112,7 +112,6 @@ The project will be considered successful if the following criteria are met:
 - Successful implementation and testing of the alarm system. 
 - Successful shock detection
 - The battery lasts at least 5 days
-- 
 ## 1.2 - Stakeholders
 
 This project is for educational purposes and is intended for commercial use. The project team will be responsible for the development of the project and the client will be responsible for providing feedback and guidance throughout the development process.
