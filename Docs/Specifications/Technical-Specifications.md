@@ -68,8 +68,9 @@ The project objectives are as follow:
 The project will be considered successful if the following criterias are met:
 
 - Successful implementation and testing of the alarm system. 
+- Successful shock detection
+- The battery lasts at least 5 days
 - 
-- Functioning mobile app with Bluetooth connectivity and GPS localization.
 ## 1.2 - Stakeholders
 
 This project is for educational purposes and is intended for commercial use. The project team will be responsible for the development of the project and the client will be responsible for providing feedback and guidance throughout the development process.
@@ -94,25 +95,21 @@ This project is for educational purposes and is intended for commercial use. The
 | Eric LARCHEVEQUE | ALGOSUP's Co-Founder | [LinkedIn](https://www.linkedin.com/in/ericlarch/)              |
 | Natacha BOEZ     | ALGOSUP's Co-Founder | [LinkedIn](https://www.linkedin.com/in/natacha-boez-913a33167/) |
 
-## 1.2 - Usage
+## 1.3 - Usage
 [*(Back to top)*](#toc)
-
-Develop an innovative anti-theft device for sports equipment and expand its application to other sectors such as camping gear, musical instruments, and locker rooms.
 
 Provide a reliable security solution for individual users of medium to high-end skis and snowboards.
 
+Develop an innovative anti-theft device for sports equipment and expand its application to other sectors such as camping gear, musical instruments, and locker rooms.
 
-
-### 1.2.1 - Requirements
+### 1.3.1 - Requirements
 - [Arduino IDE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjm4NzL6_OEAxVTUaQEHfAYB8MQmhN6BAhVEAI&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FArduino&usg=AOvVaw36wKonvDZOyb7wbdqDRmEy&opi=89978449) - Arduino is an Italian open-source hardware and software company, project, and user community that designs and manufactures single-board microcontrollers and microcontroller kits for building digital devices. 
 - [VS Code](https://code.visualstudio.com/download) - Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS.
 - [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) - C/C++ for Visual Studio Code is an extension for VS Code that provides IntelliSense, debugging, and code browsing support for C and C++ code.
 
 
-The software is developed using the 23<sup>rd</sup> version of the C++ language.
+The software is developed using the Arduino IDE based on C++.
 
-
-### 1.2.2 - Running
 
 ## 1.4 - Scope
 
@@ -123,9 +120,10 @@ The software is developed using the 23<sup>rd</sup> version of the C++ language.
 The project will include the following features:
 
 - Securing sports gear such as skis, snowboards, and related equipment from theft or unauthorized access.
-- Sending instant notifications to users via the mobile app in case of unauthorized access or tampering with the protected equipment.
+- Sending instant notifications to users via the mobile app in case of unauthorized access.
 - Integrating GPS technology to enable users to track the location of their equipment in real-time, enhancing security and facilitating recovery efforts.
 - Optimizing power consumption to ensure long-lasting battery life and uninterrupted protection of sports equipment.
+- Trigger an alarm sound in case of tampering with the protected equipment.
 
 ### 1.4.2 - Out of Scope
 
@@ -148,53 +146,63 @@ The project will be organized in the following folder structure:
 ```bash
 ~ 2023-2024-project-4-sportshield-team-3                     # 🌳 Root folder
 |----- docs                                                  # 📁 Documentation folder
-|     |--- Hardware                                             # 📁
-|     |    |-- Batterie_LP603449.pdf                               # 📃
-|     |    |-- CD-PA1010D-Datasheet-v.02.pdf                       # 📃
-|     |    |-- SIM800L-SIMCom.pdf                                  # 📃 
-|     |    |-- Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf           # 📃
-|     |    └── nRF52840_PS_v1.5.pdf                                # 📃
+|     |--- Hardware                                             # 📁 Hardware folder
+|     |    |-- Batterie_LP603449.pdf                               # 📃 Battery Specification 
+|     |    |-- CD-PA1010D-Datasheet-v.02.pdf                       # 📃 GNSS Specification
+|     |    |-- SIM800L-SIMCom.pdf                                  # 📃 SIM Specification
+|     |    |-- Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf           # 📃 Seeed Studio Chart
+|     |    └── nRF52840_PS_v1.5.pdf                                # 📃 Xiao BLE Specification
 |     ├── Management                                            # 📁 Management folder
 |     |    |--- Team-Management                                    # 📁 Team management folder
-|     |    |    |-- RACI.md                                           # 📖
+|     |    |    |-- RACII.md                                          # 📖 RACII file 
 |     |    |--- Weekly-Reports                                     # 📁 Weekly reports folder
-|     |    |    |-- Cumulative.md                                     # 📖
-|     |    |    |-- Template.md#                                      # 📖
-|     |    |    |-- Weekly-Report-1.md#                               # 📖
-|     |    |    |-- Weekly-Report-2.md#                               # 📖
-|     |    |    |-- Weekly-Report-3.md#                               # 📖
-|     |    |    |-- Weekly-Report-4.md#                               # 📖
-|     |    |    |-- Weekly-Report-5.md#                               # 📖
-|     |    |    └── Weekly-Report-6.md#                               # 📖
+|     |    |    |-- Cumulative.md                                     # 📖 Cumulative file
+|     |    |    |-- Template.md#                                      # 📖 Template file
+|     |    |    |-- Weekly-Report-1.md#                               # 📖 Weekly report 1
+|     |    |    |-- Weekly-Report-2.md#                               # 📖 Weekly report 2
+|     |    |    |-- Weekly-Report-3.md#                               # 📖 Weekly report 3
+|     |    |    |-- Weekly-Report-4.md#                               # 📖 Weekly report 4
+|     |    |    |-- Weekly-Report-5.md#                               # 📖 Weekly report 5
+|     |    |    └── Weekly-Report-6.md#                               # 📖 Weekly report 6
 |     |    |-- Project-Charter.md                                  # 📖 Project charter file
 |     |    └── Risk-Management-Plan.md                             # 📖 Risk management plan file
-|     └── Specifications                                        # 📁
-|          |-- img                                                 # 📁 Images folder
-|          |  |-- Functional-Specifications
-|          |  |    |-- 1.png 
-|          |  |    └── [etc...] 
-|          |  |-- Technical-Specifications 
-|          |  |    |-- 1.png 
-|          |  |    └── [etc...] 
-|          |  └── Test-Plan
-|          |       |-- 1.png 
-|          |       └── [etc...] 
-|          |
-|          |-- Functional-Specifications.md                     # 📖
-|          |-- Technical-Specifications.md                      # 📖
-|          └── Test-Plan.md                                     # 📖
-|----- src                                                   # 📁
-|        |-- struct.h                                           # 📄
-|        └── SS_05-03_anglais-batterycontrol.ino                # 📝
-|-- .gitignore                                               # 📖
-|-- LICENSE.MD                                               # 📖
-└── README.md                                                # 📖
+|     └── Specifications                                        # 📁 Specifications folder 
+|          |-- Img                                                 # 📁 Images folder
+|          |  |-- Functional-Specifications                         # 📁 Functional specification images folder
+|          |  |    |-- 1.png                                          # 🖼️ Functional specification image
+|          |  |    └── [etc...]                                       # 🖼️ Others Functional specification images 
+|          |  |-- Technical-Specifications                          # 📁 Technical specification images folder
+|          |  |    |-- 1.png                                          # 🖼️ Technical specification image
+|          |  |    └── [etc...]                                       # 🖼️ Others Technical specification images
+|          |  └── Test-Plan                                         # 📁 Test plan specification images folder
+|          |       |-- 1.png                                          # 🖼️ Test plan image
+|          |       └── [etc...]                                       # 🖼️ Others Test plan images
+|          |-- Functional-Specifications.md                     # 📖 Functional specification file
+|          |-- Technical-Specifications.md                      # 📖 Technical specification file
+|          └── Test-Plan.md                                     # 📖 Test plan file
+|----- src                                                   # 📁 Source code folder
+|        |-- original                                            # 📁 Original source code folder 
+|        |   |-- original.ino                                     # 📝 Original code file provided by the client
+|        |   └── original_struct.h                                # 📝 Original structure code file provided by the client
+|        └── software_team3                                      # 📁 Software team 3 source code folder 
+|             |-- batteryState.ino                                # 📝 Battery state monitoring code
+|             |-- bluetooth.ino                                   # 📝 Bluetooth connectivity code
+|             |-- gps.ino                                         # 📝 GPS functionality code
+|             |-- imu.ino                                         # 📝 Inertial Measurement Unit (IMU) code
+|             |-- nfc.ino                                         # 📝 Near Field Communication (NFC) code
+|             |-- sim.ino                                         # 📝 SIM card functionality code
+|             |-- sofware_team3.ino                               # 📝 Main software team 3 code file
+|             |-- sounds.ino                                      # 📝 Sound generation code
+|             └── struct.h                                        # 📝 Struct definition file
+|-- .gitignore                                               # 📖 Git ignore file
+|-- LICENSE.MD                                               # 📖 License file
+└── README.md                                                # 📖 Readme file
 
 ```
 
 **Legend:**
-| 🌳          | 📁       | 📖        | 📃      | 📄           | 📝            | 🖼️     |
-| ----------- | ------- | --------- | ------- | ------------ | ------------- | ------ |
+| 🌳           | 📁       | 📖        | 📃      | 📄           | 📝            | 🖼️     |
+|  ----------- | ------- | --------- | ------- | ------------ | ------------- | ------ |
 | Root folder | Folders | Documents | PDF Files | Header Files | Arduino File | Images |
 ## 2.2 - Conventions
 
@@ -273,19 +281,19 @@ Formatting conventions are important to keep a clear, concise and readable code,
 | Specification    | Lenovo ThinkBook 14  | Apple MacBook Air M1 2020 |
 | ---------------- | -------------------- | ------------------------- |
 | Processor        | Intel Core i7-1065G7 | Apple Silicon M1          |
-| RAM[^15]         | 16 GB                |  8 GB                     |
+| RAM              | 16 GB                |  8 GB                     |
 | Operating System | Windows 11 Pro       | macOS Sonoma              |
 
 
 |Name|Size|Specification|Role|Image|
 |--------------|-------|---------|------------|--------|
-|Xiao BLE Sense nrf52840  |2 x 2 x 0,5 cm         |- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)             | The Xiao BLE Sense nrf52840 serves as a compact yet powerful development board integrating Bluetooth 5.0 connectivity, motion sensing capabilities, and GPIO pins for versatile IoT prototyping and sensor-based applications.                    |![Xiao](Img/xiao.png)                    |
-|GNSS PA1010D             |2,5 x 2,5 x 1 cm       |- Integrated antenna - UART & I2C                            | The GNSS PA1010D serves as a high-performance Global Navigation Satellite System (GNSS) module, providing accurate positioning and timing information for applications ranging from asset tracking and navigation to precision agriculture and geolocation services. |![GNSS](Img/gnss.png)                    |
-| GSM/2G SIM800L Module   | 2,2 x 1,8 x 0,5 cm    | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card  | The GSM/2G SIM800L Module facilitates cellular connectivity, enabling data transmission, SMS communication, and voice calls, making it suitable for IoT projects, remote monitoring, and communication applications in areas with GSM network coverage.    | ![GSM](Img/gsm.png) |
-| Electromagnet           | 2,7 x 1,6 x 1,3 cm    | 12V, 500mA                                                  | The electromagnet is utilized to secure or release the Sportshield device through magnetic locking mechanisms for enhanced security and convenience.                    | ![electromagnet](Img/electromagnet.png) |
-| Piezoelectric buzzer    | unknown               | - 12V, avec oscillator control circuit - ~ 90-100 dB        | The piezoelectric buzzer emits audible alerts or tones by converting electrical energy into mechanical vibrations.                  | ![buzzer](Img/buzzer.png)               |
-| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm    | 3.7V, 1100mAh, 4.1Wh                                        | The Lithium-Polymer battery serves as a rechargeable power source, providing high energy density and lightweight characteristics for powering the Sportshield device.                    |![battery](Img/battery.png)              |
-| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between device over short distances.| ![nfc](Img/nfc.png)                     |
+|Xiao BLE Sense nrf52840  |2 x 2 x 0,5 cm         |- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)             | The Xiao BLE Sense nrf52840 serves as a compact yet powerful development board integrating Bluetooth 5.0 connectivity, motion sensing capabilities, and GPIO pins for versatile IoT prototyping and sensor-based applications.                    |![Xiao](Technical-Specifications/Img/Xiao.png)                    |
+|GNSS PA1010D             |2,5 x 2,5 x 1 cm       |- Integrated antenna - UART & I2C                            | The GNSS PA1010D serves as a high-performance Global Navigation Satellite System (GNSS) module, providing accurate positioning and timing information for applications ranging from asset tracking and navigation to precision agriculture and geolocation services. |![GNSS](Technical-Specifications/Img/Gnss.png)                    |
+| GSM/2G SIM800L Module   | 2,2 x 1,8 x 0,5 cm    | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card  | The GSM/2G SIM800L Module facilitates cellular connectivity, enabling data transmission, SMS communication, and voice calls, making it suitable for IoT projects, remote monitoring, and communication applications in areas with GSM network coverage.    | ![GSM](Technical-Specifications/Img/Gsm.png) |
+| Electromagnet           | 2,7 x 1,6 x 1,3 cm    | 12V, 500mA                                                  | The electromagnet is utilized to secure or release the Sportshield device through magnetic locking mechanisms for enhanced security and convenience.                    | ![electromagnet](Technical-Specifications/Img/Electromagnet.png) |
+| Piezoelectric buzzer    | unknown               | - 12V, avec oscillator control circuit - ~ 90-100 dB        | The piezoelectric buzzer emits audible alerts or tones by converting electrical energy into mechanical vibrations.                  | ![buzzer](Technical-Specifications/Img/Buzzer.png)               |
+| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm    | 3.7V, 1100mAh, 4.1Wh                                        | The Lithium-Polymer battery serves as a rechargeable power source, providing high energy density and lightweight characteristics for powering the Sportshield device.                    |![battery](Docs/Specifications/Img/Technical-Specifications/Battery.png)              |
+| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between device over short distances.| ![nfc](Technical-Specifications/Img/Nfc.png)                     |
 
 
 
@@ -294,8 +302,8 @@ Formatting conventions are important to keep a clear, concise and readable code,
 - IDE: Arduino IDE
 - Main Software Files:
   - `original.ino`: Contains original code or primary logic for SportShield.
-  - `software_team3.ino`: Contains modified code by our dev.
-  - `batteryState.ino`: Manages battery state and consumption.
+  - `software_team3.ino`: Contains modified code by our developper.
+  - `battery_state.ino`: Manages battery state and consumption.
   - `bluetooth.ino`: Handles Bluetooth connectivity for the mobile app.
   - `gps.ino`: Implements GPS functionality for device localization.
   - `imu.ino`: Manages the Inertial Measurement Unit (IMU) for movement detection.
@@ -317,7 +325,7 @@ Formatting conventions are important to keep a clear, concise and readable code,
 
 The `original.ino` file serves as the main sketch provided by Coris Innovation for the SportShield project. It encompasses the central logic and functionality of the SportShield device, orchestrating the behavior of the hardware components, sensors, and communication modules to achieve the project's objectives.
 
-#### 3.2.2 - `batteryState.ino`
+#### 3.2.2 - `battery_state.ino`
 
 >Purpose:
 
@@ -339,7 +347,7 @@ This Arduino sketch implements the following functionalities related to battery 
 
 >Outputs:
 
-*Battery Status Updates**: Notifications or status messages indicating the current battery state, such as voltage level, remaining capacity, or estimated runtime.
+**Battery Status Updates**: Notifications or status messages indicating the current battery state, such as voltage level, remaining capacity, or estimated runtime.
 
 >Dependencies:
 
@@ -399,12 +407,12 @@ This file interfaces with a GPS module integrated into the SportShield device to
 
 >Inputs:
 
-- GPS data received from the GPS module, including latitude, longitude, altitude, and satellite information.
+- GPS data received from the GPS module, including latitude, longitude, altitude.
 - Configuration parameters for GPS initialization and operation (e.g., update rate, data format).
 
 >Outputs:
 
-- Processed GPS data, including current location coordinates (latitude, longitude), altitude, and satellite information.
+- Processed GPS data, including current location coordinates (latitude, longitude), altitude.
 - Location updates or events triggered based on GPS data changes or thresholds.
 
 >Dependencies: 
