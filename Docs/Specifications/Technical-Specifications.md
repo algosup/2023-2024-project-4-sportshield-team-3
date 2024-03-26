@@ -1,5 +1,3 @@
-<div align="center">
-
 # Technical Specification
 
 ---
@@ -95,12 +93,12 @@ This project aims to enhance battery efficiency, prolong lifespan, and ensure se
 
 ### 1.1.2 - Objectives
 
-The project objectives are as follow:
+The project objectives are as follows:
 
 - Improve energy efficiency of the system.
 - Management of a low battery situation.
 - Increase the battery lifespan.
-- NFC is an expected feature for the users, in order to activate/deactivate the anti-theft system & unlock the cable.
+- NFC is an expected feature for the users, to activate/deactivate the anti-theft system & unlock the cable.
 - Via their smartphone and SportShield app (redundant with Bluetooth function, to increase control options for users)
 - Add the possibility to stop the alarm when it rings, even if the ringing cycle is not finished.
 - Permit the alarm to ring while sending http notification to the server.
@@ -109,7 +107,7 @@ The project objectives are as follow:
 
 ### 1.1.2 - Success Criteria
 
-The project will be considered successful if the following criterias are met:
+The project will be considered successful if the following criteria are met:
 
 - Successful implementation and testing of the alarm system. 
 - Successful shock detection
@@ -289,7 +287,7 @@ Naming conventions are important to keep a clear navigation through the director
 
 ### 2.2.2 - Formatting Conventions
 
-Formatting conventions are important to keep a clear, concise and readable code, our project will follow the following formatting conventions:
+Formatting conventions are important to keep clear, concise, and readable code, our project will follow the following formatting conventions:
 
 #### 2.2.2.1 - Indentation
 
@@ -303,9 +301,9 @@ Formatting conventions are important to keep a clear, concise and readable code,
 
 #### 2.2.2.3 - Line Breaks
 
-- Break the line two spaces before a function call.
-- Break the line two spaces before a function declaration.
-- Break the line one space between each variables declaration.
+- Break the line into two spaces before a function call.
+- Break the line into two spaces before a function declaration.
+- Break the line one space between each variable's declaration.
 - Do not break the line between a function name and its parameters.
 - Do not break the line in an if or a switch statement.
 - Do not break the line in a for or a while loop.
@@ -337,7 +335,7 @@ Formatting conventions are important to keep a clear, concise and readable code,
 | Electromagnet           | 2,7 x 1,6 x 1,3 cm    | 12V, 500mA                                                  | The electromagnet is utilized to secure or release the Sportshield device through magnetic locking mechanisms for enhanced security and convenience.                    | ![electromagnet](./Img/Technical-Specifications//Electromagnet.png) |
 | Piezoelectric buzzer    | unknown               | - 12V, avec oscillator control circuit - ~ 90-100 dB        | The piezoelectric buzzer emits audible alerts or tones by converting electrical energy into mechanical vibrations.                  | ![buzzer](./Img/Technical-Specifications//Buzzer.png)               |
 | Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm    | 3.7V, 1100mAh, 4.1Wh                                        | The Lithium-Polymer battery serves as a rechargeable power source, providing high energy density and lightweight characteristics for powering the Sportshield device.                    |![battery](./Img/Technical-Specifications/Battery.png)              |
-| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between device over short distances.| ![nfc](./Img/Technical-Specifications//Nfc.png)                     |
+| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between devices over short distances.| ![nfc](./Img/Technical-Specifications//Nfc.png)                     |
 
 
 
@@ -346,7 +344,7 @@ Formatting conventions are important to keep a clear, concise and readable code,
 - IDE: Arduino IDE
 - Main Software Files:
   - `original.ino`: Contains original code or primary logic for SportShield.
-  - `software_team3.ino`: Contains modified code by our developper.
+  - `software_team3.ino`: Contains modified code by our developer.
   - `battery_state.ino`: Manages battery state and consumption.
   - `bluetooth.ino`: Handles Bluetooth connectivity for the mobile app.
   - `gps.ino`: Implements GPS functionality for device localization.
@@ -410,7 +408,7 @@ The sketch implements strategies to optimize power consumption and extend batter
 - Include the `batteryState.ino` file as part of the SportShield project in the Arduino IDE.
 - Integrate function calls from this file into the main control logic `software_team3` to ensure continuous monitoring of the battery state.
 - Configure voltage threshold values and battery management parameters according to the specifications provided by Coris Innovation.
-- Test the battery management functionality under various load conditions, battery states, and environmental factors to verify its reliability and effectiveness.
+- Test the battery management functionality under various load conditions, battery status, and environmental factors to verify its reliability and effectiveness.
 
 #### 3.2.2 - `bluetooth.ino`
 
@@ -457,12 +455,12 @@ This file interfaces with a GPS module integrated into the SportShield device to
 
 >Inputs:
 
-- GPS data received from the GPS module, including latitude, longitude, altitude.
+- GPS data received from the GPS module, including latitude, longitude, and altitude.
 - Configuration parameters for GPS initialization and operation (e.g., update rate, data format).
 
 >Outputs:
 
-- Processed GPS data, including current location coordinates (latitude, longitude), altitude.
+- Processed GPS data, including current location coordinates (latitude, longitude), and altitude.
 - Location updates or events triggered based on GPS data changes or thresholds.
 
 >Dependencies: 
@@ -482,11 +480,11 @@ This file depends on the underlying GPS library or module integrated into the Sp
 
 >Purpose:
 
-The purpose of the `imu.ino` file is to manage the Inertial Measurement Unit (IMU) integrated into the SportShield device, which provides motion sensing capabilities.
+The purpose of the `imu.ino` file is to manage the Inertial Measurement Unit (IMU) integrated into the SportShield device, which provides motion-sensing capabilities.
 
 >Functionality:
 
-This file interacts with the IMU sensor to collect data related to the device's orientation, acceleration, and angular velocity. It processes this data to detect motion events, such as tilting, shaking, or sudden movements, and triggers corresponding actions or alarms.
+This file interacts with the IMU sensor to collect data related to the device's orientation, acceleration, and angular velocity. It processes this data to detect motion events, such as tilting, shaking, or sudden movements and triggers corresponding actions or alarms.
 
 >Inputs:
 
@@ -533,7 +531,7 @@ This file interacts with the NFC module integrated into the SportShield hardware
 
 >Dependencies:
 
-This file is supposed to depends on the underlying NFC library or driver provided by the microcontroller platform.
+This file is supposed to depend on the underlying NFC library or driver provided by the microcontroller platform.
 It may interact with other system components such as the main control logic, Bluetooth module for transmitting NFC data to a mobile app, or storage module for saving NFC tag data.
 
 >Usage:
@@ -631,7 +629,7 @@ This header file contains declarations of struct types, enums, and typedefs repr
 >Outputs:
 
 - Structured data types representing different aspects of the SportShield system, including sensor readings, device configurations, user commands, and system states.
-- Enumerated types defining sets of symbolic constants representing discrete values or options for specific system parameters or attributes.
+- Enumerated types are defining sets of symbolic constants representing discrete values or options for specific system parameters or attributes.
 
 >Dependencies:
 
@@ -697,7 +695,7 @@ In this section, you will find all the tools and references used to create this 
 
 | Term                      | Description                                                                                                 |
 |---------------------------|-------------------------------------------------------------------------------------------------------------|
-| Processor                 | The central processing unit (CPU) of a computer or device, responsible for executing instructions and tasks. |
+| Processor                 | The central processing unit (CPU) of a computer or device, is responsible for executing instructions and tasks. |
 | RAM                       | Random Access Memory, a type of computer memory used for temporary data storage during program execution.    |
 | Operating System          | Software that manages computer hardware and provides common services for computer programs.                   |
 | BLE                       | Bluetooth Low Energy, a wireless communication technology designed for short-range communication.           |
@@ -711,12 +709,12 @@ In this section, you will find all the tools and references used to create this 
 | GPRS                      | General Packet Radio Service, packet-switching technology for data transmission over GSM networks.           |
 | HTTP                      | Hypertext Transfer Protocol, application protocol for distributed, collaborative, hypermedia information systems. |
 | Electromagnet             | A magnet where the magnetic field is produced by electric current.                                           |
-| Piezoelectric Buzzer      | A buzzer that produces sound when electric current is applied to a piezoelectric material.                   |
+| Piezoelectric Buzzer      | A buzzer that produces sound when an electric current is applied to a piezoelectric material.                   |
 | Lithium-Polymer battery   | A rechargeable battery technology used in portable electronic devices for high energy density and lightweight. |
-| NFC                       | Near Field Communication, set of communication protocols enabling two electronic devices to establish communication. |
+| NFC                       | Near Field Communication, a set of communication protocols enabling two electronic devices to establish communication. |
 | NFC Antenna               | An antenna for Near Field Communication applications, facilitating contactless data exchange.              |
 | Arduino                   | Open-source electronics platform for creating interactive projects.                                          |
-| IDE                       | Integrated Development Environment, software application for software development.                          |
+| IDE                       | Integrated Development Environment, a software application for software development.                          |
 | Bluetooth                 | Wireless technology for short-range data exchange using radio waves.                                         |
 | GPS                       | Global Positioning System, satellite-based navigation system.                                                |
 | SIM Card                  | Subscriber Identity Module Card, memory chip used in mobile phones.                                          |
@@ -727,3 +725,4 @@ In this section, you will find all the tools and references used to create this 
 | Initialization            | Preparing something to be used, often setting its initial state or parameters.                                |
 | Callback Function         | Function passed as an argument to another function and executed after a specific event.                       |
 | Dependency                | Relationship between two software components where one relies on another.                                     |
+
