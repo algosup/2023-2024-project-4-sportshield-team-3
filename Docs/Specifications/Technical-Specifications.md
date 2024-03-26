@@ -13,7 +13,7 @@
 
 **Created on:** March 13<sup>th</sup>, 2024
 
-**Last updated:**  March 25<sup>th</sup>, 2024
+**Last updated:**  March 26<sup>th</sup>, 2024
 
 ---
 
@@ -34,7 +34,51 @@
 <br><details>
 <summary><h3 id="toc"> Table of Contents <i>(Click to expand)</i></h3></summary>
 
-
+- [1 - Overview](#1---overview)
+  - [1.1 - Purpose](#11---purpose)
+  - [1.2 - Stakeholders](#12---stakeholders)
+    - [1.2.1 - Project Team](#121---project-team)
+    - [1.2.2 - Client](#122---client)
+  - [1.3 - Usage](#13---usage)
+    - [1.3.1 Requirements](#131---requirements)
+  - [1.4 Scope](#14---scope)
+    - [1.4.1 In Scope](#141---in-scope)
+    - [1.4.2 Out scope](#142---out-of-scope)
+- [2 - Overall Description](#2---overall-description)
+  - [2.1 - Project Folder Structure](#21---project-folder-structure)
+  - [2.2 - Conventions](#22---conventions)
+    - [2.2.1 - Naming Conventions](#221---naming-conventions)
+      - [2.2.1.1 Folders](#2211-folders)
+      - [2.2.1.2 Files](#2212-files)
+      - [2.2.1.3 Variables](#2213-variables)
+      - [2.2.1.4 Constants](#2214-constants)
+      - [2.2.1.5 Functions](#2215-functions)
+      - [2.2.1.6 Tests](#2216-tests)
+    - [2.2.2 - Formatting Conventions](#222---formatting-conventions)
+      - [2.2.2.1 - Indentation](#2221---indentation)
+      - [2.2.2.2 - Line Length](#2222---line-length)
+      - [2.2.2.3 - Line Breaks](#2223---line-breaks)
+      - [2.2.2.4 - Comments](#2224---comments)
+- [3 - System Architecture](#3-system-architecture)
+  - [3.1 - Hardware](#31---hardware)
+  - [3.2 - Software](#32---software)
+    - [3.2.1 - `original.ino`](#321---originalino)
+    - [3.2.2 - `battery_state.ino`](#322---battery-stateino)
+    - [3.2.3 - `bluetooth.ino`](#323---bluetoothino)
+    - [3.2.4 - `gps.ino`](#324---gpsino)
+    - [3.2.5 - `imu.ino`](#325---imuino)
+    - [3.2.6 - `nfc.ino`](#326---nfcino)
+    - [3.2.7 - `sim.ino`](#327---simino)
+    - [3.2.8 - `sounds.ino`](#328---soundsino)
+    - [3.2.9 - `struct.h`](#329---structh)
+- [4 - End matter](#4---end-matter)
+  - [4.1 - Contributors](#41---contributors)
+  - [4.2 - Related Documents](#42---related-documents)
+  - [4.3 - License](#43---license)
+  - [4.4 - References](#44---references)
+    - [4.4.1 - Tools](#441---tools)
+    - [4.4.2 - References](#442---references)
+  - [4.5 - Glossary](#45---glossary)
 </details>
 
 
@@ -210,7 +254,7 @@ The project will be organized in the following folder structure:
 
 ### 2.2.1 - Naming Conventions
 
-Naming conventions[^16] are important to keep a clear navigation through the directories, our project will follow the following naming conventions:
+Naming conventions are important to keep a clear navigation through the directories, our project will follow the following naming conventions:
 
 #### 2.2.1.1 Folders
 
@@ -287,13 +331,13 @@ Formatting conventions are important to keep a clear, concise and readable code,
 
 |Name|Size|Specification|Role|Image|
 |--------------|-------|---------|------------|--------|
-|Xiao BLE Sense nrf52840  |2 x 2 x 0,5 cm         |- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)             | The Xiao BLE Sense nrf52840 serves as a compact yet powerful development board integrating Bluetooth 5.0 connectivity, motion sensing capabilities, and GPIO pins for versatile IoT prototyping and sensor-based applications.                    |![Xiao](Technical-Specifications/Img/Xiao.png)                    |
-|GNSS PA1010D             |2,5 x 2,5 x 1 cm       |- Integrated antenna - UART & I2C                            | The GNSS PA1010D serves as a high-performance Global Navigation Satellite System (GNSS) module, providing accurate positioning and timing information for applications ranging from asset tracking and navigation to precision agriculture and geolocation services. |![GNSS](Technical-Specifications/Img/Gnss.png)                    |
-| GSM/2G SIM800L Module   | 2,2 x 1,8 x 0,5 cm    | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card  | The GSM/2G SIM800L Module facilitates cellular connectivity, enabling data transmission, SMS communication, and voice calls, making it suitable for IoT projects, remote monitoring, and communication applications in areas with GSM network coverage.    | ![GSM](Technical-Specifications/Img/Gsm.png) |
-| Electromagnet           | 2,7 x 1,6 x 1,3 cm    | 12V, 500mA                                                  | The electromagnet is utilized to secure or release the Sportshield device through magnetic locking mechanisms for enhanced security and convenience.                    | ![electromagnet](Technical-Specifications/Img/Electromagnet.png) |
-| Piezoelectric buzzer    | unknown               | - 12V, avec oscillator control circuit - ~ 90-100 dB        | The piezoelectric buzzer emits audible alerts or tones by converting electrical energy into mechanical vibrations.                  | ![buzzer](Technical-Specifications/Img/Buzzer.png)               |
-| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm    | 3.7V, 1100mAh, 4.1Wh                                        | The Lithium-Polymer battery serves as a rechargeable power source, providing high energy density and lightweight characteristics for powering the Sportshield device.                    |![battery](Docs/Specifications/Img/Technical-Specifications/Battery.png)              |
-| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between device over short distances.| ![nfc](Technical-Specifications/Img/Nfc.png)                     |
+|Xiao BLE Sense nrf52840  |2 x 2 x 0,5 cm         |- BLE 5.0 & 6 DoF IMU - 11 GPIO (UART, SPI, I2C)             | The Xiao BLE Sense nrf52840 serves as a compact yet powerful development board integrating Bluetooth 5.0 connectivity, motion sensing capabilities, and GPIO pins for versatile IoT prototyping and sensor-based applications.                    |![Xiao](./Img/Technical-Specifications/Xiao.png)                    |
+|GNSS PA1010D             |2,5 x 2,5 x 1 cm       |- Integrated antenna - UART & I2C                            | The GNSS PA1010D serves as a high-performance Global Navigation Satellite System (GNSS) module, providing accurate positioning and timing information for applications ranging from asset tracking and navigation to precision agriculture and geolocation services. |![GNSS](./Img/Technical-Specifications/Gnss.png)                    |
+| GSM/2G SIM800L Module   | 2,2 x 1,8 x 0,5 cm    | - GPRS & HTTP, UART - SIM Card holde -> With 1NCE SIM card  | The GSM/2G SIM800L Module facilitates cellular connectivity, enabling data transmission, SMS communication, and voice calls, making it suitable for IoT projects, remote monitoring, and communication applications in areas with GSM network coverage.    | ![GSM](./Img/Technical-Specifications//Gsm.png) |
+| Electromagnet           | 2,7 x 1,6 x 1,3 cm    | 12V, 500mA                                                  | The electromagnet is utilized to secure or release the Sportshield device through magnetic locking mechanisms for enhanced security and convenience.                    | ![electromagnet](./Img/Technical-Specifications//Electromagnet.png) |
+| Piezoelectric buzzer    | unknown               | - 12V, avec oscillator control circuit - ~ 90-100 dB        | The piezoelectric buzzer emits audible alerts or tones by converting electrical energy into mechanical vibrations.                  | ![buzzer](./Img/Technical-Specifications//Buzzer.png)               |
+| Lithium-Polymer battery | 5,1 x 3,5 x 0,6 cm    | 3.7V, 1100mAh, 4.1Wh                                        | The Lithium-Polymer battery serves as a rechargeable power source, providing high energy density and lightweight characteristics for powering the Sportshield device.                    |![battery](./Img/Technical-Specifications/Battery.png)              |
+| NFC antenna             | 5,5 x 4,5 x 0,017 cm  | 13,56MHz frequency                                          |  The NFC antenna facilitates Near Field Communication (NFC) capabilities, enabling contactless data exchange and communication between device over short distances.| ![nfc](./Img/Technical-Specifications//Nfc.png)                     |
 
 
 
@@ -335,11 +379,17 @@ The `batteryState.ino` file is responsible for managing the battery state and co
 
 This Arduino sketch implements the following functionalities related to battery management:
 
-**Monitoring Battery Voltage**: The file contains functions to read the voltage level of the battery periodically using analog-to-digital conversion techniques. It interprets the raw voltage readings to determine the current state of charge and estimates the remaining battery capacity.
+**Monitoring Battery Voltage**: 
 
-**Low Battery Detection**: It includes algorithms to detect low battery conditions based on predefined voltage thresholds. When the battery voltage drops below a certain threshold, appropriate actions are triggered to notify the user, conserve power, or switch to alternative power sources.
+The file contains functions to read the voltage level of the battery periodically using analog-to-digital conversion techniques. It interprets the raw voltage readings to determine the current state of charge and estimates the remaining battery capacity.
 
-**Power Optimization**: The sketch implements strategies to optimize power consumption and extend battery life. This may involve adjusting the operating modes of various components, reducing the frequency of sensor readings or wireless transmissions, and implementing sleep modes to minimize idle power consumption.
+**Low Battery Detection**: 
+
+It includes algorithms to detect low battery conditions based on predefined voltage thresholds. When the battery voltage drops below a certain threshold, appropriate actions are triggered to notify the user, conserve power, or switch to alternative power sources.
+
+**Power Optimization**: 
+
+The sketch implements strategies to optimize power consumption and extend battery life. This may involve adjusting the operating modes of various components, reducing the frequency of sensor readings or wireless transmissions, and implementing sleep modes to minimize idle power consumption.
 
 >Inputs:
 
@@ -522,9 +572,9 @@ It may interact with other system components such as the main control logic, sen
 
 >Usage:
 
-- Include the `sim.ino` file in the software_team3.ino project file.
+- Include the `sim.ino` file in the `software_team3.ino` project file.
 - Initialize the SIM card module and configure its parameters (e.g., APN, authentication credentials) using appropriate function calls.
-- Implement logic for sending SMS messages, making voice calls, and establishing data connections (GPRS) as needed for the SportShield application.
+- Implement logic for sending SMS messages and establishing data connections (GPRS) as needed for the SportShield application.
 - Set up event handlers or callback functions to handle SIM card events such as network registration, connection status changes, or errors.
 - Integrate SIM card functionality with other system components such as sensor data acquisition, alarm triggers, or user notifications.
 - Test the SIM card functionality thoroughly to ensure reliable communication, proper network registration, and robust error handling.
@@ -537,7 +587,7 @@ The purpose of the `sounds.ino` file is to generate sound signals, including ala
 
 >Functionality:
 
-This file implements functions to control the piezoelectric buzzer or speaker integrated into the SportShield hardware. It generates sound signals of varying frequencies, durations, and amplitudes to convey different types of information to the user.
+This file implements functions to control the piezoelectric buzzer integrated into the SportShield hardware. It generates sound signals of varying frequencies, durations, and amplitudes to convey different types of information to the user.
 
 >Inputs:
 
@@ -551,7 +601,7 @@ This file implements functions to control the piezoelectric buzzer or speaker in
 
 >Dependencies:
 
-This file may depend on the underlying library or driver provided by the microcontroller platform for controlling audio output peripherals.
+This file may depend on the `OneWire V2.3.7` library provided by the microcontroller platform for controlling audio output peripherals.
 It may interact with other system components such as the main control logic, sensors, user interface elements, or communication modules to synchronize sound events with system operation.
 
 >Usage:
@@ -585,19 +635,19 @@ This header file contains declarations of struct types, enums, and typedefs repr
 
 >Dependencies:
 
-This file may depend on standard or platform-specific header files for data types and macros used in struct definitions (e.g., stdint.h, Arduino.h).
+This file may depend on standard or platform-specific header files for data types and macros used in struct definitions.
 It may interact with other header files or source files within the SportShield software project to exchange structured data or share common definitions.
 
 >Usage:
 
-- Include the struct.h header file in all source files requiring access to the defined data structures or types.
+- Include the `struct.h` header file in all source files requiring access to the defined data structures or types.
 - Define struct types, enums, and typedefs necessary to represent the data entities and concepts relevant to the SportShield system.
 - Use the defined data structures to organize and manipulate data inputs, outputs, and intermediate values within the software components.
 - Ensure consistency and coherence in the naming, organization, and usage of data structures to maintain clarity and facilitate comprehension and maintenance of the software codebase.
 - Document the purpose, structure, and usage guidelines for each defined data structure or type to aid developers in understanding and using them effectively.
 - Test the data structures and their associated functionality rigorously to verify correct behavior, adherence to specifications, and compatibility with other system components.
 
-# 5 - End Matter
+# 4 - End Matter
 
 ## 4.1 - Contributors
 [*(Back to top)*](#toc)
@@ -622,11 +672,11 @@ It may interact with other header files or source files within the SportShield s
 |                [Test Plan](Test-Plan.md)                |         This document describes the test plan of the project.         |
 |                 [Readme](../../readme.md)                  |                 This document describes the project.                  |
 
-## 4.2 - License
+## 4.3 - License
 
 [*(Back to top)*](#toc)
 
-This project is licensed under the MIT License - see the [LICENSE](/Users/abderrazaqmakran/Documents/2023-2024-project-4-sportshield-team-3/LICENSE.MD) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.MD) file for details.
 
 ## 4.4 - References
 
@@ -635,7 +685,6 @@ This project is licensed under the MIT License - see the [LICENSE](/Users/abderr
 In this section, you will find all the tools and references used to create this document.
 
 ### 4.4.1 - Tools
-- [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor/)
 - [Shield.io](https://shields.io/)
 
 ### 4.4.2 - References
@@ -646,50 +695,35 @@ In this section, you will find all the tools and references used to create this 
 
 [*(Back to top)*](#toc)
 
-<!-- |             Term              |                                                                                                                     Definition                                                                                                                      |                                                                                    What it means in this project                                                                                    |                              Additional Content                               |
-| :---------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
-|       **Processor[^1]**       |                                                                   A processor is the logic circuitry that responds to and processes the basic instructions that drive a computer.                                                                   |                                                             The processor is the virtual processor that will execute the assembly code.                                                             |      [Wikipedia](https://en.wikipedia.org/wiki/Central_processing_unit)       |
-|      **Interpreter[^2]**      |       In computer science, an interpreter is a computer program that directly executes instructions written in a programming or scripting language, without requiring them previously to have been compiled into a machine language program.        |                                                            The interpreter is the virtual processor that will execute the assembly code.                                                            |      [Wikipedia](https://en.wikipedia.org/wiki/Interpreter_(computing))       |
-|   **Assembly Language[^3]**   | An assembly language is a low-level programming language for a computer, or other programmable device, in which there is a very strong (generally one-to-one) correspondence between the language and the architecture's machine code instructions. |                                                      The assembly language is the language that will be interpreted by the virtual processor.                                                       |         [Wikipedia](https://en.wikipedia.org/wiki/Assembly_language)          |
-|           **C[^4]**           |                                        C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.                                        |                                                                       C is the language used to write the virtual processor.                                                                        |      [Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))      |
-|  **Low-Level Language[^5]**   |                                                  A low-level programming language is a programming language that provides little or no abstraction from a computer's instruction set architecture.                                                  |                                                                           The assembly language is a low-level language.                                                                            |   [Wikipedia](https://en.wikipedia.org/wiki/Low-level_programming_language)   |
-|       **Emulation[^6]**       |                                                   In computing, emulation refers to the ability of a computer program in an electronic device to emulate (or imitate) another program or device.                                                    |                                                                           The virtual processor will emulate a processor.                                                                           |              [Wikipedia](https://en.wikipedia.org/wiki/Emulator)              |
-|      **Instruction[^7]**      |                                                                                   An instruction is an order given to a computer processor by a computer program.                                                                                   |                                                                         The assembly language is composed of instructions.                                                                          |   [Wikipedia](https://en.wikipedia.org/wiki/Instruction_(computer_science))   |
-|   **Operating System[^8]**    |                                                   An operating system is system software that manages computer hardware, software resources, and provides common services for computer programs.                                                    |                                                              The operating system is the software that will run the virtual processor.                                                              |          [Wikipedia](https://en.wikipedia.org/wiki/Operating_system)          |
-|  **Visual Studio Code[^9]**   |                                                                           Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS.                                                                           |                                                               Visual Studio Code is the IDE[^10] used to write the virtual processor.                                                               |         [Wikipedia](https://en.wikipedia.org/wiki/Visual_Studio_Code)         |
-|         **IDE[^10]**          |                                           An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.                                            |                                                                 Visual Studio Code is the IDE used to write the virtual processor.                                                                  | [Wikipedia](https://en.wikipedia.org/wiki/Integrated_development_environment) |
-|         **GCC[^11]**          |                                                  GCC, formerly an acronym for GNU Compiler Collection, is a compiler system produced by the GNU Project supporting various programming languages.                                                   |                                                                     GCC is the compiler used to compile the virtual processor.                                                                      |      [Wikipedia](https://en.wikipedia.org/wiki/GNU_Compiler_Collection)       |
-|       **Compiler[^12]**       |                                        A compiler is a computer program that translates computer code written in one programming language (the source language) into another language (the target language).                                        |                                                                     GCC is the compiler used to compile the virtual processor.                                                                      |              [Wikipedia](https://en.wikipedia.org/wiki/Compiler)              |
-| **Performance Analysis[^13]** |                                   Performance analysis is the process of assessing the performance of a computer, comparing the performance of one or more systems, or evaluating the performance of a component.                                   |                                                     Performance analysis is the process of assessing the performance of the virtual processor.                                                      |  [Wikipedia](https://en.wikipedia.org/wiki/Profiling_(computer_programming))  |
-|  **Memory Management[^14]**   |                               Memory management is the process of controlling and coordinating computer memory, assigning portions called blocks to various running programs to optimize overall system performance.                                |       Memory management is the process of controlling and coordinating computer memory, assigning portions called blocks to various running programs to optimize overall system performance.        |         [Wikipedia](https://en.wikipedia.org/wiki/Memory_management)          |
-|         **RAM[^15]**          |                                              Random-access memory (RAM) is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.                                              |                                                                          RAM is the memory used by the virtual processor.                                                                           |        [Wikipedia](https://en.wikipedia.org/wiki/Random-access_memory)        |
-|  **Naming Convention[^16]**   |                         A naming convention is a set of rules for choosing the character sequence to be used for identifiers which denote variables, types, functions, and other entities in source code and documentation.                         | A naming convention is a set of rules for choosing the character sequence to be used for identifiers which denote variables, types, functions, and other entities in source code and documentation. |  [Wikipedia](https://en.wikipedia.org/wiki/Naming_convention_(programming))   |
-|       **Register[^17]**       |                                                      In computer architecture, a processor register is a quickly accessible location available to a computer's central processing unit (CPU).                                                       |                                                                     Registers are used by the virtual processor to store data.                                                                      |         [Wikipedia](https://en.wikipedia.org/wiki/Processor_register)         |
-|         **Jump[^18]**         |                                                           In computer science, a jump statement is a statement that unconditionally transfers program control to a designated statement.                                                            |                                                         Jump statements are used by the virtual processor to change the flow of execution.                                                          |     [Wikipedia](https://en.wikipedia.org/wiki/Branch_(computer_science))      |
-|       **Parsing[^19]**        |                  Parsing, syntax analysis, or syntactic analysis is the process of analyzing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar.                   |                                                                   Parsing is the process of analyzing the assembly language code.                                                                   |              [Wikipedia](https://en.wikipedia.org/wiki/Parsing)               |
-|       **Operand[^20]**        |                                                    In mathematics and computer programming, an operand is the object of a mathematical operation, a quantity on which an operation is performed.                                                    |                                                            Operands are used by the virtual processor to perform arithmetic operations.                                                             |              [Wikipedia](https://en.wikipedia.org/wiki/Operand)               | -->
-
-## 4.6 - Footnotes
-
-[*(Back to top)*](#toc)
-
-[^1]:  []()
-[^2]:  []()
-[^3]:  []()
-[^4]:  []()
-[^5]:  []()
-[^6]:  []()
-[^7]:  []()
-[^8]:  []()
-[^9]:  []()
-[^10]: []()
-[^11]: []()
-[^12]: []()
-[^13]: []()
-[^14]: []()
-[^15]: []()
-[^16]: []()
-[^17]: []()
-[^18]: []()
-[^19]: []()
-[^20]: []()
+| Term                      | Description                                                                                                 |
+|---------------------------|-------------------------------------------------------------------------------------------------------------|
+| Processor                 | The central processing unit (CPU) of a computer or device, responsible for executing instructions and tasks. |
+| RAM                       | Random Access Memory, a type of computer memory used for temporary data storage during program execution.    |
+| Operating System          | Software that manages computer hardware and provides common services for computer programs.                   |
+| BLE                       | Bluetooth Low Energy, a wireless communication technology designed for short-range communication.           |
+| IMU                       | Inertial Measurement Unit, an electronic device that measures specific force, angular rate, and sometimes magnetic field. |
+| GPIO                      | General-Purpose Input/Output, a pin on a microcontroller whose behavior can be controlled by software.        |
+| UART                      | Universal Asynchronous Receiver-Transmitter, a hardware communication protocol for serial communication.     |
+| SPI                       | Serial Peripheral Interface, a synchronous serial communication interface for short-distance communication. |
+| I2C                       | Inter-Integrated Circuit, a serial communication bus interface commonly used in embedded systems.            |
+| GNSS                      | Global Navigation Satellite System, providing geolocation and time information globally.                    |
+| GSM                       | Global System for Mobile Communications, standard for digital cellular networks used for voice and data.   |
+| GPRS                      | General Packet Radio Service, packet-switching technology for data transmission over GSM networks.           |
+| HTTP                      | Hypertext Transfer Protocol, application protocol for distributed, collaborative, hypermedia information systems. |
+| Electromagnet             | A magnet where the magnetic field is produced by electric current.                                           |
+| Piezoelectric Buzzer      | A buzzer that produces sound when electric current is applied to a piezoelectric material.                   |
+| Lithium-Polymer battery   | A rechargeable battery technology used in portable electronic devices for high energy density and lightweight. |
+| NFC                       | Near Field Communication, set of communication protocols enabling two electronic devices to establish communication. |
+| NFC Antenna               | An antenna for Near Field Communication applications, facilitating contactless data exchange.              |
+| Arduino                   | Open-source electronics platform for creating interactive projects.                                          |
+| IDE                       | Integrated Development Environment, software application for software development.                          |
+| Bluetooth                 | Wireless technology for short-range data exchange using radio waves.                                         |
+| GPS                       | Global Positioning System, satellite-based navigation system.                                                |
+| SIM Card                  | Subscriber Identity Module Card, memory chip used in mobile phones.                                          |
+| Libraries                 | Collections of precompiled routines or functions for specific purposes.                                      |
+| Analog Input              | Function in microcontrollers for reading analog voltage levels.                                              |
+| Data Transmission         | Sending data from one location to another over a communication channel.                                      |
+| Data Reception            | Receiving and capturing data sent from another device or source.                                             |
+| Initialization            | Preparing something to be used, often setting its initial state or parameters.                                |
+| Callback Function         | Function passed as an argument to another function and executed after a specific event.                       |
+| Dependency                | Relationship between two software components where one relies on another.                                     |
