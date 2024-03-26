@@ -27,10 +27,9 @@ void PulseBuzzer(int repetitions, unsigned long durationOn, unsigned long durati
   }
 }
 
-// provides the absolute difference in acceleration between consecutive calls, helping to monitor changes in motion over time.
+// Provides the absolute difference in acceleration between consecutive calls, helping to monitor changes in motion over time.
 float getMotionData() {
   static float previousAcceleration = 0;
-  //r
   float accelX = imu.readFloatAccelX();
   float accelY = imu.readFloatAccelY();
   float accelZ = imu.readFloatAccelZ();
@@ -39,7 +38,7 @@ float getMotionData() {
   float MotionDataerence = currentAcceleration - previousAcceleration;  // Calculate the acceleration difference
   previousAcceleration = currentAcceleration;
 
-  return fabs(MotionDataerence);  //returns a value always positive
+  return fabs(MotionDataerence);  //  Returns a value always positive
 }
 
 float getRotationData() {

@@ -16,12 +16,9 @@
 
 //---------------- GLOBAL VARIABLES -----------------------------
 
-// Battery Voltage
-const float MIN_VOLTAGE = 3.0;
-const float MAX_VOLTAGE = 4.2;
-
 myConfig Config;
 bool isAuthenticate = false;
+
 // Timer
 #define HW_TIMER_INTERVAL_MS 1
 NRF52_MBED_Timer ITimer(NRF_TIMER_3);
@@ -43,11 +40,11 @@ BLEDescriptor ActivationDescriptor("2901", "Activation");
 BLEDescriptor UnlockDescriptor("2901", "Unlock");
 BLEDescriptor MACDescriptor("2901", "MAC Address");
 
-bool BLE_activated = true;  //true if the bluetooth is activated
-uint32_t tim_connec = 0;    // time in ms or we start to activate the bluetooth following a detection of movement
+bool BLE_activated = true;  // True if the bluetooth is activated
+uint32_t tim_connec = 0;    // Time in ms or we start to activate the bluetooth following a detection of movement
 
 //IMU : LSM6DS3
-LSM6DS3 imu(I2C_MODE, 0x6A);  //I2C device address 0x6A
+LSM6DS3 imu(I2C_MODE, 0x6A);  // I2C device address 0x6A
 uint32_t timer_imu = millis();
 bool MotionBig = false;
 bool MotionSmall = false;
@@ -75,54 +72,56 @@ void PulseBuzzer(int repetitions, unsigned long durationOn, unsigned long durati
 unsigned long previousMillis = 0;
 int currentRep = 0;
 
-//Electroaimant
+// Electromagnet
 const int aimantPin = D3;
 
 // Set a threshold to determine a "small" or "big" movement
 
-float SmallMT = 20.0;  //     SmallMotionThreshold
-float BigMT = 150.0;   //    BigMotionThreshold
+float SmallMT = 20.0;  // SmallMotionThreshold
+float BigMT = 150.0;   // BigMotionThreshold
 
-float SmallRT = 20.0;  //     SmallRotationThreshold
-float BigRT = 125.0;   //     BigRotationThreshold
+float SmallRT = 20.0;  // SmallRotationThreshold
+float BigRT = 125.0;   // BigRotationThreshold
 
-//batterie
+// Battery
 #define VBAT_ENABLE 14
 
 float MotionData;
 float RotationData;
 
-unsigned long StartCoolDown = 0;  //check point for millis aided cooldown
+unsigned long StartCoolDown = 0;  // Check point for millis aided cooldown
 
 
 //-------------------------------- SETUP ----------------------------------------
 void setup() {
 
-  pinMode(buzzerPin, OUTPUT);  // setup for buzzer
+  // Setup for buzzer
+  pinMode(buzzerPin, OUTPUT);  
   digitalWrite(buzzerPin, HIGH);
   delay(1000);
   digitalWrite(buzzerPin, LOW);
   Serial.println(" buzzer");
-
-  pinMode(aimantPin, OUTPUT);  //setup electro-aimant
+  
+  // Setup electromagnet
+  pinMode(aimantPin, OUTPUT);  
   digitalWrite(aimantPin, HIGH);
   delay(1000);
   digitalWrite(aimantPin, LOW);
   Serial.println("electro");
 
-  //debug led initialization
+  // Debug led initialization
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LEDR, LOW);
 
-  // power bridge control
+  // Power bridge control
   pinMode(D4, OUTPUT);
   digitalWrite(D4, HIGH);
 
-  // power battery control with the transistor
+  // Power battery control with the transistor
   pinMode(D9, OUTPUT);
   digitalWrite(D9, HIGH);
 
-  // battery charging enable with high current 100mA > 50mA
+  // Battery charging enable with high current (LOW)100mA > (HIGH)50mA
   pinMode(P0_13, OUTPUT);
   digitalWrite(P0_13, LOW);
 
@@ -152,7 +151,7 @@ void setup() {
   sim_setup();
   Serial.println("SIM SETUP");
 
-  analogReadResolution(ADC_RESOLUTION);  //setup battery reading
+  analogReadResolution(ADC_RESOLUTION);  // Setup battery reading
   pinMode(PIN_VBAT, INPUT);
   pinMode(VBAT_ENABLE, OUTPUT);
   digitalWrite(VBAT_ENABLE, LOW);
@@ -173,10 +172,10 @@ void loop() {
   MotionData = getMotionData();
   RotationData = getRotationData();
 
-  if (Config.isActivate) {  //alarm enalbled
+  if (Config.isActivate) {  //  Alarm enable
     activateGPS();
 
-    if (MotionData > BigMT || RotationData > BigRT) {  //Big motion detection
+    if (MotionData > BigMT || RotationData > BigRT) {  // Big motion detection
       if (MotionData > BigMT) {
         Serial.print("Motion detected : ");
         Serial.println(MotionData);
@@ -188,7 +187,7 @@ void loop() {
       MotionSmall = false;
       send_move = true;
 
-    } else if ((MotionBig == false) && (MotionData > SmallMT || RotationData > SmallRT)) {  //Small motion detection
+    } else if ((MotionBig == false) && (MotionData > SmallMT || RotationData > SmallRT)) {  //  Small motion detection
       if (MotionData > SmallMT) {
         Serial.print(" Small motion: ");
         Serial.println(MotionData);
@@ -201,12 +200,12 @@ void loop() {
   }
 
   if (MotionBig) {
-    PulseBuzzer(5, 500, 1000);  // repetitions, DurationOn , DurationOff
-    //sending positions & shock notif via SIM module
+    PulseBuzzer(5, 500, 1000);  // Repetitions, DurationOn , DurationOff
+    //  Sending positions & shock notif via SIM module
   }
 
   if (MotionSmall) {
-    PulseBuzzer(3, 100, 100);  // repetitions, DurationOn , DurationOff
+    PulseBuzzer(3, 100, 100);  // Repetitions, DurationOn , DurationOff
   }
 
   MotionDetect = true;
@@ -220,7 +219,7 @@ void loop() {
     }
   }
 
-  //if a mvt is detected and bluetooth is disabled bluetooth activation
+  //  If a mvt is detected and bluetooth is disabled bluetooth activation
   if (MotionDetect == true) {
     tim_connec = millis();
     MotionDetect = false;
@@ -231,36 +230,37 @@ void loop() {
     }
   }
 
-  //bluetooth actived when we are interacting with the module or when the alarm is on
+  //  Bluetooth actived when we are interacting with the module or when the alarm is on
   if ((BLE_activated == true) || (Config.isActivate)) {
     BLE.poll();  //communication autorisé
   }
 
-  //at the end of the time during which the lock has not moved, if bluetooth is activated, and the lock is not in activation mode then it is turned off to save the battery
+  //  At the end of the time during which the lock has not moved, if bluetooth is activated, and the lock is not in activation mode then it is turned off to save the battery
   if ((millis() - tim_connec > TIME_OUT_MS_BLE_ACT) && (BLE_activated == true) && (Config.isActivate != 1)) {
     BLE_activated = false;
     Serial.println("timeout->BLE_END");
     BLE.end();
   }
 
-  //capture clocked GPS data
+  //  Capture clocked GPS data
   GPS.read();
   if (GPS.newNMEAreceived()) {
-    Serial.print(GPS.lastNMEA());    // this also sets the newNMEAreceived() flag to false
-    if (!GPS.parse(GPS.lastNMEA()))  // this also sets the newNMEAreceived() flag to false
+    Serial.print(GPS.lastNMEA());    // This also sets the newNMEAreceived() flag to false
+    if (!GPS.parse(GPS.lastNMEA()))  // This also sets the newNMEAreceived() flag to false
       Serial.println("fail to parse");
-    ;  // we can fail to parse a   sentence in which case we should just wait for another
+    ;  // We can fail to parse a sentence in which case we should just wait for another
   }
 
-  if (GPS.fix && position_acquired == false) {  // if location detected
+  if (GPS.fix && position_acquired == false) {  // If location detected
     Serial.println("fix + false");
     position_acquired = true;
     GPS.fix = 0;
     digitalWrite(GPS_WKUP_PIN, LOW);
-    GPS.sendCommand("$PMTK225,4*2F");  // send to backup mode
+    GPS.sendCommand("$PMTK225,4*2F");  // Send to backup mode
   }
-
-  if (send_move) {  //sending of positions via SIM module
+  
+  //  Sending of positions via SIM module
+  if (send_move) {  
     Serial.println("Envoi detection mouvement");
     sim800l->setupGPRS("iot.1nce.net");
     sim800l->connectGPRS();
@@ -283,8 +283,9 @@ void loop() {
     sim800l->disconnectGPRS();
     send_move = false;
   }
-
-  if (send_position) {  //regular sending of positions via SIM module
+  
+  //  Regular sending of positions via SIM module
+  if (send_position) {  
     Serial.println("Envoi regulier position");
     sim800l->setupGPRS("iot.1nce.net");
     sim800l->connectGPRS();
@@ -331,7 +332,7 @@ char Conversion(unsigned short int data) {
     mdphexadecimal[i] = mdphexadecimal[2 + i];
     mdphexadecimal[2 + i] = temp;
   }
-  //Serial.println("Mot de passe : " + String(valeur) + " ");  //used to see the value in decimal
+  //Serial.println("Mot de passe : " + String(valeur) + " ");  // Used to see the value in decimal
   Serial.print("Written password  = ");
   Serial.println(mdphexadecimal);
 }

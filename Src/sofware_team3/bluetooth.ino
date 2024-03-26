@@ -4,10 +4,10 @@
 void ble_setup(void) {
   if (!BLE.begin()) {
     Serial.println("starting Bluetooth® Low Energy module failed!");
-    while (1)  // set a reset in this case? risk of card crash?
+    while (1)  // Set a reset in this case? risk of card crash?
       ;
   }
-  // set advertised local name and service UUID:
+  //  Set advertised local name and service UUID:
   BLE.setLocalName("DeviceTeam3");
   BLE.setDeviceName("DeviceTeam3");
   BLE.setAdvertisedService(PasswordService);
@@ -26,7 +26,7 @@ void ble_setup(void) {
   // add service
   BLE.addService(PasswordService);
   BLE.addService(ConfigService);
-  // set the initial value for the characeristic:
+  //  Set the initial value for the characeristic:
   PasswordCharacteristic.writeValue(0);
   NameCharacteristic.writeValue("\n");
   ActivationCharacteristic.writeValue(false);
@@ -41,11 +41,11 @@ void ble_setup(void) {
   ActivationCharacteristic.setEventHandler(BLEWritten, onWriteActivation);
   ActivationCharacteristic.setEventHandler(BLERead, onReadActivation);
   UnlockCharacteristic.setEventHandler(BLEWritten, onWriteUnlock);
-  // start advertising
+  // Start advertising
   BLE.advertise();
 }
 
-// Detectec when the bluetooth is connected
+// Detect when the bluetooth is connected
 void onConnect(BLEDevice central) {
   Serial.print("Connected to ");
   Serial.println(central.address());
@@ -54,7 +54,7 @@ void onConnect(BLEDevice central) {
   bluetoothConnected();
 }
 
-// Detectec when the bluetooth is disconnected
+// Detect when the bluetooth is disconnected
 void onDisconnect(BLEDevice central) {
   Serial.print(F("Disconnected from central: "));
   Serial.println(central.address());
@@ -98,13 +98,13 @@ void onWriteActivation(BLEDevice central, BLECharacteristic characteristic) {
     Config.isActivate = ActivationCharacteristic.value();
     if (Config.isActivate != 0) {
       Serial.println("Alarme enabled");
-      digitalWrite(SIM800_DTR_PIN, LOW);  // put in normal mode
+      digitalWrite(SIM800_DTR_PIN, LOW);  // Put in normal mode
       delay(100);
-      sim800l->setPowerMode(NORMAL);  // set normal functionnality mode
+      sim800l->setPowerMode(NORMAL);  //  Set normal functionnality mode
     } else {
       Serial.print("Désactivation");
-      sim800l->setPowerMode(MINIMUM);      // set minimum functionnality mode
-      digitalWrite(SIM800_DTR_PIN, HIGH);  // put in sleep mode
+      sim800l->setPowerMode(MINIMUM);      // Set minimum functionnality mode
+      digitalWrite(SIM800_DTR_PIN, HIGH);  // Put in sleep mode
     }
   } else {
     ActivationCharacteristic.writeValue(Config.isActivate);
@@ -119,7 +119,7 @@ void onReadActivation(BLEDevice central, BLECharacteristic characteristic) {
 
 void onWriteUnlock(BLEDevice central, BLECharacteristic characteristic) {
   if (isAuthenticate) {
-    // activate electromagnet
+    // Activate electromagnet
     Serial.println("Unlock");
     digitalWrite(aimantPin, HIGH);
     delay(2000);
