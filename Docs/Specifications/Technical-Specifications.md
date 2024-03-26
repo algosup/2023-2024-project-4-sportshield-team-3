@@ -20,10 +20,10 @@
 | Reviewer           | Role              | Approved | Date       |
 | ------------------ | ----------------- | -------- | ---------- |
 | Salaheddine NAMIR  | Quality Assurance |          | 26/03/2024 |
-| Mouatassime SEIV   | Project Manager   |          | 26/03/2024 |
-| Pierre GORIN       | Program Manager   |          | 26/03/2024 |
-| Abderrazaq MAKRAN  | Technical Leader  |          | 26/03/2024 |  
-| Michel RIFF        | Technical Writer  |          | 26/03/2024 |
+| Mouatassime SEIV   | Project Manager   |✅        | 26/03/2024 |
+| Pierre GORIN       | Program Manager   |✅        | 26/03/2024 |
+| Abderrazaq MAKRAN  | Technical Leader  |✅        | 26/03/2024 |  
+| Michel RIFF        | Technical Writer  |✅        | 26/03/2024 |
 | Guillaume DESPAUX  | Software Engineer |          | 26/03/2024 |
 
 
