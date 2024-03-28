@@ -11,19 +11,21 @@ void ble_setup(void) {
   BLE.setLocalName("DeviceTeam3");
   BLE.setDeviceName("DeviceTeam3");
   BLE.setAdvertisedService(PasswordService);
-  // add descriptors
+  //  Add descriptors
   PasswordCharacteristic.addDescriptor(PasswordDescriptor);
   NameCharacteristic.addDescriptor(NameDescriptor);
   ActivationCharacteristic.addDescriptor(ActivationDescriptor);
   UnlockCharacteristic.addDescriptor(UnlockDescriptor);
   MACCharacteristic.addDescriptor(MACDescriptor);
-  // add the characteristic to the service
+  StopAlarmCharacteristic.addDescriptor(StopAlarmDescriptor);
+  //  Add the characteristic to the service
   PasswordService.addCharacteristic(PasswordCharacteristic);
   ConfigService.addCharacteristic(NameCharacteristic);
   ConfigService.addCharacteristic(ActivationCharacteristic);
   ConfigService.addCharacteristic(UnlockCharacteristic);
   ConfigService.addCharacteristic(MACCharacteristic);
-  // add service
+  ConfigService.addCharacteristic(StopAlarmCharacteristic);
+  //  Add service
   BLE.addService(PasswordService);
   BLE.addService(ConfigService);
   //  Set the initial value for the characeristic:
@@ -32,7 +34,8 @@ void ble_setup(void) {
   ActivationCharacteristic.writeValue(false);
   UnlockCharacteristic.writeValue(false);
   MACCharacteristic.writeValue(BLE.address());
-  //set event handler
+  StopAlarmCharacteristic.writeValue(0);
+  //  Set event handler
   BLE.setEventHandler(BLEConnected, onConnect);
   BLE.setEventHandler(BLEDisconnected, onDisconnect);
   PasswordCharacteristic.setEventHandler(BLEWritten, onWritePassword);
@@ -41,11 +44,12 @@ void ble_setup(void) {
   ActivationCharacteristic.setEventHandler(BLEWritten, onWriteActivation);
   ActivationCharacteristic.setEventHandler(BLERead, onReadActivation);
   UnlockCharacteristic.setEventHandler(BLEWritten, onWriteUnlock);
-  // Start advertising
+  StopAlarmCharacteristic.setEventHandler(BLEWritten, stopPulseBuzzer);
+  //  Start advertising
   BLE.advertise();
 }
 
-// Detect when the bluetooth is connected
+//  Detect when the bluetooth is connected
 void onConnect(BLEDevice central) {
   Serial.print("Connected to ");
   Serial.println(central.address());
@@ -54,7 +58,7 @@ void onConnect(BLEDevice central) {
   bluetoothConnected();
 }
 
-// Detect when the bluetooth is disconnected
+//  Detect when the bluetooth is disconnected
 void onDisconnect(BLEDevice central) {
   Serial.print(F("Disconnected from central: "));
   Serial.println(central.address());
@@ -63,15 +67,17 @@ void onDisconnect(BLEDevice central) {
   bluetoothDisconnected();
 }
 
-
+//  Detect when password is send
 void onWritePassword(BLEDevice central, BLECharacteristic characteristic) {
   const int motDePasseAttendu = 13330;
-  short int value = PasswordCharacteristic.value();
-  Conversion(value);
+  int value = PasswordCharacteristic.value(); //  short int value = PasswordCharacteristic.value();
+  // Conversion(value);
   isAuthenticate = (value == motDePasseAttendu);
+  Serial.println(value);
   Serial.println(isAuthenticate ? "successful authentication" : "wrong password");
 }
 
+// Write the new name for the device
 void onWriteName(BLEDevice central, BLECharacteristic characteristic) {
   if (isAuthenticate) {
     Config.Name = NameCharacteristic.value();
@@ -83,6 +89,7 @@ void onWriteName(BLEDevice central, BLECharacteristic characteristic) {
   }
 }
 
+//  Read the name of the device
 void onReadName(BLEDevice central, BLECharacteristic characteristic) {
   Serial.println("CALLBACK READ");
   Serial.println(isAuthenticate);
@@ -93,6 +100,7 @@ void onReadName(BLEDevice central, BLECharacteristic characteristic) {
   }
 }
 
+//  
 void onWriteActivation(BLEDevice central, BLECharacteristic characteristic) {
   if (isAuthenticate) {
     Config.isActivate = ActivationCharacteristic.value();
@@ -124,5 +132,13 @@ void onWriteUnlock(BLEDevice central, BLECharacteristic characteristic) {
     digitalWrite(aimantPin, HIGH);
     delay(2000);
     digitalWrite(aimantPin, LOW);
+  }
+}
+
+// Stop the alarm during the function
+void stopPulseBuzzer(BLEDevice central, BLECharacteristic characteristic) {
+  if (isAuthenticate) {
+    stopBuzzer = true;
+    Serial.println("Alarm desactivated");
   }
 }

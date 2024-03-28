@@ -12,6 +12,14 @@ void PulseBuzzer(int repetitions, unsigned long durationOn, unsigned long durati
   static int buzzerState = LOW;
   unsigned long currentMillis = millis();
 
+  if (stopBuzzer) {
+    currentRep = 0;
+    previousMillis = 0;
+    MotionSmall = false;
+    MotionBig = false;
+    stopBuzzer = false;
+  }
+
   if (currentRep < repetitions) {
     if (currentMillis - previousMillis >= (buzzerState == LOW ? durationOn : durationOff)) {
       digitalWrite(buzzerPin, buzzerState = !buzzerState);

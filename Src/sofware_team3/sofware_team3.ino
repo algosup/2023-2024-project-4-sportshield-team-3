@@ -33,12 +33,14 @@ BLEStringCharacteristic NameCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214
 BLEStringCharacteristic MACCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1217", BLERead, 20);
 BLEBooleanCharacteristic ActivationCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1215", BLERead | BLEWrite);
 BLEBooleanCharacteristic UnlockCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1216", BLEWrite);
+BLEBooleanCharacteristic StopAlarmCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1218", BLEWrite);
 
 BLEDescriptor PasswordDescriptor("2901", "Password");  // Bluetooth® Low Energy Descriptor
 BLEDescriptor NameDescriptor("2901", "Name");
 BLEDescriptor ActivationDescriptor("2901", "Activation");
 BLEDescriptor UnlockDescriptor("2901", "Unlock");
 BLEDescriptor MACDescriptor("2901", "MAC Address");
+BLEDescriptor StopAlarmDescriptor("2901", "Stop Alarm");
 
 bool BLE_activated = true;  // True if the bluetooth is activated
 uint32_t tim_connec = 0;    // Time in ms or we start to activate the bluetooth following a detection of movement
@@ -71,6 +73,7 @@ const int buzzerPin = D2;
 void PulseBuzzer(int repetitions, unsigned long durationOn, unsigned long durationOff);
 unsigned long previousMillis = 0;
 int currentRep = 0;
+bool stopBuzzer = false;
 
 // Electromagnet
 const int aimantPin = D3;
@@ -166,9 +169,6 @@ void setup() {
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
 
-  Serial.print(getBatteryPercentage());
-  Serial.println("%");
-  delay(100);
   MotionData = getMotionData();
   RotationData = getRotationData();
 
@@ -198,14 +198,14 @@ void loop() {
       MotionSmall = true;
     }
   }
-
+  
   if (MotionBig) {
-    PulseBuzzer(5, 500, 1000);  // Repetitions, DurationOn , DurationOff
-    //  Sending positions & shock notif via SIM module
+    PulseBuzzer(5, 500, 1000);  // repetitions, DurationOn , DurationOff
+    //sending positions & shock notif via SIM module
   }
 
   if (MotionSmall) {
-    PulseBuzzer(3, 100, 100);  // Repetitions, DurationOn , DurationOff
+    PulseBuzzer(3, 100, 100);  // repetitions, DurationOn , DurationOff
   }
 
   MotionDetect = true;
@@ -332,7 +332,7 @@ char Conversion(unsigned short int data) {
     mdphexadecimal[i] = mdphexadecimal[2 + i];
     mdphexadecimal[2 + i] = temp;
   }
-  //Serial.println("Mot de passe : " + String(valeur) + " ");  // Used to see the value in decimal
+  //  Serial.println("Mot de passe : " + String(valeur) + " ");  // Used to see the value in decimal
   Serial.print("Written password  = ");
   Serial.println(mdphexadecimal);
 }
@@ -340,7 +340,7 @@ char Conversion(unsigned short int data) {
 String convertDMMtoDD(String dmmCoordinates) {
   int degrees;
   float minutes;
-  // Separate coordinates in degrees and decimal minutes
+  //  Separate coordinates in degrees and decimal minutes
   if (dmmCoordinates.length() == 9) {
     degrees = dmmCoordinates.substring(0, 2).toInt();
     minutes = dmmCoordinates.substring(2).toFloat();
@@ -348,7 +348,7 @@ String convertDMMtoDD(String dmmCoordinates) {
     degrees = dmmCoordinates.substring(0, 1).toInt();
     minutes = dmmCoordinates.substring(1).toFloat();
   }
-  // Convert decimal minutes to decimal degrees
+  //  Convert decimal minutes to decimal degrees
   float decimalDegrees = degrees + (minutes / 60.0);
 
   // Convert to string and format coordinates to decimal degrees
