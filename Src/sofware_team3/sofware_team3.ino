@@ -32,13 +32,13 @@ BLEShortCharacteristic PasswordCharacteristic("19B10000-E8F2-537E-4F6C-D104768A1
 BLEStringCharacteristic NameCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLERead | BLEWrite, 20);
 BLEStringCharacteristic MACCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1217", BLERead, 20);
 BLEBooleanCharacteristic ActivationCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1215", BLERead | BLEWrite);
-BLEBooleanCharacteristic UnlockCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1216", BLEWrite);
+BLEBooleanCharacteristic LockUnlockCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1216", BLEWrite);
 BLEBooleanCharacteristic StopAlarmCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1218", BLEWrite);
 
 BLEDescriptor PasswordDescriptor("2901", "Password");  // Bluetooth® Low Energy Descriptor
 BLEDescriptor NameDescriptor("2901", "Name");
 BLEDescriptor ActivationDescriptor("2901", "Activation");
-BLEDescriptor UnlockDescriptor("2901", "Unlock");
+BLEDescriptor LockUnlockDescriptor("2901", "Lock/Unlock");
 BLEDescriptor MACDescriptor("2901", "MAC Address");
 BLEDescriptor StopAlarmDescriptor("2901", "Stop Alarm");
 
@@ -77,6 +77,7 @@ bool stopBuzzer = false;
 
 // Electromagnet
 const int aimantPin = D3;
+bool isLock = false;
 
 // Set a threshold to determine a "small" or "big" movement
 
@@ -169,11 +170,11 @@ void setup() {
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
 
-  MotionData = getMotionData();
-  RotationData = getRotationData();
-
   if (Config.isActivate) {  //  Alarm enable
     activateGPS();
+
+    MotionData = getMotionData();
+    RotationData = getRotationData();
 
     if (MotionData > BigMT || RotationData > BigRT) {  // Big motion detection
       if (MotionData > BigMT) {
@@ -261,6 +262,7 @@ void loop() {
   
   //  Sending of positions via SIM module
   if (send_move) {  
+    PulseBuzzer(10, 500, 1000); // Permit 
     Serial.println("Envoi detection mouvement");
     sim800l->setupGPRS("iot.1nce.net");
     sim800l->connectGPRS();
@@ -290,7 +292,7 @@ void loop() {
     sim800l->setupGPRS("iot.1nce.net");
     sim800l->connectGPRS();
     String RouteCoord = "http://141.94.244.11:2000/updateCoordinate/" + BLE.address();
-    String bat = "{\"latitude\": \" " + convertDMMtoDD(String(float(GPS.latitude), 4)) + "\", \"longitude\":\"" + convertDMMtoDD(String(float(GPS.longitude), 4)) + "\", \"batterie\":\"" + String(getBatteryVoltage()) + "\"}";
+    String bat = "{\"latitude\": \" " + convertDMMtoDD(String(float(GPS.latitude), 4)) + "\", \"longitude\":\"" + convertDMMtoDD(String(float(GPS.longitude), 4)) + "\", \"batterie\":\"" + String(getBatteryPercentage()) + "\"}";
     char posbat[200];
     bat.toCharArray(posbat, bat.length() + 1);
     Serial.println(posbat);

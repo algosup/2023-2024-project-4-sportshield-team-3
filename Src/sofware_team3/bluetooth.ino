@@ -15,14 +15,14 @@ void ble_setup(void) {
   PasswordCharacteristic.addDescriptor(PasswordDescriptor);
   NameCharacteristic.addDescriptor(NameDescriptor);
   ActivationCharacteristic.addDescriptor(ActivationDescriptor);
-  UnlockCharacteristic.addDescriptor(UnlockDescriptor);
+  LockUnlockCharacteristic.addDescriptor(LockUnlockDescriptor);
   MACCharacteristic.addDescriptor(MACDescriptor);
   StopAlarmCharacteristic.addDescriptor(StopAlarmDescriptor);
   //  Add the characteristic to the service
   PasswordService.addCharacteristic(PasswordCharacteristic);
   ConfigService.addCharacteristic(NameCharacteristic);
   ConfigService.addCharacteristic(ActivationCharacteristic);
-  ConfigService.addCharacteristic(UnlockCharacteristic);
+  ConfigService.addCharacteristic(LockUnlockCharacteristic);
   ConfigService.addCharacteristic(MACCharacteristic);
   ConfigService.addCharacteristic(StopAlarmCharacteristic);
   //  Add service
@@ -32,7 +32,7 @@ void ble_setup(void) {
   PasswordCharacteristic.writeValue(0);
   NameCharacteristic.writeValue("\n");
   ActivationCharacteristic.writeValue(false);
-  UnlockCharacteristic.writeValue(false);
+  LockUnlockCharacteristic.writeValue(false);
   MACCharacteristic.writeValue(BLE.address());
   StopAlarmCharacteristic.writeValue(0);
   //  Set event handler
@@ -43,7 +43,7 @@ void ble_setup(void) {
   NameCharacteristic.setEventHandler(BLERead, onReadName);
   ActivationCharacteristic.setEventHandler(BLEWritten, onWriteActivation);
   ActivationCharacteristic.setEventHandler(BLERead, onReadActivation);
-  UnlockCharacteristic.setEventHandler(BLEWritten, onWriteUnlock);
+  LockUnlockCharacteristic.setEventHandler(BLEWritten, onWriteLockUnlock);
   StopAlarmCharacteristic.setEventHandler(BLEWritten, stopPulseBuzzer);
   //  Start advertising
   BLE.advertise();
@@ -70,8 +70,8 @@ void onDisconnect(BLEDevice central) {
 //  Detect when password is send
 void onWritePassword(BLEDevice central, BLECharacteristic characteristic) {
   const int motDePasseAttendu = 13330;
-  int value = PasswordCharacteristic.value(); //  short int value = PasswordCharacteristic.value();
-  // Conversion(value);
+  short int value = PasswordCharacteristic.value();
+  Conversion(value);
   isAuthenticate = (value == motDePasseAttendu);
   Serial.println(value);
   Serial.println(isAuthenticate ? "successful authentication" : "wrong password");
@@ -110,7 +110,7 @@ void onWriteActivation(BLEDevice central, BLECharacteristic characteristic) {
       delay(100);
       sim800l->setPowerMode(NORMAL);  //  Set normal functionnality mode
     } else {
-      Serial.print("Désactivation");
+      Serial.println("Désactivation");
       sim800l->setPowerMode(MINIMUM);      // Set minimum functionnality mode
       digitalWrite(SIM800_DTR_PIN, HIGH);  // Put in sleep mode
     }
@@ -125,13 +125,18 @@ void onReadActivation(BLEDevice central, BLECharacteristic characteristic) {
   ActivationCharacteristic.writeValue(Config.isActivate);
 }
 
-void onWriteUnlock(BLEDevice central, BLECharacteristic characteristic) {
-  if (isAuthenticate) {
+// Permit to lock or unlock the cable 
+void onWriteLockUnlock(BLEDevice central, BLECharacteristic characteristic) {
+  if (isAuthenticate && isLock) {
     // Activate electromagnet
     Serial.println("Unlock");
-    digitalWrite(aimantPin, HIGH);
-    delay(2000);
     digitalWrite(aimantPin, LOW);
+    isLock = false;
+  }
+  else if (isAuthenticate && !isLock){
+    Serial.println("Lock");
+    digitalWrite(aimantPin, HIGH);
+    isLock = true;
   }
 }
 

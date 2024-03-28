@@ -1,9 +1,9 @@
 struct myConfig {
   short int pin = 0;
   String Name = "\n";
-  bool isActivate = true; // False == sleep mode
+  bool isActivate = false; // False == sleep mode
 
-  bool isBatteryLow;
-  bool isBatteryFull;
-  bool isBatteryCritical;
+  bool isBatteryLow = false;
+  bool isBatteryFull = false;
+  bool isBatteryCritical = false;
 };
