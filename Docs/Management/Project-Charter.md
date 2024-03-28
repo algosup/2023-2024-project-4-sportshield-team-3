@@ -17,11 +17,11 @@
 | Role               | Name  | Date  |
 | ------------------ | ----- | ----- |
 | Project Manager    | Mouatassime Seiv | 2024/03/15 |
-| Technical Leader   |       |       |
-| Program Manager    |       |       |
-| Quality Assurance  |       |       |
-| Technical Writer   |       |       |
-| Software Engineer  |       |       |
+| Technical Leader   | Abderrazaq MAKRAN| 2024/03/15 |
+| Program Manager    | Pierre Gorin     | 2024/03/15 |
+| Quality Assurance  | Salaheddine Namir| 2024/03/15 |
+| Technical Writer   | Michel Riff      | 2024/03/15 |
+| Software Engineer  |Guillaume Despaux | 2024/03/15 |
 
 ---
 
@@ -67,11 +67,11 @@ The team is composed of the following members:
 | Role               | Name  | Picture |
 | ------------------ | ----- | ------- |
 | Project Manager    | Mouatassime Seiv |<img src="" width="100" height="100" />|
-| Technical Leader   | [Technical Leader] |<img src="" width="100" height="100" />|
-| Program Manager    | [Program Manager] |<img src="" width="100" height="100" />|
-| Quality Assurance  | [Quality Assurance] |<img src="" width="100" height="100" />|
-| Technical Writer   | [Technical Writer] |<img src="" width="100" height="100" />|
-| Software Engineer  | [Software Engineer] |<img src="" width="100" height="100" />|
+| Technical Leader   | Abderrazaq MAKRAN|<img src="" width="100" height="100" />|
+| Program Manager    | Pierre Gorin     |<img src="" width="100" height="100" />|
+| Quality Assurance  | Salaheddine Namir|<img src="" width="100" height="100" />|
+| Technical Writer   | Michel Riff      |<img src="" width="100" height="100" />|
+| Software Engineer  | Guillaume Despaux|<img src="" width="100" height="100" />|
 
 ### Responsibilities
 For this project responsibilities are as follows:
