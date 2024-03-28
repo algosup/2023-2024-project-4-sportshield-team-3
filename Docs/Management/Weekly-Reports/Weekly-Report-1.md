@@ -1,7 +1,7 @@
 <h1 align="center">Weekly Report 1</h1>
 
 <p align="center">
-Created by: Mouatassime Seiv <br> Creation Date: 3/18/2024 <br> Last update: 3/20/2024
+Created by: Mouatassime Seiv <br> Creation Date: 3/18/2024 <br> Last update: 3/28/2024
 </p>
 
 <details>
