@@ -83,7 +83,7 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 - ✅ Existing code reviewed and assessed.
 - ✅ Refurbishment of existing code initiated for optimization.
-- ✅ Fuctionnal Testing made by **Pierre Gorin**
+- ✅ Fuctionnal Testing made by **Pierre Gorin** reviewed completely by **Salaheddine NAMIR (Quality Assurance)** that also did the Test cases and now he is working on the Test plan.
 
 ## 7. Next steps
 
