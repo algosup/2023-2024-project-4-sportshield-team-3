@@ -3,15 +3,14 @@
 ![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Arduino Logo](https://img.shields.io/badge/-Arduino-00979D?logo=arduino&logoColor=white) ![C logo](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)  ![C++ Logo](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white)
 ![Last Updated](https://img.shields.io/github/last-commit/algosup/2023-2024-project-4-sportshield-team-3/test-plan)
 ![GitHub issues](https://img.shields.io/github/issues/algosup/2023-2024-project-4-sportshield-team-3)
-| Contributers        | Role              |
-| ----------------- | ----------------- | 
-| Salaheddine NAMIR | Quality Assurance |         
-| Mouatassime SEIV  | Project Manager   |        
-| Pierre GORIN      | Program Manager   |         
-| Abderrazaq MAKRAN | Technical Lead    |         
-| Michel RIFF       | Technical Writer  |          
-| Guillaume DESPAUX | Software Engineer |          
-
+| Contributers        | Role              |GitHub|Photos|
+| ----------------- | ----------------- | ----|---|
+| Salaheddine NAMIR | **Quality Assurance** |  [![GitHub](https://img.shields.io/badge/GitHub-T3rryc-lightgrey?logo=github&style=flat-square)](https://github.com/T3rryc)  | <img src="https://avatars.githubusercontent.com/u/71770514?v=4" width="70px" height="70px">|
+| Mouatassime SEIV  | **Project Manager**   |[![GitHub](https://img.shields.io/badge/GitHub-seiv007-lightgrey?logo=github&style=flat-square)](https://github.com/seiv007)  |  <img src="https://media.licdn.com/dms/image/C5603AQF4HZAk-2E6_g/profile-displayphoto-shrink_400_400/0/1660715651722?e=1716422400&v=beta&t=Y8iX2D3b1agoR57z2bGOah0L5KGhZ5RUgfUnCLpjQ4M" width="70px" height="70px"> |    
+| Pierre GORIN      | **Program Manager**   |[![GitHub](https://img.shields.io/badge/GitHub-Pierre2103-lightgrey?logo=github&style=flat-square)](https://github.com/Pierre2103)       |  <img src="https://avatars.githubusercontent.com/u/91249863?v=4" width="70px" height="70px">     |
+| Michel RIFF       | **Technical Writer**  | [![GitHub](https://img.shields.io/badge/GitHub-MichelRiff-lightgrey?logo=github&style=flat-square)](https://github.com/MichelRiff) |<img src="https://avatars.githubusercontent.com/u/146001004?v=4" width="70px" height="70px"> |         
+| Guillaume DESPAUX | **Software Engineer** | [![GitHub](https://img.shields.io/badge/GitHub-GuillaumeDespaux-lightgrey?logo=github&style=flat-square)](https://github.com/GuillaumeDespaux) | <img src="https://avatars.githubusercontent.com/u/146001117?v=4" width="70px" height="70px"> |       
+| Abderrazaq MAKRAN|**Technical Leader**|[![GitHub](https://img.shields.io/badge/GitHub-Amakran2003-lightgrey?logo=github&style=flat-square)](https://github.com/Amakran2003)|<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="70px" height="70px"> |
 <details>
 <summary>📖Table of Contents</summary>
 
