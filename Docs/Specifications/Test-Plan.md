@@ -57,7 +57,6 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 - Enable the alarm to ring while simultaneously sending HTTP notifications to the server.
 - Enhance interruption management for better user experience.
 
-	
 
 #### 1.1.2 Out of Scope
 ##### 1. Hardware Modifications:
@@ -168,11 +167,36 @@ The following test deliverables will be produced as part of the testing process:
 
 ## 4 Resource & Environment Needs
 
+The testing process will require the following resources and environments to ensure that the SportShield device is thoroughly tested and validated. This includes testing tools, test environments, and other necessary resources.
+
 ### 4.1 Testing Tools
+This following tools will be used to conduct the testing process:
+
+**LightBlue app**: 
+- A mobile application that allows users to interact with Bluetooth Low Energy (BLE) devices. This app will be used to test the SportShield device's Bluetooth functionality and ensure that it can communicate with other devices effectively.
+
+**SportShield app**:
+- A mobile application developed specifically for the SportShield device. This app will be used to test the device's NFC functionality and ensure that users can activate/deactivate the anti-theft system and unlock the cable using their smartphone.
 
 ### 4.2 Test Environment
 
+The testing process will be conducted in a controlled environment to ensure that the SportShield device is tested under realistic conditions. The test environment will include the following components:
+
+**Hardware Components**:
+- The [SportShield device](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/blob/main/Docs/Specifications/Technical-Specifications.md#31---hardware), including all sensors, actuators, and communication modules.
+- A smartphone on Android  with the LightBlue app installed to test Bluetooth functionality.
+- A smartphone on Android with the SportShield app installed to test NFC functionality.
+- [Computer](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/blob/main/Docs/Specifications/Technical-Specifications.md#31---hardware) with internet access to test HTTP notifications and server-side functionality.
+
 ## 5 Terms/Acronyms 
+
+|Terms|Definition|
+|---|---|
+|**XP**|Extreme Programming|
+|**BLE**|Bluetooth Low Energy|
+|**NFC**|Near Field Communication|
+|**HTTP**|Hypertext Transfer Protocol|
+|**QA**|Quality Assurance|
 
 
 

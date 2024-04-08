@@ -37,3 +37,19 @@
 |DEACTIVATE ANTI-THIEFT PROTECTION & UNLOCK DEVICE WITH MOBILE APP|This test case verifies the successful deactivation of the Anti-Theft Protection feature and unlocking of the SportShield device using the Mobile App.|🟡Medium|2024/03/28|Test case execution|✅Pass|[TEST CASE 5](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/9)|
 |...|...|...|...|...|...|...|
 |DEACTIVATE ANTI-THIEFT PROTECTION & UNLOCK DEVICE WITH SECURITY CARD|This test case verifies the successful deactivation of the Anti-Theft Protection feature and unlocking of the SportShield device using the Security Card.|🟡Medium|2024/03/19|Test case init|⏳Not Tested|[TEST CASE 6](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/10)|
+|...|...|...|...|...|...|...|
+|EMIT AUDIBLE ALARM WHEN LIGHT SHOCK IS DETECTED|This test case verifies the successful Emit an Audible Alarm when a Light Shock is Detected |🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 7](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/14)|
+|...|...|...|...|...|...|...|
+|EMIT AUDIBLE ALARM AND SEND NOTIFICATION WHEN STRONG SHOCK IS DETECTED|This test case verifies the successful Emit an Audible Alarm and Send a Notification when a Strong Shock is Detected. |🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 8](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/15)|
+|...|...|...|...|...|...|...|
+|SEND GPS COORDINATES AND BATTERY LEVEL TO THE API|This test case verifies the successful Send GPS Coordinates and Battery Level to the API. |🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 9](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/16)|
+|...|...|...|...|...|...|...|
+|RECEIVE NOTIFICATIONS FROM THE API|This test case verifies the successful Receive Notifications from the API. |🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 10](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/17)
+|...|...|...|...|...|...|...|
+|SEND A NOTIFICATION WHEN THE BATTERY IS LOW.|This test case verifies the successful Send a Notification when the Battery is Low. |🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 11](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/18)
+|...|...|...|...|...|...|...|
+|SEND A NOTIFICATION WHEN THE BATTERY IS FULL.|This test case verifies the successful Send a Notification when the Battery is Full.|🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 12](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/19)
+|...|...|...|...|...|...|...|
+|TEST CASE: CUT THE ALARM WITH THE MOBILE APP.|This test case verifies the successful Cut the Alarm with the Mobile App.|🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 13](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/20)
+|...|...|...|...|...|...|...|
+|TEST CASE: CUT THE ALARM WITH THE SECURITY CARD.|This test case verifies the successful Cut the Alarm with the Security Card.|🟠High|2024/04/08|Test case init|⏳Not Tested|[TEST CASE 14](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues/21)
