@@ -44,4 +44,4 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 ## 6. Team feedback
 
-during the thrid week all team members were working on different project based on C++ wich we worked on that project for 10 days
+during the thrid week all team members were working on different project based on C++ which  we worked on that project for 10 days
