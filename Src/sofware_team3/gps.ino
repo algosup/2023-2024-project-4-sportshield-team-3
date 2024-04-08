@@ -14,7 +14,7 @@ void gps_setup(void) {
 }
 
 void GPS_ISR() {
-  if (Config.isActivate != 0) {
+  if (Config.isActivate) {
     if (!position_acquired) {
       start_gps = true;
       digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));

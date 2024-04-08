@@ -44,6 +44,9 @@ BLEDescriptor StopAlarmDescriptor("2901", "Stop Alarm");
 
 bool BLE_activated = true;  // True if the bluetooth is activated
 uint32_t tim_connec = 0;    // Time in ms or we start to activate the bluetooth following a detection of movement
+bool isPairable;  //  Check if the device is paraible
+bool isPaired;  // Check if the device is currently paired
+String uniqueUser = "";
 
 //IMU : LSM6DS3
 LSM6DS3 imu(I2C_MODE, 0x6A);  // I2C device address 0x6A
@@ -169,6 +172,10 @@ void setup() {
 
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
+  delay(1000);
+  Serial.println(uniqueUser);
+  Serial.print("Is paired ? : ");
+  Serial.println(BLE.paired());
 
   if (Config.isActivate) {  //  Alarm enable
     activateGPS();

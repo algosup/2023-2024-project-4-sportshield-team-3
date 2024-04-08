@@ -35,6 +35,8 @@ void ble_setup(void) {
   LockUnlockCharacteristic.writeValue(false);
   MACCharacteristic.writeValue(BLE.address());
   StopAlarmCharacteristic.writeValue(0);
+  //  Set unique paraible device
+  BLE.setPairable(ONCE);
   //  Set event handler
   BLE.setEventHandler(BLEConnected, onConnect);
   BLE.setEventHandler(BLEDisconnected, onDisconnect);
@@ -51,11 +53,22 @@ void ble_setup(void) {
 
 //  Detect when the bluetooth is connected
 void onConnect(BLEDevice central) {
-  Serial.print("Connected to ");
-  Serial.println(central.address());
-  Serial.println(BLE.address());
-  digitalWrite(LEDB, LOW);
-  bluetoothConnected();
+    String tmp = central.address();
+  
+  if (uniqueUser == "") {
+    uniqueUser = tmp;
+  }
+   if (uniqueUser == tmp) {
+    Serial.print("Connected to ");
+    Serial.println(central.address());
+    Serial.println(uniqueUser);
+    Serial.println(BLE.address());
+    digitalWrite(LEDB, LOW);
+    bluetoothConnected();
+  }
+  else {
+    Serial.println("Connection attempt from untrusted device.");
+  }
 }
 
 //  Detect when the bluetooth is disconnected
