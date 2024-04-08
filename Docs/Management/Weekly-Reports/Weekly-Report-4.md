@@ -25,7 +25,7 @@ Created by: Mouatassime Seiv <br> Creation Date: 4/08/2024 <br> Last update: 4/0
 
 ## 1. Overall project status summary
 
-During the Second week, significant progress was made in establishing team cohesion and defining the project's scope. Despite initial challenges, the team rallied and made considerable strides, particularly towards the end of the week.
+During the 4rd week, significant progress was made in establishing team cohesion and defining the project's scope. Despite initial challenges, the team rallied and made considerable strides, particularly towards the end of the week.
 
 ## 2. Milestones met this week
 
