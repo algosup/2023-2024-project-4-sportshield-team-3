@@ -66,7 +66,7 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 ## 7. Anticipated risks
 
-- 😴 Potential for decreased productivity due to team member fatigue.
+- 😴 Potential for decreased productivity due to team member fatigue and missing
 - 🎯 Need for ongoing scope clarification to avoid project drift.
 - 🛠️ Risks associated with unresolved hardware issues impacting project timelines.
 
