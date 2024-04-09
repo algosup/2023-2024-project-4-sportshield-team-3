@@ -32,7 +32,7 @@
 - - -
 
 ## 2. Introduction
-This manual provide instructionsand detailed procedures for installing, operating, maintaining, and troubleshooting about this anti-theft device SportShield from Coris Innovation. Read and undertsand every warnings and precautions before using this product.
+This manual provide instructions and detailed procedures for installing, operating, maintaining, and troubleshooting about this anti-theft device SportShield from Coris Innovation. Read and undertsand every warnings and precautions before using this product.
 
 - - -
 
@@ -47,7 +47,7 @@ This manual provide instructionsand detailed procedures for installing, operatin
 >- NFC (*under the device*)
 
 ### 3.2 Intended Use
-The sportShield device is able to work in any environment to protect your equipements in public area. It should be able to work equally well in cold and hot environments.
+The sportShield device is able to work in any environment to protect your equipment in public area. It should be able to work equally well in cold and hot environments.
 It can be in a sleep mode which reduce the battery consumption if the device is not used.
 
 #### 3.2.1 Alarm system
@@ -67,7 +67,7 @@ Located at the back of the device, it has a range of 0,5 centimeters and should 
 
 #### 3.2.4 Physical security features
 ![Locker](img\locker.png)
-The locker system works with a multi-layered cable which can be adapted as the lenght you want to secure any equipements.
+The locker system works with a multi-layered cable which can be adapted as the length you want to secure any equipements.
 There is a outgoing cable at the right of the device which can be locked at the left side of the device with an electromagnet.
 
 - - -
@@ -77,7 +77,7 @@ There is a outgoing cable at the right of the device which can be locked at the 
 ![1step](img/1instruction.png)
 You can connect the SportShield device to your phone by bluetooth or NFC :
 ![2step](img/2instruction.png)
-- Bluetooth : you can select manualy your device with the bluetooth option.
+- Bluetooth : you can select manually your device with the bluetooth option.
   - First step : After clicking on the Bluetooth option, you just need to scan for your device which must be near for the first connection.
    ![3step](img/3instruction.png)
    - Second step : After scanning it, you need to select your device (your localization must be enabled).
@@ -112,8 +112,8 @@ To avoid any damage or disfunction of the device, follow these safety warnings :
 ## 6. Operation Guide
 ### 6.1 Enabling or disabling the Anti-Theft Protection and unlock the device
 #### 6.1.1 Activate and deactivate the Anti-Theft Protection using the Mobile App
-In the mobile app, go on your device and click on the "Activate Anti-Theft Protection" button. The mobile app displays a message to confirm that the anti-theft protection is activated.
-The same button is changed by "Deactivate Anti-Theft Protection" which disable this protection if it is clicked, the mobile app displays a message to confirm that the anti-theft protection is deactivated.
+In the Mobile App, go on your device and click on the "Activate Anti-Theft Protection" button. The mobile app displays a message to confirm that the anti-theft protection is activated.
+The same button is changed by "Deactivate Anti-Theft Protection" which disable this protection if it is clicked, the Mobile App displays a message to confirm that the anti-theft protection is deactivated.
 ![Enable_anti_theft](img/8instruction.png)
 
 To unlock the device, you need to click on the "Unlock" button, which will displays a message to confirm that the device is unlocked.
@@ -125,13 +125,13 @@ To unlock it, you need to present your security card to the device a second time
 ![NFC](img/NFC.png)
 
 ### 6.2 Location and battery Tracking: Viewing device location and battery via app
-You see the GPS coordinates on the map and the battery level inside the mobile app. (*the device must have battery*)
+You see the GPS coordinates on the map and the battery level inside the Mobile App. (*the device must have battery*)
 It can send a notification on your phone to prevent you when the battery is low or when it is full.
 ![localization](img/localization.png)
 
 ### 6.3 Cut the Alarm off
 #### 6.3.1 Cut the Alarm with the Mobile App
-If the alarm of the device is activated, you can cut it on the mobile app with the "Cut Alarm" button, it will displays a message to confirm that the alarm is cut.
+If the alarm of the device is activated, you can cut it on the Mobile App with the "Cut Alarm" button, it will displays a message to confirm that the alarm is cut.
 
 #### 6.3.2 Cut the Alarm with the Security Card
 Present your security card to the device, it will cut the alarm and play a sound to confirm that the alarm is cut.
@@ -146,10 +146,10 @@ The device will enter in sleep mode to reduce the power consumption, it will ent
 ## 7. TroubleShooting
 | Problem | Solution |
 | ----------------- | -------- |
-| **The device doesn't connect with your device**            | 1. Check the SportShield is power on and within searchable distance. <p>2. Check wether there are too many Bluetooth receivers around, turn un-necessary. |
+| **The device doesn't connect with your device**            | 1. Check the SportShield is power on and within searchable distance. <p>2. Check whether there are too many Bluetooth receivers around, turn un-necessary. |
 | **The nfc doesn't detect the security card or the phone**  | 1. Pair again the security card (*guide in the 4.2*). |
 | **The locker doesn't lock or unlock**                      | 1. Battery might be low, please charge the device. |
-| **The localisation doesn't work**                          | 1. Battery might be low, please charge the device. |
+| **The localization doesn't work**                          | 1. Battery might be low, please charge the device. |
 | **The buzzer doesn't work or too low**                     | 1. Battery might be low, please charge the device. <p>2. The buzzer might be cluttered, please clean it. |
 | **The device doesn't detect any shock**                    | 1. Battery might be low, please charge the device. <p>2. deactivate and activate back the Anti-Theft Protection. |
 | **The Alarm doesn't cut off**                              | 1.1. Restart the Mobile App then retry. <p>1.2. Wait a minute before presenting your security card to the device.|
