@@ -44,25 +44,7 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 ## 6. Work accomplished
 
-➭ <ins>Project Setup:</ins>
-
-
-
-<br>
-
-➭ <ins>Documents:</ins>
-
-
-<br>
-
-➭ <ins>Hardware:</ins>
-
-
-<br>
-
-➭ <ins>Software:</ins>
-
-
+1 -We were working on the NFC compatibility with the device so the device can detect it properly. ⚡
 
 ## 7. Anticipated risks
 
