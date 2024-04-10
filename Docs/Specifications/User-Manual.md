@@ -56,7 +56,7 @@ It can be in a sleep mode which reduce the battery consumption if the device is 
 - When the device is connected by bluetooth or detect a NFC card it play a sound to confirm it.
 
 #### 3.2.2 USB-C charging port
-![How to charge](./img/charging.png)<p>
+![How to charge](./img/charging.png)<br>
 The device can only be charged by a USB-C charger of any power, we recommend charging it from a wall outlet.
 
 >![Advice](./img/icons8-caution-60.png)
@@ -66,7 +66,7 @@ The device can only be charged by a USB-C charger of any power, we recommend cha
 Located at the back of the device, it has a range of 0,5 centimeters and should work with the provided security card.
 
 #### 3.2.4 Physical security features
-![Locker](./img/locker.png)<p>
+![Locker](./img/locker.png)<br>
 The locker system works with a multi-layered cable which can be adapted as the length you want to secure any equipements.
 There is a outgoing cable at the right of the device which can be locked at the left side of the device with an electromagnet.
 
@@ -74,22 +74,21 @@ There is a outgoing cable at the right of the device which can be locked at the 
 
 ## 4. User Interface Description
 ### 4.1 Connection: Instructions for connecting the device to user's equipement
-![1step](./img/1instruction.png)<p>
-You can connect the SportShield device to your phone by bluetooth or NFC :<p>
-![2step](./img/2instruction.png)<p>
-- Bluetooth : you can select manually your device with the bluetooth option.
-  - First step : After clicking on the Bluetooth option, you just need to scan for your device which must be near for the first connection.<p>
-   ![3step](./img/3instruction.png)<p>
-   - Second step : After scanning it, you need to select your device (your localization must be enabled).<p>
-  ![4step](./img/4instruction.png)<p>
-   - Third step : You may need to click a second time on your device to confirm it.<p>
-  ![5step](./img/6instruction.jpg)<p>
-   - Fourth step : Connect the app to your device, the device will play a very short melody to confirm your connection.<p>
-  ![6step](./img/5instruction.png)<p>
-   - Result : Now you're connected.<p>
-  ![7step](./img/7instruction.jpg)<p>
+| Steps | Instruction | Visual |
+| ----- | ----------- | ------ |
+| / | You can connect the SportShield device to your phone by bluetooth or NFC | ![Bluetooth_NFC](./img/1instruction.png) |
+| 1st way | Bluetooth : you can select manually your device with the bluetooth option. | ![Bluetoothway](./img/2instruction.png) |
+|  |  |  |
+| Step 1 | After clicking on the Bluetooth option, you just need to scan for your device which must be near for the first connection. | ![1step](./img/3instruction.png) |
+| Step 2 | After scanning it, you need to select your device (your localization must be enabled). | ![2step](./img/4instruction.png) |
+| Step 3 | You may need to click a second time on your device to confirm it. | ![3step](./img/6instruction.jpg) |
+| Step 4 | Connect the app to your device, the device will play a very short melody to confirm your connection. | ![4step](./img/5instruction.png) |
+| Step 5 | Result : Now you're connected. | ![5step](./img/7instruction.jpg) |
+|  |  |
+| 2nd way | NFC : if your phone is equipped with NFC technology, you can add your device to the app by scanning it closely under the device. | ![NFCway](./img/contactless_pay_pass_nfc_payment__Mobile_phone_-512.png) |
 
-- NFC : if your phone is equipped with NFC technology, you can add your device to the app by scanning it closely under the device.
+
+
 
 ### 4.2 Security card Setup: Step-by-step for the device for the security card setup and pairing
 If your phone need to be paired with the mobile app, you can add a security card to the device by following these steps :
@@ -113,21 +112,21 @@ To avoid any damage or disfunction of the device, follow these safety warnings :
 ### 6.1 Enabling or disabling the Anti-Theft Protection and unlock the device
 #### 6.1.1 Activate and deactivate the Anti-Theft Protection using the Mobile App
 In the Mobile App, go on your device and click on the "Activate Anti-Theft Protection" button. The mobile app displays a message to confirm that the anti-theft protection is activated.
-The same button is changed by "Deactivate Anti-Theft Protection" which disable this protection if it is clicked, the Mobile App displays a message to confirm that the anti-theft protection is deactivated.<p>
-![Enable_anti_theft](./img/8instruction.png)<p>
+The same button is changed by "Deactivate Anti-Theft Protection" which disable this protection if it is clicked, the Mobile App displays a message to confirm that the anti-theft protection is deactivated.<br>
+![Enable_anti_theft](./img/8instruction.png)<br>
 
-To unlock the device, you need to click on the "Unlock" button, which will displays a message to confirm that the device is unlocked.<p>
-![Unlock](./img/9instruction.png)<p>
+To unlock the device, you need to click on the "Unlock" button, which will displays a message to confirm that the device is unlocked.<br>
+![Unlock](./img/9instruction.png)<br>
 
 #### 6.1.2 Activate and deactivate the Anti-Theft Protection and unlock the device by using the Security Card
 Present your security card to the device, it will play a sound to confirm that the anti-theft protection is enabled or disabled.
-To unlock it, you need to present your security card to the device a second time which will play a different sound.<p>
-![NFC](./img/NFC.png)<p>
+To unlock it, you need to present your security card to the device a second time which will play a different sound.<br>
+![NFC](./img/NFC.png)<br>
 
 ### 6.2 Location and battery Tracking: Viewing device location and battery via app
 You see the GPS coordinates on the map and the battery level inside the Mobile App. (*the device must have battery*)
-It can send a notification on your phone to prevent you when the battery is low or when it is full.<p>
-![localization](./img/localization.png)<p>
+It can send a notification on your phone to prevent you when the battery is low or when it is full.<br>
+![localization](./img/localization.png)<br>
 
 ### 6.3 Cut the Alarm off
 #### 6.3.1 Cut the Alarm with the Mobile App
@@ -146,13 +145,13 @@ The device will enter in sleep mode to reduce the power consumption, it will ent
 ## 7. TroubleShooting
 | Problem | Solution |
 | ----------------- | -------- |
-| **The device doesn't connect with your device**            | 1. Check the SportShield is power on and within searchable distance. <p>2. Check whether there are too many Bluetooth receivers around, turn un-necessary. |
+| **The device doesn't connect with your device**            | 1. Check the SportShield is power on and within searchable distance. <br>2. Check whether there are too many Bluetooth receivers around, turn un-necessary. |
 | **The nfc doesn't detect the security card or the phone**  | 1. Pair again the security card (*guide in the 4.2*). |
 | **The locker doesn't lock or unlock**                      | 1. Battery might be low, please charge the device. |
 | **The localization doesn't work**                          | 1. Battery might be low, please charge the device. |
-| **The buzzer doesn't work or too low**                     | 1. Battery might be low, please charge the device. <p>2. The buzzer might be cluttered, please clean it. |
-| **The device doesn't detect any shock**                    | 1. Battery might be low, please charge the device. <p>2. deactivate and activate back the Anti-Theft Protection. |
-| **The Alarm doesn't cut off**                              | 1.1. Restart the Mobile App then retry. <p>1.2. Wait a minute before presenting your security card to the device.|
+| **The buzzer doesn't work or too low**                     | 1. Battery might be low, please charge the device. <br>2. The buzzer might be cluttered, please clean it. |
+| **The device doesn't detect any shock**                    | 1. Battery might be low, please charge the device. <br>2. deactivate and activate back the Anti-Theft Protection. |
+| **The Alarm doesn't cut off**                              | 1.1. Restart the Mobile App then retry. <br>1.2. Wait a minute before presenting your security card to the device.|
 
 >**If any of these solutions doesn't work, please contact the Customer Support** (*contacts in the 9.*)
 
