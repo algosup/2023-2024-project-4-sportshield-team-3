@@ -96,8 +96,7 @@ float BigRT = 125.0;   // BigRotationThreshold
 float MotionData;
 float RotationData;
 
-unsigned long StartCoolDown = 0;  // Check point for millis aided cooldown
-
+bool statusSleepMode = false;
 
 //-------------------------------- SETUP ----------------------------------------
 void setup() {
@@ -172,7 +171,8 @@ void setup() {
 
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
-  
+
+
   if (Config.isActivate) {  //  Alarm enable
     activateGPS();
 
@@ -205,7 +205,18 @@ void loop() {
   
   if (MotionBig) {
     PulseBuzzer(5, 500, 1000);  // repetitions, DurationOn , DurationOff
-    //sending positions & shock notif via SIM module
+    // Permit to send a notification when a big shock is detected
+    Serial.println("Send big shock detected");
+    sim800l->setupGPRS("iot.1nce.net");
+    sim800l->connectGPRS();
+    String Route = "http://141.94.244.11:2000/sendNotfication/" + BLE.address();
+    String str = "{\"message\": The device receive a big chock.}";
+    char comment[32];
+    str.toCharArray(comment, str.length() + 1);
+    char direction[200];
+    Route.toCharArray(direction, Route.length() + 1);
+    sim800l->doPost(direction, "application/json", comment, 10000, 10000);
+    sim800l->disconnectGPRS();
   }
 
   if (MotionSmall) {
@@ -266,7 +277,7 @@ void loop() {
   //  Sending of positions via SIM module
   if (send_move) {  
     PulseBuzzer(10, 500, 1000); // Permit 
-    Serial.println("Envoi detection mouvement");
+    Serial.println("Send movement detection");
     sim800l->setupGPRS("iot.1nce.net");
     sim800l->connectGPRS();
     String Route = "http://141.94.244.11:2000/sendNotfication/" + BLE.address();
