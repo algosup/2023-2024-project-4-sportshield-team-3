@@ -78,7 +78,7 @@ The key stakeholders involved in this project include:
 
 | Name            | Role   | Represented by       | Contact            | Expectations                                                                                                                  |
 |-----------------|--------|----------------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------|
-|CORIS INNOVATION | Client | CORIS DIGITAL | fanon@corisinnovation.com | Our ambition is to support European industrial players in their innovation R&D, digitalization and production challenges. The development of our team is key to the projects success, |
+|CORIS INNOVATION | Client | Florent ANON | fanon@corisinnovation.com | Our ambition is to support European industrial players in their innovation R&D, digitalization and production challenges. The development of our team is key to the projects success, |
 
 ## Deliverables and Milestones
 ### Milestones
