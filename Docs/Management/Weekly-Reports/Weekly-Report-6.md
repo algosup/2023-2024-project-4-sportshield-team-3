@@ -31,7 +31,7 @@ During the 6th week, significant progress was made in establishing team cohesion
 
 Overall, the project remains on track with the established timeline. However, concerns arise regarding the functionality of certain hardware modules, which may impact future milestones.
 
-## 3. Resources status
+## 3. Resources status ᛒ
 
 When two Bluetooth devices wish to communicate, they perform a process called "pairing" where they exchange a unique identifier called a link key. Once paired, they establish a connection by synchronizing their frequency hopping patterns. This allows them to communicate seamlessly without interference from other Bluetooth devices.
 
