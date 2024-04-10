@@ -42,11 +42,6 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 1 -We managed to set up the alarm ,but we are working on the sensor ringing when we need it. ⏰
 
-2 -We are working on the NFC compatibility with the device so the device can detect it properly. ⚡
-
-3 -We started working on battery  managament to keep the battery mostly alive and only use components when needed. 🔋
-
-
 ## 6. Anticipated risks
 
 - 😴 Potential for decreased productivity due to team member fatigue and missing
