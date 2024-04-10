@@ -1,4 +1,4 @@
-# Test Plan 2023-2024-project-4-sportshield-team-3
+# Test Plan 2023-2024-project-4-sport shield-team-3
 
 ![GitHub Logo](https://img.shields.io/badge/-GitHub-181717?logo=github) ![Arduino Logo](https://img.shields.io/badge/-Arduino-00979D?logo=arduino&logoColor=white) ![C logo](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=white)  ![C++ Logo](https://img.shields.io/badge/-C++-00599C?logo=c%2B%2B&logoColor=white)
 ![Last Updated](https://img.shields.io/github/last-commit/algosup/2023-2024-project-4-sportshield-team-3/test-plan)
@@ -34,15 +34,15 @@
 
 </details>
 
-## 1 Introduction	
-SportShield is a smart anti-thieft device designed to protect sport equipement. Developed by Coris Innovation, a company specialised on systems and process engineering. The device feature include choke sensors, thieft alarme, GPS tracking, remote lock/unlock functinality. The goal of the project is to improve the battery consumption management, device management with NFC and alarm management and simultaneous actions. 
+## 1 Introduction   
+SportShield is a smart anti-theft device designed to protect sports equipment. Developed by Coris Innovation, a company specializing in systems and process engineering. The device features include choke sensors, theft alarms, GPS tracking, and remote lock/unlock functionality. The goal of the project is to improve battery consumption management, device management with NFC alarm management, and simultaneous actions. 
 
 ### 1.1  Scope
 
 #### 1.1.1 In Scope
 ##### 1. Battery Consumption Management:
 
-- Improve energy efficiency of the system by implementing strategies such as turning on components only when needed and managing sleep modes effectively.
+- Improve the energy efficiency of the system by implementing strategies such as turning on components only when needed and managing sleep modes effectively.
 - Implement measures to handle low battery situations, ensuring skis are secured even when the battery is low.
 - Increase battery lifespan by enforcing charging limits (e.g., no charge above 80% of Vmax) and discharge thresholds (e.g., no discharge under 20%).
 
@@ -73,7 +73,7 @@ SportShield is a smart anti-thieft device designed to protect sport equipement. 
 - Modifications or enhancements to the server-side infrastructure beyond implementing HTTP notifications are not included in this test plan.
 ##### 5. Third-Party Integration:
 
-- Integrating with third-party services or platforms beyond basic HTTP notifications is out of scope for this test plan.
+- Integrating with third-party services or platforms beyond basic HTTP notifications is out of the scope of this test plan.
 ##### 6. Physical Design Changes:
 
 - Alterations to the physical design of the device, such as size, shape, or material changes, are not part of this test plan.
@@ -118,12 +118,12 @@ Each team member will contribute to the testing process according to their role 
 
 
 ## 2 Test Methodology
-On this section we will describe the test methodology that will be used to validate the SportShield device. This includes an overview of the testing process, the different test levels that will be applied, bug triage procedures, and criteria for suspending and resuming testing activities.
+In this section, we will describe the test methodology that will be used to validate the SportShield device. This includes an overview of the testing process, the different test levels that will be applied, bug triage procedures, and criteria for suspending and resuming testing activities.
 
 ### 2.1 Overview
 The testing process will follow a structured approach to validate the SportShield device's functionality, reliability, usability, performance, and security. The testing activities will be organized into different levels, each focusing on specific aspects of the device's behavior. The test plan will include detailed test cases, test procedures, and expected results to ensure comprehensive coverage of all requirements.
 
-Extreme Programming (XP) is a software development methodology that focuses on delivering high-quality software quickly and efficiently. It emphasizes collaboration, feedback, and continuous improvement to ensure that the final product meets customer requirements and expectations. XP is based on a set of core values and principles that guide the development process and help teams deliver value to customers. This method is type of agile methodology that is well-suited for projects with changing requirements and tight deadlines.     
+Extreme Programming (XP) is a software development methodology that focuses on delivering high-quality software quickly and efficiently. It emphasizes collaboration, feedback, and continuous improvement to ensure that the final product meets customer requirements and expectations. XP is based on a set of core values and principles that guide the development process and help teams deliver value to customers. This method is a type of agile methodology that is well-suited for projects with changing requirements and tight deadlines.     
 
 ### 2.2 Test Levels
 
@@ -148,10 +148,10 @@ During this phase, the team will prioritize the identified bugs based on their s
 - **Prioritization**: The team will prioritize bugs based on their severity, impact on the system, and customer requirements. Critical bugs that affect core functionality will be addressed first, followed by less critical issues.
 - **Assignment**: Each bug will be assigned to a team member responsible for resolving it. The team will collaborate to ensure that bugs are fixed in a timely manner and that the system meets quality standards. 
 - **Verification**: Once a bug is fixed, the team will verify the resolution and retest the affected functionality to ensure that the issue has been resolved. This will help prevent regression and ensure that the system remains stable.
-- **Closure**: Once a bug is verified and resolved, it will be marked as closed. The team will document the resolution and update the bug tracking system to reflect the status of the bug. This will help track the progress of bug fixes and ensure that all issues are addressed before release.
+- **Closure**: Once a bug is verified and resolved, it will be marked as closed. The team will document the resolution and update the bug-tracking system to reflect the status of the bug. This will help track the progress of bug fixes and ensure that all issues are addressed before release.
 
-All of these steps is reported on [GitHub issues](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues) to ensure that the team is aware of the status of each bug and can collaborate effectively to resolve them.
-Labeling system will be used to categorize and prioritize bugs based on their severity and impact on the system. This will help the team track and manage bugs effectively and ensure that critical issues are addressed promptly.
+All of these steps are reported on [GitHub issues](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/issues) to ensure that the team is aware of the status of each bug and can collaborate effectively to resolve them.
+A labeling system will be used to categorize and prioritize bugs based on their severity and impact on the system. This will help the team track and manage bugs effectively and ensure that critical issues are addressed promptly.
 
 ### 2.4 Suspension Criteria and Resumption Requirements
 
@@ -184,7 +184,7 @@ The testing process will be conducted in a controlled environment to ensure that
 
 **Hardware Components**:
 - The [SportShield device](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/blob/main/Docs/Specifications/Technical-Specifications.md#31---hardware), including all sensors, actuators, and communication modules.
-- A smartphone on Android  with the LightBlue app installed to test Bluetooth functionality.
+- A smartphone on Android with the LightBlue app installed to test Bluetooth functionality.
 - A smartphone on Android with the SportShield app installed to test NFC functionality.
 - [Computer](https://github.com/algosup/2023-2024-project-4-sportshield-team-3/blob/main/Docs/Specifications/Technical-Specifications.md#31---hardware) with internet access to test HTTP notifications and server-side functionality.
 
