@@ -65,12 +65,12 @@ The team will work on the following tasks:
 The team is composed of the following members:
 | Role               | Name  | Picture |
 | ------------------ | ----- | ------- |
-| Project Manager    | Mouatassime Seiv |<img src="https://media.licdn.com/dms/image/C5603AQF4HZAk-2E6_g/profile-displayphoto-shrink_400_400/0/1660715651722?e=1716422400&v=beta&t=Y8iX2D3b1agoR57z2bGOah0L5KGhZ5RUgfUnCLpjQ4M" width="100" height="100" />|
-| Technical Leader   | Abderrazaq MAKRAN|<img src="" width="100" height="100" />|
-| Program Manager    | Pierre Gorin     |<img src="https://avatars.githubusercontent.com/u/91249863?v=4" width="70px" height="70px" width="100" height="100" />|
-| Quality Assurance  | Salaheddine Namir|<img src="" width="100" height="100" />|
-| Technical Writer   | Michel Riff      |<img src="" width="100" height="100" />|
-| Software Engineer  | Guillaume Despaux|<img src="" width="100" height="100" />|
+| Project Manager    | Mouatassime Seiv |<img src="https://media.licdn.com/dms/image/C5603AQF4HZAk-2E6_g/profile-displayphoto-shrink_400_400/0/1660715651722?e=1716422400&v=beta&t=Y8iX2D3b1agoR57z2bGOah0L5KGhZ5RUgfUnCLpjQ4M" width="200" height="200" />|
+| Technical Leader   | Abderrazaq MAKRAN|<img src="https://avatars.githubusercontent.com/u/145991267?v=4" width="200" height="200" />|
+| Program Manager    | Pierre Gorin     |<img src="https://avatars.githubusercontent.com/u/91249863?v=4" width="200" height="200"  />|
+| Quality Assurance  | Salaheddine Namir|<img src="https://avatars.githubusercontent.com/u/71770514?v=4" width="200" height="200"  />|
+| Technical Writer   | Michel Riff      |<img src="https://avatars.githubusercontent.com/u/146001004?v=4" width="200" height="200" />|
+| Software Engineer  | Guillaume Despaux|<img src="https://avatars.githubusercontent.com/u/146001117?v=4" width="200" height="200" />|
 
 
 ## Stakeholders
