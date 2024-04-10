@@ -78,7 +78,9 @@ The key stakeholders involved in this project include:
 
 | Name            | Role   | Represented by       | Contact            | Expectations                                                                                                                  |
 |-----------------|--------|----------------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [Client]        | Client | [Client Representative] | [Client Email] | The client expects the team to enhance the existing prototype, addressing issues encountered during the initial development phase and incorporating valuable features for end-users. |
+|CORIS INNOVATION | Client | CORIS DIGITAL | fanon@corisinnovation.com | Our ambition is to support European industrial players in their innovation, 
+R&D, digitalization and production challenges. The development of our 
+team is key to the projects success.|
 
 ## Deliverables and Milestones
 ### Milestones
@@ -111,7 +113,7 @@ The team will have access to the following material resources and their document
 
 | Equipment         | Description                                                                                               |
 |-------------------|-----------------------------------------------------------------------------------------------------------|
-| Development board | Ultra-compact, ultra-low-power Bluetooth development board based on the Nordic nRF52840.                 |
+| Development board | Ultra-compact, ultra-low-power Bluetooth development board based on the Nordic nRF52840.                  |
 | Battery           | Lithium-ion polymer rechargeable battery.                                                                 |
 | GPS module        | Module utilizing the MediaTek GNSS Chipset MT3333, supporting various location and navigation applications. |
 | GSM module        | Miniature cellular module enabling GPRS transmission.                                                      |
