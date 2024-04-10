@@ -172,11 +172,7 @@ void setup() {
 
 //-------------------------------- LOOP ----------------------------------------
 void loop() {
-  delay(1000);
-  Serial.println(uniqueUser);
-  Serial.print("Is paired ? : ");
-  Serial.println(BLE.paired());
-
+  
   if (Config.isActivate) {  //  Alarm enable
     activateGPS();
 
