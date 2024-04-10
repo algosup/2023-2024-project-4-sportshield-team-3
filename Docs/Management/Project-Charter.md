@@ -84,14 +84,13 @@ The key stakeholders involved in this project include:
 ### Milestones
 The project milestones and associated deliverables are outlined below:
 
-| Deliverable              | Description                                                                                                                | Due Date  | Time |
-|--------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|------|
-| Functional Specification | Document outlining software requirements and expected behavior of the SPORTSHIELD prototype.                             | 2024/03/18 | NULL  |
-| Technical Specification  | Document detailing technical requirements and expected behavior of the SPORTSHIELD prototype.                               | 2024/03/26 | NULL  |
-| Test Plan                | Document describing the test strategy and test cases to validate the SPORTSHIELD prototype.                                 | 2024/04/10 | NULL  |
-| User Manual              | Document explaining how to operate the SPORTSHIELD prototype.                                                               | 2024/04/10 | NULL  |
-| Code                     | Source code of the SPORTSHIELD prototype.                                                                                  | 2024/04/10 | NULL  |
-
+| Deliverable              | Description                                                                                                                | Due Date  |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|
+| Functional Specification | Document outlining software requirements and expected behavior of the SPORTSHIELD prototype.                                | 2024/03/18 | 
+| Technical Specification  | Document detailing technical requirements and expected behavior of the SPORTSHIELD prototype.                               | 2024/03/26 |
+| Test Plan                | Document describing the test strategy and test cases to validate the SPORTSHIELD prototype.                                 | 2024/04/10 | 
+| User Manual              | Document explaining how to operate the SPORTSHIELD prototype.                                                               | 2024/04/10 | 
+| Code                     | Source code of the SPORTSHIELD prototype.                                                                                   | 2024/04/10 |
 ### Deliverables
 The deliverables to be provided as per the milestones are as follows:
 - Functional Specification
