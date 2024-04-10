@@ -1,4 +1,4 @@
-<h1 align="center">Weekly Report 2</h1>
+<h1 align="center">Weekly Report 3</h1>
 
 <p align="center">
 Created by: Mouatassime Seiv <br> Creation Date: 4/08/2024 <br> Last update: 4/08/2024
