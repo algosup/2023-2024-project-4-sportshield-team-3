@@ -31,8 +31,25 @@ During the Second week, significant progress was made in establishing team cohes
 Overall, the project remains on track with the established timeline. However, concerns arise regarding the functionality of certain hardware modules, which may impact future milestones.
 
 ## 3. Resources status
+Devices use various sensors and technologies for thief detection, depending on the specific application and the level of sophistication desired. Here are some common methods:
 
-All required resources are currently available and operational, facilitating progress on project tasks.
+1. **Motion Sensors**: Devices can employ motion sensors to detect movement within a specified area. These sensors can be based on various technologies such as passive infrared (PIR), microwave, or ultrasonic sensors. When motion is detected, the device triggers an alarm or sends a notification to alert the user.
+
+2. **Door and Window Sensors**: These sensors are typically used in home security systems. They consist of two parts—one attached to the door or window and the other to the frame. When the door or window is opened, the connection between the two parts is broken, triggering an alarm.
+
+3. **Magnetic Sensors**: Magnetic sensors work similarly to door and window sensors but can be used for a variety of purposes. For instance, they can detect when a drawer or cabinet is opened by sensing the disruption of a magnetic field.
+
+4. **Vibration Sensors**: Vibration sensors can detect when an object is moved or tampered with. They are often used in conjunction with other sensors in devices such as safes or alarm systems.
+
+5. **Sound Sensors**: Some devices use sound sensors to detect specific noises associated with break-ins, such as glass breaking or doors being forced open.
+
+6. **GPS Tracking**: For mobile devices or vehicles, GPS tracking can be used to monitor their location in real-time. If a device is stolen, its location can be tracked, allowing for recovery or remote disabling.
+
+7. **Biometric Sensors**: Some high-security devices use biometric sensors such as fingerprint scanners or facial recognition systems to prevent unauthorized access.
+
+8. **Smart Algorithms and AI**: Many modern security systems utilize advanced algorithms and artificial intelligence to analyze sensor data and detect patterns indicative of suspicious behavior. This can help reduce false alarms and improve the accuracy of thief detection.
+
+Overall, the choice of sensors depends on factors such as the environment being monitored, the level of security required, and the specific use case of the device.
 
 ## 4. Scope status
 
