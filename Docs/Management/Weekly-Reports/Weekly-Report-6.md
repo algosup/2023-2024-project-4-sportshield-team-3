@@ -43,7 +43,7 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 ## 5. Work accomplished
 
-3 -We started working on Electromagnet and Bluetooth connexion so two devices cant connect both at the same time, 
+3 -We started working on Electromagnet and Bluetooth connexion so two devices cant connect both at the same time 🔗
 
 ## 6. Anticipated risks
 
