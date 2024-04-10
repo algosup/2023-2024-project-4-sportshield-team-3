@@ -87,7 +87,7 @@ The project scope has been outlined in the project charter, serving as a guiding
 
 ## 7. Next steps
 
-- 📅 10/20/2024: Complete delivery of functional specifications v1.0.
+- 📅 4/10/2024: Complete delivery of functional specifications v1.0.
 - 📝 Initiate technical specifications drafting.
 - 📊 Develop project management plans (RACI, critical path, risk management, resource management).
 
