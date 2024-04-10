@@ -1,0 +1,1 @@
+// This file stand for all connexion with NFC's card/device 
