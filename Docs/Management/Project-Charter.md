@@ -1,4 +1,4 @@
-# Project Charter - SPORTSHIELD [Team 4]
+# Project Charter - SPORTSHIELD [Team 3]
 
 ## Document Control
 
